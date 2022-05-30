@@ -9,3 +9,6 @@ License: CC0
 Encoding: UTF-8
 LazyData: true
 URL: https://statgarten.github.io/datatoys/
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
