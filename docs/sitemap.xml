@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://statgarten.github.io/datatoys/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://statgarten.github.io/datatoys/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://statgarten.github.io/datatoys/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://statgarten.github.io/datatoys/index.html</loc>
   </url>
   <url>
-    <loc>/reference/hello.html</loc>
+    <loc>https://statgarten.github.io/datatoys/reference/hello.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://statgarten.github.io/datatoys/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/odaKR.html</loc>
   </url>
 </urlset>
