@@ -3,9 +3,9 @@
 \docType{data}
 \name{odaKR}
 \alias{odaKR}
-\title{odaKR.}
+\title{odaKR}
 \format{
-A data frame with five variables: \code{연도}, \code{사업분류},
+A data frame with four variables: \code{연도}, \code{사업분류},
   \code{지원액_원화}, and \code{지원액_달러}.
 }
 \usage{
