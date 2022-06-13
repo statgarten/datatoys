@@ -44,6 +44,17 @@ NULL
 #' 전국 경찰관서에 고소, 고발, 인지 등으로 형사입건된 사건의 발생, 검거, 피의자에 대한 지역별 분석 현황
 #' 범죄대분류, 범죄중분류, 서울, 부산, 대구, 인천, 광주, 대전 울산, 세종, 경기도 지역으로 구분하여 발생 건수 제공
 #' https://www.data.go.kr/data/3074462/fileData.do
-#'
+#' 
 #' @format A data frame with 90 variables.
 "crime"
+
+
+
+#' scholarship
+#'
+#' 한국장학재단에서 제공하는 전년도 장학금 수혜현황(대학정보공시 항목) 조사를 통해, 대학별 재원구분에 따른 교외장학금 수혜 금액 및 
+#' 성격유형에 따른 교내장학금 수혜금액 제공. 2020 회계연도부터 재난을 사유로 지급한 교내장학금 추가 조사.
+#' https://www.data.go.kr/data/15038576/fileData.do
+#'
+#' @format A data frame with 16 variables.
+"scholarship"
