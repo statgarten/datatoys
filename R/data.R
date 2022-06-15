@@ -102,3 +102,16 @@ NULL
 #'
 #' @format A data frame with 20 variables.
 "housingPrice"
+
+
+
+
+#' restaurant
+#'
+#' 경기도 지역 특산물을 활용한 향토 특색음식점으로 경기도를 대표할 수 있는 맛, 위생, 서비스가 우수한 업소를 발굴하여 
+#' 경기으뜸맛집으로 육성하고자 선정된 맛집 현황입니다. 음식점명, 맛집전화번호, 대표음식명, 주소, 위경도 등의 정보를 제공합니다.
+#' Last Update: 2017-11-20;
+#' https://www.data.go.kr/data/15057234/openapi.do
+#'
+#' @format A data frame with 9 variables.
+"restaurant"
