@@ -12,6 +12,8 @@ NULL
 "odaKR"
 
 
+
+
 #' accident
 #'
 #' 도로교통공단에서 제공하는 사망 교통사고에 대한 개별정보(발생일시, 사고유형, 위치좌표 등)
@@ -24,6 +26,9 @@ NULL
 #'   \code{사고유형}, \code{가해자법규위반}, \code{도로형태_대분류}, \code{도로형태}, \code{가해자_당사자종별},
 #'   \code{피해자_당사자종별}, \code{발생위치X_UTMK}, \code{발생위치Y_UTMK}, \code{경도}, and \code{위도}.
 "accident"
+
+
+
 
 #' pollution
 #'
@@ -39,6 +44,7 @@ NULL
 
 
 
+
 #' crime
 #'
 #' 전국 경찰관서에 고소, 고발, 인지 등으로 형사입건된 사건의 발생, 검거, 피의자에 대한 지역별 분석 현황
@@ -50,6 +56,7 @@ NULL
 
 
 
+
 #' scholarship
 #'
 #' 한국장학재단에서 제공하는 전년도 장학금 수혜현황(대학정보공시 항목) 조사를 통해, 대학별 재원구분에 따른 교외장학금 수혜 금액 및 
@@ -58,6 +65,8 @@ NULL
 #'
 #' @format A data frame with 16 variables.
 "scholarship"
+
+
 
 
 #' medicalCheckup
@@ -73,7 +82,6 @@ NULL
 
 
 
-
 #' gasStation
 #'
 #' 산업통상자원부에서 제공하는 전국 주유소 등록현황(전국 주유소 신규 등록 , 휴업, 폐업 현황 정보, 연도, 변동사유발생연월일, 판매업종류 등). 
@@ -82,3 +90,15 @@ NULL
 #'
 #' @format A data frame with 6 variables.
 "gasStation"
+
+
+
+
+#' housingPrice
+#'
+#' 국토교통부에서 제공하는 2021년도 공동주택 공시가격정보입니다. 
+#' Last Update: 2021-10-29;
+#' https://www.data.go.kr/data/3073746/fileData.do
+#'
+#' @format A data frame with 20 variables.
+"housingPrice"
