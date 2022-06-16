@@ -127,3 +127,15 @@ NULL
 #'
 #' @format A data frame with 22 variables.
 "nationalPension"
+
+
+
+
+#' postOffice
+#'
+#' 서울특별시 우체국 정보에 대한 데이터로 전체기관명, 대표 전화번호, 새우편번호, 도로명주소, 행정시, 행정구, 행정동 정보.
+#' Last Update: 2021-05-27;
+#' data.go.kr/data/15047367/fileData.do
+#'
+#' @format A data frame with 14 variables.
+"postOffice"
