@@ -135,7 +135,20 @@ NULL
 #'
 #' 서울특별시 우체국 정보에 대한 데이터로 전체기관명, 대표 전화번호, 새우편번호, 도로명주소, 행정시, 행정구, 행정동 정보.
 #' Last Update: 2021-05-27;
-#' data.go.kr/data/15047367/fileData.do
+#' https://www.data.go.kr/data/15047367/fileData.do
 #'
 #' @format A data frame with 14 variables.
 "postOffice"
+
+
+
+
+#' medicine
+#'
+#' 건강보험심사평가원에서 제공하는 의약품 주성분(일반명) 현황에 대한 데이터셋. 
+#' 의약품주성분 코드, 성분명, 제형구분, 투여, 함량, 단위 등 정보를 제공.
+#' Last Update: 2021-10-25;
+#' https://www.data.go.kr/data/15067461/fileData.do
+#'
+#' @format A data frame with 8 variables.
+"medicine"

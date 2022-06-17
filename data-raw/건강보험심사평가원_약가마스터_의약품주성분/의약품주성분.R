@@ -1,7 +1,8 @@
 library(tidyverse)
 library(lubridate)
 
-file <- ".csv"
+file <- "의약품주성분.csv"
+
 readr::guess_encoding(file)
 
 # df <- tibble::tibble(readxl::read_excel(file))
@@ -10,6 +11,6 @@ df <- tibble::tibble(read.csv(file, fileEncoding = "euc-kr"))
 
 dplyr::glimpse(df)
 
-df
+medicine <- df
 
-usethis::use_data(df, overwrite = TRUE)
+usethis::use_data(medicine, overwrite = TRUE)
