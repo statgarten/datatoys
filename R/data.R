@@ -164,3 +164,15 @@ NULL
 #'
 #' @format A data frame with 7 variables.
 "necessariesPrice"
+
+
+
+
+#' globalBusiness
+#'
+#' 대한무역투자진흥공사에서 제공하는 전세계 124개국의 해외진출기업의 회사명, 주소, 홈페이지, 진출년도, 진출형태, 투자형태 등의 정보.
+#' Last Update: 2021-09-27;
+#' https://www.data.go.kr/data/15003297/fileData.do
+#'
+#' @format A data frame with 19 variables.
+"globalBusiness"
