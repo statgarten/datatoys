@@ -176,3 +176,15 @@ NULL
 #'
 #' @format A data frame with 19 variables.
 "globalBusiness"
+
+
+
+
+#' petNames
+#'
+#' 서울특별시 마포구 지역경제과에서 제공하는 반려동물 이름 현황데이터. 동물이름, 동물 수 데이터를 제공.
+#' Last Update: 2021-09-01;
+#' https://www.data.go.kr/data/15042010/fileData.do
+#'
+#' @format A data frame with 2 variables.
+"petNames"
