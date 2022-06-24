@@ -188,3 +188,16 @@ NULL
 #'
 #' @format A data frame with 2 variables.
 "petNames"
+
+
+
+
+
+#' foodBank
+#' 
+#' 한국사회복지협의회에서 제공하는 2021년 전국푸드뱅크 기부자 통계.
+#' Last Update: 2022-03-18;
+#' https://www.data.go.kr/data/15083266/fileData.do
+#'
+#' @format A data frame with 4 variables.
+"foodBank"
