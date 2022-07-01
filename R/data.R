@@ -226,3 +226,38 @@ NULL
 #'
 #' @format A data frame with 22 variables.
 "carInspection"
+
+
+
+
+#' fireStation
+#' 
+#' 소방청에서 제공하는 전국 소방서 정보.
+#' Last Update: 2022-04-18;
+#' https://www.data.go.kr/data/15048242/fileData.do
+#'
+#' @format A data frame with 5 variables.
+"fireStation"
+
+
+
+
+#' bloodTest
+#' 
+#' 국민건강보험공단에서 제공하는 2014~2015년 일반검진 및 생애전환기 건강검진 혈액검사 데이터.
+#' Last Update: 2021-11-24;
+#' https://www.data.go.kr/data/15095107/fileData.do
+#'
+#' @format A data frame with 5 variables.
+#' \describe{
+#'   \item{SEX}{성별(남성:1, 여성:2)}
+#'   \item{AGE_G}{연령(그룹)}
+#'   \item{HGB}{혈색소}
+#'   \item{TCHOL}{총콜레스테롤}
+#'   \item{TG}{중성지방}
+#'   \item{HDL}{HDL콜레스테롤}
+#'   \item{ANE}{빈혈 진료여부(있음:1, 없음:0)}
+#'   \item{IHD}{허혈심장질환 진료여부(있음:1, 없음:0)}
+#'   \item{STK}{뇌혈관질환 진료여부(있음:1, 없음:0)}
+#'  }
+"bloodTest"
