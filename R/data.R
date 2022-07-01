@@ -214,3 +214,15 @@ NULL
 #'
 #' @format A data frame with 4 variables.
 "childAbuse"
+
+
+
+
+#' carInspection
+#' 
+#' 한국교통안전공단에서 운영하고 있는 자동차검사소 정보. 해당 지역별 리스트와 위도, 경도 등 각종 정보를 제공.
+#' Last Update: 2021-09-27;
+#' https://www.data.go.kr/data/3041572/fileData.do
+#'
+#' @format A data frame with 22 variables.
+"carInspection"
