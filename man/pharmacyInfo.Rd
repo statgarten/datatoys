@@ -5,7 +5,7 @@
 \alias{pharmacyInfo}
 \title{pharmacyInfo}
 \format{
-A data frame with 29 variables.
+A data frame with 15 variables.
 }
 \usage{
 pharmacyInfo
