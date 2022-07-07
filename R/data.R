@@ -264,12 +264,51 @@ NULL
 
 
 
+
 #' odaNews
 #' 
 #' 한국국제협력단에서 제공하는 국가별 개발 협력 동향정보 데이터. 지역, 국가, 관할사무소, 구분(공여국/수원국/국제기구/KOICA), 
-#' KOICA 12대분야 및 기타, 동향기사 제목 및 본문내용, 출처, 링크 정보를 제공.
+#' KOICA 12대분야 및 기타, 동향기사 제목 및 본문내용, 출처, 링크 정보를 제공. 
 #' Last Update: 2022-06-29;
 #' https://www.data.go.kr/data/15052910/fileData.do
 #'
 #' @format A data frame with 16 variables.
 "odaNews"
+
+
+
+#' legalDong
+#' 
+#' 국토교통부에서 제공하는 법정동 정보. 우리나라의 법정 구역으로 법률로 지정된 일정한 명칭과 영역을 지닌 구역으로 
+#' 토지행정시스템에서 사용하는 법정동 데이터. 현존하는 법정동코드는 삭제일자가 없으며, 과거법정동코드는
+#' 행정표준코드관리시스템(https://www.code.go.kr)에서 제공하는 법정동코드 자료를 바탕으로 시스템 사용 용도에 
+#' 맞춰 가공한 데이터로 정보가 상이할 수 있음.
+#' Last Update: 2021-12-17;
+#' https://www.data.go.kr/data/15063424/fileData.do
+#'
+#' @format A data frame with 9 variables.
+"legalDong"
+
+
+
+
+#' hospitalInfo
+#' 
+#' 건강보험심사평가원에서 제공하는 병의원 기본정보 데이터셋.
+#' Last Update: 2022-04-14;
+#' https://www.data.go.kr/data/15051059/fileData.do
+#'
+#' @format A data frame with 29 variables.
+"hospitalInfo"
+
+
+
+
+#' pharmacyInfo
+#' 
+#' 건강보험심사평가원에서 제공하는 약국 기본정보 데이터셋.
+#' Last Update: 2022-04-14;
+#' https://www.data.go.kr/data/15051059/fileData.do
+#'
+#' @format A data frame with 29 variables.
+"pharmacyInfo"

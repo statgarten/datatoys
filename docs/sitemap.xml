@@ -43,10 +43,16 @@
     <loc>https://statgarten.github.io/datatoys/reference/hello.html</loc>
   </url>
   <url>
+    <loc>https://statgarten.github.io/datatoys/reference/hospitalInfo.html</loc>
+  </url>
+  <url>
     <loc>https://statgarten.github.io/datatoys/reference/housingPrice.html</loc>
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/legalDong.html</loc>
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/medicalCheckup.html</loc>
@@ -68,6 +74,9 @@
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/petNames.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/pharmacyInfo.html</loc>
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/pollution.html</loc>
