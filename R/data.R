@@ -310,5 +310,5 @@ NULL
 #' Last Update: 2022-04-14;
 #' https://www.data.go.kr/data/15051059/fileData.do
 #'
-#' @format A data frame with 29 variables.
+#' @format A data frame with 15 variables.
 "pharmacyInfo"
