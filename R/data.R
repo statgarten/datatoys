@@ -324,3 +324,15 @@ NULL
 #'
 #' @format A data frame with 7 variables.
 "tuition"
+
+
+
+
+#' weather2020
+#' 
+#' 농림축산식품부에서 제공하는 농업 종관기상 데이터.
+#' Last Update: 2021-03-26;
+#' https://www.data.go.kr/data/15034381/fileData.do
+#'
+#' @format A list with 3 data frame.
+"weather2020"
