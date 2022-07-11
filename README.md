@@ -15,4 +15,4 @@ remotes::install_github("statgarten/datatoys")
 ```
 
 ## Acknowledgement
-This work was supported by Institute for Information & communications. Technology Promotion(IITP) grant funded by the Korea government(MSIP).
+This work was supported by Institute for Information and Communications Technology Promotion(IITP) grant funded by the Korea government(MSIP).

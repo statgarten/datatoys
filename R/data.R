@@ -336,3 +336,15 @@ NULL
 #'
 #' @format A list with 3 data frame.
 "weather2020"
+
+
+
+
+#' airport
+#' 
+#' 국토교통부에서 제공하는 전세계 공항의 영문 공항명, 한글 공항명, IATA 코드, ICAO 코드, 국가명, 지역명에 대한 정보.
+#' Last Update: 2022-06-10;
+#' https://www.data.go.kr/data/3051587/fileData.do
+#'
+#' @format A list with 8 data frame.
+"airport"
