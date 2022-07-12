@@ -3,7 +3,7 @@
 \docType{data}
 \name{foodBank}
 \alias{foodBank}
-\title{foodBank}
+\title{한국사회복지협의회 2021 전국푸드뱅크 기부자 통계}
 \format{
 A data frame with 4 variables.
 }

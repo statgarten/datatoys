@@ -3,7 +3,7 @@
 \docType{data}
 \name{odaKR}
 \alias{odaKR}
-\title{odaKR}
+\title{한국국제협력단 소득수준별 ODA 실적통계}
 \format{
 A data frame with four variables: \code{연도}, \code{사업분류},
   \code{지원액_원화}, and \code{지원액_달러}.

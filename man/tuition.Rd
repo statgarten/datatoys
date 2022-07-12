@@ -3,7 +3,7 @@
 \docType{data}
 \name{tuition}
 \alias{tuition}
-\title{tuition}
+\title{한국장학재단 장학금 정보}
 \format{
 A data frame with 7 variables.
 }

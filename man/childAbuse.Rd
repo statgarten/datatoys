@@ -3,7 +3,7 @@
 \docType{data}
 \name{childAbuse}
 \alias{childAbuse}
-\title{childAbuse}
+\title{보건복지부 아동학대 신고정보}
 \format{
 A data frame with 4 variables.
 }

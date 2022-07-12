@@ -3,7 +3,7 @@
 \docType{data}
 \name{gasStation}
 \alias{gasStation}
-\title{gasStation}
+\title{산업통상자원부 전국 주유소 등록현황}
 \format{
 A data frame with 6 variables.
 }

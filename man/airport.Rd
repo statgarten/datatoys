@@ -3,7 +3,7 @@
 \docType{data}
 \name{airport}
 \alias{airport}
-\title{airport}
+\title{국토교통부 전세계 공항정보}
 \format{
 A list with 8 data frame.
 }

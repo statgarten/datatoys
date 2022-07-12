@@ -3,7 +3,7 @@
 \docType{data}
 \name{weather2020}
 \alias{weather2020}
-\title{weather2020}
+\title{농림축산식품부 농업 종관기상 데이터}
 \format{
 A list with 3 data frame.
 }

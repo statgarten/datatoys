@@ -1,4 +1,6 @@
 url: https://statgarten.github.io/datatoys/
 template:
   bootstrap: 5
+  navbar:
+    bg: "#C70A80"
 lang: ko

@@ -3,7 +3,7 @@
 \docType{data}
 \name{odaIndex}
 \alias{odaIndex}
-\title{odaIndex}
+\title{한국국제협력단 협력국 개발지표 및 ODA 지원 실적}
 \format{
 A list with 80 data frame.
 }

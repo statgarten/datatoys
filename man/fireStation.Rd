@@ -3,7 +3,7 @@
 \docType{data}
 \name{fireStation}
 \alias{fireStation}
-\title{fireStation}
+\title{소방청 전국 소방서 정보}
 \format{
 A data frame with 5 variables.
 }

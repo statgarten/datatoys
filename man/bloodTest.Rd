@@ -3,7 +3,7 @@
 \docType{data}
 \name{bloodTest}
 \alias{bloodTest}
-\title{bloodTest}
+\title{국민건강보험공단 2014-15 혈액검사 데이터}
 \format{
 A data frame with 5 variables.
 \describe{

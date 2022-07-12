@@ -3,7 +3,7 @@
 \docType{data}
 \name{restaurant}
 \alias{restaurant}
-\title{restaurant}
+\title{경기도 맛집 정보}
 \format{
 A data frame with 9 variables.
 }

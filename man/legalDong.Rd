@@ -3,7 +3,7 @@
 \docType{data}
 \name{legalDong}
 \alias{legalDong}
-\title{legalDong}
+\title{국토교통부 법정동 정보}
 \format{
 A data frame with 9 variables.
 }

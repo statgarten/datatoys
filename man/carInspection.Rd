@@ -3,7 +3,7 @@
 \docType{data}
 \name{carInspection}
 \alias{carInspection}
-\title{carInspection}
+\title{한국교통안전공단 자동차검사소 정보}
 \format{
 A data frame with 22 variables.
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{odaNews}
 \alias{odaNews}
-\title{odaNews}
+\title{한국국제협력단 국가별 개발협력동향정보}
 \format{
 A data frame with 16 variables.
 }

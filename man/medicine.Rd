@@ -3,7 +3,7 @@
 \docType{data}
 \name{medicine}
 \alias{medicine}
-\title{medicine}
+\title{건강보험심사평가원 의약품 주성분 정보}
 \format{
 A data frame with 8 variables.
 }

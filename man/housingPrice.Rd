@@ -3,7 +3,7 @@
 \docType{data}
 \name{housingPrice}
 \alias{housingPrice}
-\title{housingPrice}
+\title{국토교통부 2021 공동주택 공시가격 정보}
 \format{
 A data frame with 20 variables.
 }

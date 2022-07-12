@@ -3,7 +3,7 @@
 \docType{data}
 \name{pollution}
 \alias{pollution}
-\title{pollution}
+\title{국립환경과학원 축산오염원조사정보}
 \format{
 A data frame with 18 variables: \code{법정동코드}, \code{시도},
   \code{시군구}, \code{읍면동}, \code{리}, \code{축종}, \code{법적규제}, \code{사육두수.두.},

@@ -3,7 +3,7 @@
 \docType{data}
 \name{postOffice}
 \alias{postOffice}
-\title{postOffice}
+\title{서울특별시 우체국 정보}
 \format{
 A data frame with 14 variables.
 }

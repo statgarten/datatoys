@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# datatoys <img src="man/figures/logo.png" align="right" width="120" />
+
+## Overview
+
+> Play gives children a chance to practice what they are learning 
+> - Fred Rogers
+
+Let's play with data! We prepared toy data for data newbies. This package contains some datasets provided by the [Public Data Portal](https://data.go.kr) in Republic of Korea. It makes you can play with data for fun like children! Install the package, and **start your adventure!**
+
+## Installation
+
+```
+# Install development version from GitHub
+remotes::install_github("statgarten/datatoys")
+```
+
+## List of dataset
+```{r echo=FALSE, message=FALSE}
+library(datatoys)
+library(dplyr)
+
+data(package = "datatoys")$results %>%
+  as_tibble() %>%
+  select(Item, Title) %>%
+  knitr::kable()
+```
+
+
+## Acknowledgement
+This work was supported by Institute for Information and Communications Technology Promotion(IITP) grant funded by the Korea government(MSIP).

@@ -3,7 +3,7 @@
 \docType{data}
 \name{accident}
 \alias{accident}
-\title{accident}
+\title{도로교통공단 사망교통사고 정보}
 \format{
 A data frame with 23 variables: \code{발생년}, \code{발생년월일시},
   \code{주야}, \code{요일}, \code{사망자수}, \code{부상자수}, \code{중상자수}, \code{경상자수},

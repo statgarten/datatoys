@@ -3,7 +3,7 @@
 \docType{data}
 \name{medicalCheckup}
 \alias{medicalCheckup}
-\title{medicalCheckup}
+\title{국민건강보험 일반건강검진결과}
 \format{
 A data frame with 31 variables.
 }

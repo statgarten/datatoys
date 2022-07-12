@@ -3,7 +3,7 @@
 \docType{data}
 \name{pharmacyInfo}
 \alias{pharmacyInfo}
-\title{pharmacyInfo}
+\title{건강보험심사평가원 약국 기본정보}
 \format{
 A data frame with 15 variables.
 }

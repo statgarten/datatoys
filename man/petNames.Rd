@@ -3,7 +3,7 @@
 \docType{data}
 \name{petNames}
 \alias{petNames}
-\title{petNames}
+\title{마포구 반려동물 이름 통계}
 \format{
 A data frame with 2 variables.
 }

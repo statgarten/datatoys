@@ -3,7 +3,7 @@
 \docType{data}
 \name{nationalPension}
 \alias{nationalPension}
-\title{nationalPension}
+\title{국민연금공단 국민연금사업장 정보}
 \format{
 A data frame with 22 variables.
 }

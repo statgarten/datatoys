@@ -7,12 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Open Datasets from https://data.go.kr.">
 <title>A Collection of Datasets from data.go.kr • datatoys</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="A Collection of Datasets from data.go.kr">
 <meta property="og:description" content="Open Datasets from https://data.go.kr.">
+<meta property="og:image" content="https://statgarten.github.io/datatoys/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -51,21 +58,147 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="datatoys-">datatoys <img src="reference/figures/logo-datatoys.png" align="right" width="120"><a class="anchor" aria-label="anchor" href="#datatoys-"></a>
-</h1></div>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="datatoys-">datatoys <a class="anchor" aria-label="anchor" href="#datatoys-"></a>
+</h1>
+</div>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <blockquote>
-<p>Play gives children a chance to practice what they are learning — Fred Rogers</p>
+<p>Play gives children a chance to practice what they are learning - Fred Rogers</p>
 </blockquote>
 <p>Let’s play with data! We prepared toy data for data newbies. This package contains some datasets provided by the <a href="https://data.go.kr" class="external-link">Public Data Portal</a> in Republic of Korea. It makes you can play with data for fun like children! Install the package, and <strong>start your adventure!</strong></p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<pre><code><span class="co"># Install development version from GitHub</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"statgarten/datatoys"</span><span class="op">)</span></code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install development version from GitHub</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"statgarten/datatoys"</span>)</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="list-of-dataset">List of dataset<a class="anchor" aria-label="anchor" href="#list-of-dataset"></a>
+</h2>
+<table class="table">
+<thead><tr class="header">
+<th align="left">Item</th>
+<th align="left">Title</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">accident</td>
+<td align="left">도로교통공단 사망교통사고 정보</td>
+</tr>
+<tr class="even">
+<td align="left">airport</td>
+<td align="left">국토교통부 전세계 공항정보</td>
+</tr>
+<tr class="odd">
+<td align="left">bloodTest</td>
+<td align="left">국민건강보험공단 2014-15 혈액검사 데이터</td>
+</tr>
+<tr class="even">
+<td align="left">carInspection</td>
+<td align="left">한국교통안전공단 자동차검사소 정보</td>
+</tr>
+<tr class="odd">
+<td align="left">childAbuse</td>
+<td align="left">보건복지부 아동학대 신고정보</td>
+</tr>
+<tr class="even">
+<td align="left">crime</td>
+<td align="left">경찰청 범죄발생 지역별 통계</td>
+</tr>
+<tr class="odd">
+<td align="left">fireStation</td>
+<td align="left">소방청 전국 소방서 정보</td>
+</tr>
+<tr class="even">
+<td align="left">foodBank</td>
+<td align="left">한국사회복지협의회 2021 전국푸드뱅크 기부자 통계</td>
+</tr>
+<tr class="odd">
+<td align="left">gasStation</td>
+<td align="left">산업통상자원부 전국 주유소 등록현황</td>
+</tr>
+<tr class="even">
+<td align="left">globalBusiness</td>
+<td align="left">대한무역투자진흥공사 해외진출기업 정보</td>
+</tr>
+<tr class="odd">
+<td align="left">hospitalInfo</td>
+<td align="left">건강보험심사평가원 병의원 기본정보</td>
+</tr>
+<tr class="even">
+<td align="left">housingPrice</td>
+<td align="left">국토교통부 2021 공동주택 공시가격 정보</td>
+</tr>
+<tr class="odd">
+<td align="left">legalDong</td>
+<td align="left">국토교통부 법정동 정보</td>
+</tr>
+<tr class="even">
+<td align="left">medicalCheckup</td>
+<td align="left">국민건강보험 일반건강검진결과</td>
+</tr>
+<tr class="odd">
+<td align="left">medicine</td>
+<td align="left">건강보험심사평가원 의약품 주성분 정보</td>
+</tr>
+<tr class="even">
+<td align="left">nationalPension</td>
+<td align="left">국민연금공단 국민연금사업장 정보</td>
+</tr>
+<tr class="odd">
+<td align="left">necessariesPrice</td>
+<td align="left">한국소비자원 생필품가격 정보</td>
+</tr>
+<tr class="even">
+<td align="left">odaIndex</td>
+<td align="left">한국국제협력단 협력국 개발지표 및 ODA 지원 실적</td>
+</tr>
+<tr class="odd">
+<td align="left">odaKR</td>
+<td align="left">한국국제협력단 소득수준별 ODA 실적통계</td>
+</tr>
+<tr class="even">
+<td align="left">odaNews</td>
+<td align="left">한국국제협력단 국가별 개발협력동향정보</td>
+</tr>
+<tr class="odd">
+<td align="left">petNames</td>
+<td align="left">마포구 반려동물 이름 통계</td>
+</tr>
+<tr class="even">
+<td align="left">pharmacyInfo</td>
+<td align="left">건강보험심사평가원 약국 기본정보</td>
+</tr>
+<tr class="odd">
+<td align="left">pollution</td>
+<td align="left">국립환경과학원 축산오염원조사정보</td>
+</tr>
+<tr class="even">
+<td align="left">postOffice</td>
+<td align="left">서울특별시 우체국 정보</td>
+</tr>
+<tr class="odd">
+<td align="left">restaurant</td>
+<td align="left">경기도 맛집 정보</td>
+</tr>
+<tr class="even">
+<td align="left">scholarship</td>
+<td align="left">한국장학재단 2020년도 장학금 수혜현황</td>
+</tr>
+<tr class="odd">
+<td align="left">tuition</td>
+<td align="left">한국장학재단 장학금 정보</td>
+</tr>
+<tr class="even">
+<td align="left">weather2020</td>
+<td align="left">농림축산식품부 농업 종관기상 데이터</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section level2">
 <h2 id="acknowledgement">Acknowledgement<a class="anchor" aria-label="anchor" href="#acknowledgement"></a>

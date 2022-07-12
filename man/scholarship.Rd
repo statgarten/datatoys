@@ -3,7 +3,7 @@
 \docType{data}
 \name{scholarship}
 \alias{scholarship}
-\title{scholarship}
+\title{한국장학재단 2020년도 장학금 수혜현황}
 \format{
 A data frame with 16 variables.
 }

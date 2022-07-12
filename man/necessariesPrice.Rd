@@ -3,7 +3,7 @@
 \docType{data}
 \name{necessariesPrice}
 \alias{necessariesPrice}
-\title{necessariesPrice}
+\title{한국소비자원 생필품가격 정보}
 \format{
 A data frame with 7 variables.
 }
