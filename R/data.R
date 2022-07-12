@@ -348,3 +348,18 @@ NULL
 #'
 #' @format A list with 8 data frame.
 "airport"
+
+
+
+
+#' odaIndex
+#' 
+#' 한국국제협력단(KOICA)에서 제공하는 협력국(총 138개국/ 사무소 주재국 44개, 겸임국 94개)의 개발 지표 및 ODA 지원 실적. 
+#' *개발지표: 인구, 경제, 인간개발, 빈곤, 교육, 재정, 거버넌스, 비즈니스, 산업인프라, 성평등
+#' *출처: World Bank Open data, Human Development Data Center, Fragile States Index, Transparency International, 
+#' UN Department of Economic and Social Affairs Public Institutions, OECD Statistics, KOICA ODA 정보센터
+#' Last Update: 2022-05-13;
+#' https://www.data.go.kr/data/15088160/fileData.do
+#'
+#' @format A list with 80 data frame.
+"odaIndex"
