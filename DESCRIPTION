@@ -2,13 +2,15 @@ Package: datatoys
 Type: Package
 Title: A Collection of Datasets from data.go.kr
 Version: 0.1.0
-Author: Youngjun Na
-Maintainer: Youngjun Na <ruminoreticulum@gmail.com>
+Authors@R: c(
+    person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0002-4643-0191")))
 Description: Open Datasets from https://data.go.kr.
 License: CC0
 Encoding: UTF-8
 LazyData: true
 URL: https://statgarten.github.io/datatoys/
+BugReports: https://github.com/statgarten/datatoys/issues
 RoxygenNote: 7.1.2
 Depends: 
     R (>= 2.10)

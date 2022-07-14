@@ -388,4 +388,4 @@ NULL
 #' https://www.data.go.kr/data/3038724/fileData.do
 #'
 #' @format A list with 18 data frame.
-"fire"
+"fire" 
