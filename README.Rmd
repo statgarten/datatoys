@@ -33,6 +33,7 @@ remotes::install_github("statgarten/datatoys")
 ```{r echo=FALSE, message=FALSE}
 library(datatoys)
 library(dplyr)
+library(kable)
 
 data(package = "datatoys")$results %>%
   as_tibble() %>%
