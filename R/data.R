@@ -376,3 +376,16 @@ NULL
 #'
 #' @format A list with 48 data frame.
 "karaoke"
+
+
+
+
+
+#' 소방청 화재통계
+#' 
+#' 소방청에서 제공하는 장소별 원인별 화재통계.
+#' Last Update: 2020-03-19;
+#' https://www.data.go.kr/data/3038724/fileData.do
+#'
+#' @format A list with 18 data frame.
+"fire"
