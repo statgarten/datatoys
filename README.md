@@ -44,6 +44,7 @@ adventure!**
 | postOffice       | 서울특별시           | 우체국 정보                      |
 | fire             | 소방청               | 화재통계                         |
 | fireStation      | 소방청               | 전국 소방서 정보                 |
+| foodNutrients    | 식품의약품안전처     | 식품영양성분 데이터베이스        |
 | carInspection    | 한국교통안전공단     | 자동차검사소 정보                |
 | odaIndex         | 한국국제협력단       | 협력국 개발지표 및 ODA 지원 실적 |
 | odaKR            | 한국국제협력단       | 소득수준별 ODA 실적통계          |
@@ -53,8 +54,3 @@ adventure!**
 | scholarship      | 한국장학재단         | 2020년도 장학금 수혜현황         |
 | tuition          | 한국장학재단         | 장학금 정보                      |
 | karaoke          | 행정안전부           | 단란주점 영업 정보               |
-
-## Acknowledgement
-
-This work was supported by Institute for Information and Communications
-Technology Promotion(IITP) grant funded by the Korea government(MSIP).

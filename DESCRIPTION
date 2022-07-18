@@ -3,9 +3,12 @@ Type: Package
 Title: A Collection of Datasets from data.go.kr
 Version: 0.1.0
 Authors@R: c(
-    person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"),
-            comment = c(ORCID = "0000-0002-4643-0191")))
-Description: Open Datasets from https://data.go.kr.
+              person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"),
+                      comment = c(ORCID = "0000-0002-4643-0191")),
+              person("Hara", "Chang", email = "hara.chang@antller.com", role = c("aut"),
+                      comment = c(ORCID = ""))
+            )
+Description: Datasets from Korea Open Data Portal
 License: CC0
 Encoding: UTF-8
 LazyData: true

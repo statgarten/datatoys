@@ -389,3 +389,19 @@ NULL
 #'
 #' @format A list with 18 data frame.
 "fire" 
+
+
+
+
+
+
+#' 식품의약품안전처 식품영양성분 데이터베이스
+#' 
+#' 식품의약품안전처에서 제공하는 농축수산물, 가공식품 및 음식 영양성분 데이터베이스. 이용허락범위: 저작자표시(CC BY). 
+#' 본 저작물은 '식품의약품안전처'에서 '2020년'작성하여 공공누리 제1유형으로 개방한 '식품영양성분 데이터베이스를'을 이용하였으며, 
+#' 해당 저작물은 '식품의약품안전처 식품영양성분 데이터베이스(https://www.foodsafetykorea.go.kr/fcdb/index.do)'에서 무료로 다운받으실 수 있습니다."
+#' Last Update: 2020-10-28;
+#' https://www.data.go.kr/data/15047698/fileData.do
+#'
+#' @format A list with 146 data frame.
+"foodNutrients" 
