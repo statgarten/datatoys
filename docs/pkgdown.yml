@@ -1,8 +1,8 @@
 pandoc: 2.17.1.1
-pkgdown: 2.0.3
+pkgdown: 2.0.6
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-07-18T08:36Z
+last_built: 2022-07-20T05:02Z
 urls:
   reference: https://statgarten.github.io/datatoys/reference
   article: https://statgarten.github.io/datatoys/articles
