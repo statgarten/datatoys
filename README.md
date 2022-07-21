@@ -52,6 +52,7 @@ adventure!**
 | odaNews          | 한국국제협력단         | 국가별 개발협력동향정보          |
 | foodBank         | 한국사회복지협의회     | 2021 전국푸드뱅크 기부자 통계    |
 | necessariesPrice | 한국소비자원           | 생필품가격 정보                  |
+| elevator         | 한국승강기안전공단     | 국내 승강기 보유 현황            |
 | scholarship      | 한국장학재단           | 2020년도 장학금 수혜현황         |
 | tuition          | 한국장학재단           | 장학금 정보                      |
 | karaoke          | 행정안전부             | 단란주점 영업 정보               |

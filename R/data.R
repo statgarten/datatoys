@@ -419,3 +419,16 @@ NULL
 #'
 #' @format A list with 13 data frame.
 "openData" 
+
+
+
+
+
+#' 한국승강기안전공단 국내 승강기 보유 현황
+#' 
+#' 한국승강기안전공단에서 제공하는 국내 승강기 보유 현황. 이용허락범위 제한 없음.
+#' Last Update: 2022-02-22;
+#' https://www.data.go.kr/data/15017366/fileData.do
+#'
+#' @format A list with 8 data frame.
+"elevator" 
