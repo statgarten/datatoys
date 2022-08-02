@@ -27,7 +27,8 @@ adventure!**
 | medicine         | 건강보험심사평가원     | 의약품 주성분 정보               |
 | pharmacyInfo     | 건강보험심사평가원     | 약국 기본정보                    |
 | restaurant       | 경기도                 | 맛집 정보                        |
-| crime            | 경찰청                 | 범죄발생 지역별 통계             |
+| crime            | 경찰청                 | 범죄 발생 지역별 통계            |
+| crimePlace       | 경찰청                 | 범죄 발생 장소별 통계            |
 | openData         | 공공데이터활용지원센터 | 공공데이터포털 목록개방현황      |
 | pollution        | 국립환경과학원         | 축산오염원조사정보               |
 | medicalCheckup   | 국민건강보험           | 일반건강검진결과                 |

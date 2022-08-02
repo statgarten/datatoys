@@ -3,7 +3,7 @@
 \docType{data}
 \name{crime}
 \alias{crime}
-\title{경찰청 범죄발생 지역별 통계}
+\title{경찰청 범죄 발생 지역별 통계}
 \format{
 A data frame with 90 variables.
 }
