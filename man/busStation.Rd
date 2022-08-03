@@ -28,4 +28,14 @@ busStation
 Last Update: 2021-09-16;
 https://www.data.go.kr/data/15067528/fileData.do
 }
+\examples{
+library(dplyr)
+library(leaflet)
+
+busStation |> 
+  filter(도시명 == "울릉군") |> 
+  leaflet() |> 
+  addTiles() |> 
+  addMarkers(~경도, ~위도, popup = ~as.character(정류장.명칭), label = ~as.character(정류장.명칭))
+}
 \keyword{datasets}

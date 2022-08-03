@@ -471,4 +471,14 @@ NULL
 #'   \item{도시코드}{도시코드}
 #'   \item{도시명}{도시명}
 #'  }
+#'  
+#' @examples
+#' library(dplyr)
+#' library(leaflet)
+#' 
+#' busStation |> 
+#'   filter(도시명 == "울릉군") |> 
+#'   leaflet() |> 
+#'   addTiles() |> 
+#'   addMarkers(~경도, ~위도, popup = ~as.character(정류장.명칭), label = ~as.character(정류장.명칭))
 "busStation"
