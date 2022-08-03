@@ -35,6 +35,7 @@ adventure!**
 | bloodTest        | 국민건강보험공단       | 2014-15 혈액검사 데이터          |
 | nationalPension  | 국민연금공단           | 국민연금사업장 정보              |
 | airport          | 국토교통부             | 전세계 공항정보                  |
+| busStation       | 국토교통부             | 전국 버스 정류장 위치정보        |
 | housingPrice     | 국토교통부             | 2021 공동주택 공시가격 정보      |
 | legalDong        | 국토교통부             | 법정동 정보                      |
 | weather2020      | 농림축산식품부         | 농업 종관기상 데이터             |
