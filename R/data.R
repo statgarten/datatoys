@@ -473,12 +473,54 @@ NULL
 #'  }
 #'  
 #' @examples
-#' library(dplyr)
 #' library(leaflet)
 #' 
 #' busStation |> 
-#'   filter(도시명 == "울릉군") |> 
+#'   dplyr::filter(도시명 == "울릉군") |> 
 #'   leaflet() |> 
 #'   addTiles() |> 
 #'   addMarkers(~경도, ~위도, popup = ~as.character(정류장.명칭), label = ~as.character(정류장.명칭))
 "busStation"
+
+
+
+
+#' 서울특별시 응급실 위치 정보
+#' 
+#' 서울특별시에서 제공하는 서울시 응급실 위치 정보. 주소, 병원분류명, 응급의료기관, 응급실운영여부, 비고, 기관설명상세, 간이약도, 기관명, 대표전화, 응급실 전화, 진료시간, 병원경도, 병원위도 등의 항목으로 구성. 본 저작물은 서울특별시에서 2021년 작성하여 공공누리 제1유형으로 개방한 '서울특별시 응급실 위치 정보(작성자:서울특별시 빅데이터담당관)'을 이용하였으며, 저작물은 '서울시 열린 데이터 광장(http://data.seoul.go.kr/dataList/OA-20338/S/1/datasetView.do)'에서 무료로 다운받으실 수 있습니다.
+#' Last Update: 2021-09-16;
+#' https://www.data.go.kr/data/15088910/fileData.do
+#'
+#' @format A data frame with 34 variables.
+#'  
+#' @examples
+#' library(leaflet)
+#' 
+#' seoulER |> 
+#' leaflet() |> 
+#'   addTiles() |> 
+#'   addMarkers(~병원경도, ~병원위도, popup = ~as.character(기관명), label = ~as.character(기관명))
+"seoulER"
+
+
+
+
+
+
+#' 경기도 응급의료기관 및 응급의료지원센터 현황
+#' 
+#' 경기도 내 응급의료기관 및 응급의료지원센터 현황. 기관 및 센터의 소재지 주소와 대표 전화번호 등의 정보를 제공. 이용허락범위 제한 없음.
+#' Last Update: 2022-05-02;
+#' https://www.data.go.kr/data/15011313/fileData.do
+#'
+#' @format A data frame with 14 variables.
+#'  
+#' @examples
+#' library(leaflet)
+#' 
+#' gyeonggiER |> 
+#' leaflet() |> 
+#'   addTiles() |> 
+#'   addMarkers(~경도, ~위도, popup = ~as.character(`병원명/센터명`), label = ~as.character(`병원명/센터명`)) |> 
+#'   addMarkers(~병원경도, ~병원위도, popup = ~as.character(기관명), label = ~as.character(기관명), data = datatoys::seoulER)
+"gyeonggiER"
