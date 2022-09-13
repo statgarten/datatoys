@@ -7,8 +7,13 @@ NULL
 #' 사업분류별, 지원액(원화), 지원액(달러)
 #' https://www.data.go.kr/data/15060094/fileData.do
 #'
-#' @format A data frame with four variables: \code{연도}, \code{사업분류},
-#'   \code{지원액_원화}, and \code{지원액_달러}.
+#' @format A data frame with 4 variables.
+#' \describe{
+#'   \item{연도}{연도}
+#'   \item{사업분류}{사업분류}
+#'   \item{지원액_원화}{원화 기준 지원액}
+#'   \item{지원액_달러}{달러 기준 지원액}
+#'  }
 "odaKR"
 
 
@@ -20,14 +25,43 @@ NULL
 #' 부상자수 = 중상자수 + 경상자수 + 부상신고자수
 #' https://www.data.go.kr/data/15070340/fileData.do
 #'
-#' @format A data frame with 23 variables: \code{발생년}, \code{발생년월일시},
-#'   \code{주야}, \code{요일}, \code{사망자수}, \code{부상자수}, \code{중상자수}, \code{경상자수},
-#'   \code{부상신고자수}, \code{발생지시도}, \code{발생지시군구}, \code{사고유형_대분류}, \code{사고유형_중분류}, 
-#'   \code{사고유형}, \code{가해자법규위반}, \code{도로형태_대분류}, \code{도로형태}, \code{가해자_당사자종별},
-#'   \code{피해자_당사자종별}, \code{발생위치X_UTMK}, \code{발생위치Y_UTMK}, \code{경도}, and \code{위도}.
+#' @format A data frame with 23 variables.
+#' \describe{
+#'   \item{발생년}{발생년}
+#'   \item{발생년월일시}{발생년월일시}
+#'   \item{주야}{주야}
+#'   \item{요일}{요일}
+#'   \item{사망자수}{사망자수}
+#'   \item{부상자수}{부상자수}
+#'   \item{중상자수}{중상자수}
+#'   \item{경상자수}{경상자수}
+#'   \item{부상신고자수}{부상신고자수}
+#'   \item{발생지시도}{발생지시도}
+#'   \item{발생지시군구}{발생지시군구}
+#'   \item{사고유형_대분류}{사고유형_대분류}
+#'   \item{사고유형_중분류}{사고유형_중분류}
+#'   \item{사고유형}{사고유형}
+#'   \item{가해자법규위반}{가해자법규위반}
+#'   \item{도로형태_대분류}{도로형태_대분류}
+#'   \item{도로형태}{도로형태}
+#'   \item{가해자_당사자종별}{가해자_당사자종별}
+#'   \item{피해자_당사자종별}{피해자_당사자종별}
+#'   \item{발생위치X_UTMK}{발생위치X_UTMK}
+#'   \item{발생위치Y_UTMK}{발생위치Y_UTMK}
+#'   \item{경도}{경도}
+#'   \item{위도}{위도}
+#'  }
+#' @examples
+#'  library(leaflet)
+#'  library(dplyr)
+#'  accident |> 
+#'    filter(발생지시도 == "서울") |> 
+#'    filter(사망자수 > 0) |> 
+#'    filter(피해자_당사자종별 == "보행자") |> 
+#'    leaflet() |> 
+#'    addTiles() |> 
+#'    addMarkers(~경도, ~위도, popup = ~as.character(사고유형), label = ~as.character(사고유형))
 "accident"
-
-
 
 
 #' 국립환경과학원 축산오염원조사정보

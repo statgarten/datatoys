@@ -5,8 +5,13 @@
 \alias{odaKR}
 \title{한국국제협력단 소득수준별 ODA 실적통계}
 \format{
-A data frame with four variables: \code{연도}, \code{사업분류},
-  \code{지원액_원화}, and \code{지원액_달러}.
+A data frame with 4 variables.
+\describe{
+  \item{연도}{연도}
+  \item{사업분류}{사업분류}
+  \item{지원액_원화}{원화 기준 지원액}
+  \item{지원액_달러}{달러 기준 지원액}
+ }
 }
 \usage{
 odaKR

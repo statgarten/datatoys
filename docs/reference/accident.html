@@ -12,7 +12,7 @@ https://www.data.go.kr/data/15070340/fileData.do"><meta property="og:image" cont
   gtag('js', new Date());
 
   gtag('config', 'G-N2QC5M81V0');
-</script></head><body>
+</script><!-- dependencies from examples --><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet"><script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet"><script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet"><script src="libs/leaflet-binding-2.1.1/leaflet.js"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">콘텐츠로 바로가기</a>
     
 
@@ -65,13 +65,100 @@ https://www.data.go.kr/data/15070340/fileData.do</p>
 
     <div class="section level2">
     <h2 id="-">양식<a class="anchor" aria-label="anchor" href="#-"></a></h2>
-    <p>A data frame with 23 variables: <code>발생년</code>, <code>발생년월일시</code>,
-  <code>주야</code>, <code>요일</code>, <code>사망자수</code>, <code>부상자수</code>, <code>중상자수</code>, <code>경상자수</code>,
-  <code>부상신고자수</code>, <code>발생지시도</code>, <code>발생지시군구</code>, <code>사고유형_대분류</code>, <code>사고유형_중분류</code>, 
-  <code>사고유형</code>, <code>가해자법규위반</code>, <code>도로형태_대분류</code>, <code>도로형태</code>, <code>가해자_당사자종별</code>,
-  <code>피해자_당사자종별</code>, <code>발생위치X_UTMK</code>, <code>발생위치Y_UTMK</code>, <code>경도</code>, and <code>위도</code>.</p>
-    </div>
+    <p>A data frame with 23 variables.</p><dl><dt>발생년</dt>
+<dd><p>발생년</p></dd>
 
+  <dt>발생년월일시</dt>
+<dd><p>발생년월일시</p></dd>
+
+  <dt>주야</dt>
+<dd><p>주야</p></dd>
+
+  <dt>요일</dt>
+<dd><p>요일</p></dd>
+
+  <dt>사망자수</dt>
+<dd><p>사망자수</p></dd>
+
+  <dt>부상자수</dt>
+<dd><p>부상자수</p></dd>
+
+  <dt>중상자수</dt>
+<dd><p>중상자수</p></dd>
+
+  <dt>경상자수</dt>
+<dd><p>경상자수</p></dd>
+
+  <dt>부상신고자수</dt>
+<dd><p>부상신고자수</p></dd>
+
+  <dt>발생지시도</dt>
+<dd><p>발생지시도</p></dd>
+
+  <dt>발생지시군구</dt>
+<dd><p>발생지시군구</p></dd>
+
+  <dt>사고유형_대분류</dt>
+<dd><p>사고유형_대분류</p></dd>
+
+  <dt>사고유형_중분류</dt>
+<dd><p>사고유형_중분류</p></dd>
+
+  <dt>사고유형</dt>
+<dd><p>사고유형</p></dd>
+
+  <dt>가해자법규위반</dt>
+<dd><p>가해자법규위반</p></dd>
+
+  <dt>도로형태_대분류</dt>
+<dd><p>도로형태_대분류</p></dd>
+
+  <dt>도로형태</dt>
+<dd><p>도로형태</p></dd>
+
+  <dt>가해자_당사자종별</dt>
+<dd><p>가해자_당사자종별</p></dd>
+
+  <dt>피해자_당사자종별</dt>
+<dd><p>피해자_당사자종별</p></dd>
+
+  <dt>발생위치X_UTMK</dt>
+<dd><p>발생위치X_UTMK</p></dd>
+
+  <dt>발생위치Y_UTMK</dt>
+<dd><p>발생위치Y_UTMK</p></dd>
+
+  <dt>경도</dt>
+<dd><p>경도</p></dd>
+
+  <dt>위도</dt>
+<dd><p>위도</p></dd>
+
+ 
+</dl></div>
+
+    <div class="section level2">
+    <h2 id="ref-examples">예시 코드<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"> <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/" class="external-link">leaflet</a></span><span class="op">)</span></span>
+<span class="r-in"> <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 다음의 패키지를 부착합니다: ‘dplyr’</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from ‘package:stats’:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     filter, lag</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from ‘package:base’:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     intersect, setdiff, setequal, union</span>
+<span class="r-in"> <span class="va">accident</span> |&gt; </span>
+<span class="r-in">   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">발생지시도</span> <span class="op">==</span> <span class="st">"서울"</span><span class="op">)</span> |&gt; </span>
+<span class="r-in">   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">사망자수</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> |&gt; </span>
+<span class="r-in">   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">피해자_당사자종별</span> <span class="op">==</span> <span class="st">"보행자"</span><span class="op">)</span> |&gt; </span>
+<span class="r-in">   <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html" class="external-link">leaflet</a></span><span class="op">(</span><span class="op">)</span> |&gt; </span>
+<span class="r-in">   <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addTiles</a></span><span class="op">(</span><span class="op">)</span> |&gt; </span>
+<span class="r-in">   <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addMarkers</a></span><span class="op">(</span><span class="op">~</span><span class="va">경도</span>, <span class="op">~</span><span class="va">위도</span>, popup <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">사고유형</span><span class="op">)</span>, label <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">사고유형</span><span class="op">)</span><span class="op">)</span></span>
+<div id="htmlwidget-f05a7d1a0fab4cb81cd5" style="width:700px;height:432.632880098888px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f05a7d1a0fab4cb81cd5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[37.48676083,37.56402978,37.57337906,37.47426373,37.48847938,37.49834987,37.61597961,37.53083283,37.50480794,37.55599023,37.56116184,37.60216476,37.49629358,37.57740042,37.5629436,37.59996895,37.59531481,37.52479841,37.50659369,37.59114177,37.54703391,37.57356333,37.48377828,37.57835747,37.54415433,37.48998424,37.5429178,37.50727714,37.55040539,37.51694902,37.48984933,37.5452874,37.53723047,37.51526025,37.5994082,37.64076035,37.60079966,37.47208303,37.54795422,37.52637982,37.54959097,37.59354956,37.61306926,37.58400843,37.51352404,37.52827416,37.50056234,37.45626421,37.47948782,37.53402268,37.55216287,37.61068084,37.54510935,37.51259502,37.48837894,37.56468635,37.60757214,37.51494279,37.61217305,37.5481867,37.54867077,37.66733402,37.65757299,37.482513,37.55996245,37.51715772,37.57831983,37.5303116,37.48991582,37.55462729,37.50947376,37.57259053,37.55006583,37.63032696,37.48183619,37.58049911,37.63914079,37.59929854,37.60593531,37.50161087,37.5279973,37.56643771,37.47372463,37.53531198,37.53825209,37.60893634,37.66105891,37.57469428,37.54138797,37.48190687,37.51823682,37.56904627,37.49874978,37.54412267,37.55733136,37.49266333,37.59028864,37.52853091,37.56079778,37.48371023,37.5125785,37.67815778,37.47463672,37.60835894,37.5828294,37.49687202,37.53701446,37.63726558,37.67125976,37.57986275,37.48166389,37.49956065,37.58123916],[127.0467272,127.0662311,126.8169158,126.9912244,127.1003183,126.9933259,127.0930048,126.8316925,127.0652151,126.9346897,126.8531598,126.9351765,127.1568919,126.9881486,126.903625,126.9064924,126.910706,127.0527057,127.1159714,126.943037,126.8755458,126.8986685,126.9255091,127.0550504,127.0549152,127.0077949,127.0616964,126.9617887,126.8190478,126.941861,126.9252239,127.0833416,126.9597206,126.9032205,127.0798329,127.0161744,127.1016032,126.8870956,126.870291,127.0516302,126.9122322,127.0583808,127.0606074,126.9493512,126.9386627,126.8394271,126.9418472,126.9056275,126.9445477,126.9019584,126.8498854,126.9297881,127.0824381,127.0106687,127.0093166,126.988847,126.9218244,126.9178122,126.9285859,127.0234334,127.0009722,127.0333026,127.0150836,126.941727,126.8545323,126.8780863,126.9017084,127.13197,126.9569972,126.9137833,126.9374202,127.0158514,127.0545518,126.9193725,126.9782337,126.9515923,127.0667672,126.9483334,127.0532128,126.9345105,127.1471595,126.925723,126.8873129,127.1221559,127.0572662,126.9311961,127.0712941,126.9246653,126.9871135,126.9446983,126.8420221,126.8918981,127.1161677,126.9858711,127.1301876,127.0994679,127.0935468,126.853573,127.0784907,127.0421839,126.9358195,127.0553781,127.0560177,127.0098256,127.0334275,126.8598848,126.960579,127.0409135,127.0426171,127.0383918,126.912353,126.8835914,126.9052515],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["차도통행중","횡단중","횡단중","차도통행중","횡단중","기타","횡단중","보도통행중","횡단중","차도통행중","횡단중","횡단중","기타","보도통행중","보도통행중","차도통행중","횡단중","횡단중","횡단중","기타","기타","횡단중","횡단중","기타","횡단중","보도통행중","보도통행중","횡단중","차도통행중","횡단중","횡단중","횡단중","횡단중","횡단중","횡단중","횡단중","기타","횡단중","차도통행중","길가장자리구역통행중","길가장자리구역통행중","횡단중","횡단중","차도통행중","횡단중","기타","기타","횡단중","기타","횡단중","횡단중","횡단중","횡단중","기타","횡단중","차도통행중","횡단중","횡단중","횡단중","횡단중","횡단중","횡단중","기타","횡단중","기타","횡단중","횡단중","기타","기타","횡단중","기타","기타","횡단중","횡단중","횡단중","기타","차도통행중","기타","기타","길가장자리구역통행중","횡단중","기타","기타","기타","횡단중","횡단중","횡단중","횡단중","차도통행중","보도통행중","횡단중","차도통행중","횡단중","기타","횡단중","기타","기타","횡단중","기타","횡단중","횡단중","횡단중","차도통행중","기타","횡단중","횡단중","횡단중","차도통행중","횡단중","기타","기타","차도통행중","기타"],null,null,null,["차도통행중","횡단중","횡단중","차도통행중","횡단중","기타","횡단중","보도통행중","횡단중","차도통행중","횡단중","횡단중","기타","보도통행중","보도통행중","차도통행중","횡단중","횡단중","횡단중","기타","기타","횡단중","횡단중","기타","횡단중","보도통행중","보도통행중","횡단중","차도통행중","횡단중","횡단중","횡단중","횡단중","횡단중","횡단중","횡단중","기타","횡단중","차도통행중","길가장자리구역통행중","길가장자리구역통행중","횡단중","횡단중","차도통행중","횡단중","기타","기타","횡단중","기타","횡단중","횡단중","횡단중","횡단중","기타","횡단중","차도통행중","횡단중","횡단중","횡단중","횡단중","횡단중","횡단중","기타","횡단중","기타","횡단중","횡단중","기타","기타","횡단중","기타","기타","횡단중","횡단중","횡단중","기타","차도통행중","기타","기타","길가장자리구역통행중","횡단중","기타","기타","기타","횡단중","횡단중","횡단중","횡단중","차도통행중","보도통행중","횡단중","차도통행중","횡단중","기타","횡단중","기타","기타","횡단중","기타","횡단중","횡단중","횡단중","차도통행중","기타","횡단중","횡단중","횡단중","차도통행중","횡단중","기타","기타","차도통행중","기타"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.45626421,37.67815778],"lng":[126.8169158,127.1568919]}},"evals":[],"jsHooks":[]}</script></code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>목차</h2>
     </nav></aside></div>
 
