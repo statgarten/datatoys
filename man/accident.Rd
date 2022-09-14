@@ -42,11 +42,10 @@ https://www.data.go.kr/data/15070340/fileData.do
 }
 \examples{
  library(leaflet)
- library(dplyr)
  accident |> 
-   filter(발생지시도 == "서울") |> 
-   filter(사망자수 > 0) |> 
-   filter(피해자_당사자종별 == "보행자") |> 
+   dplyr::filter(발생지시도 == "서울") |> 
+   dplyr::filter(사망자수 > 0) |> 
+   dplyr::filter(피해자_당사자종별 == "보행자") |> 
    leaflet() |> 
    addTiles() |> 
    addMarkers(~경도, ~위도, popup = ~as.character(사고유형), label = ~as.character(사고유형))

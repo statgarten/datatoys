@@ -53,11 +53,10 @@ NULL
 #'  }
 #' @examples
 #'  library(leaflet)
-#'  library(dplyr)
 #'  accident |> 
-#'    filter(발생지시도 == "서울") |> 
-#'    filter(사망자수 > 0) |> 
-#'    filter(피해자_당사자종별 == "보행자") |> 
+#'    dplyr::filter(발생지시도 == "서울") |> 
+#'    dplyr::filter(사망자수 > 0) |> 
+#'    dplyr::filter(피해자_당사자종별 == "보행자") |> 
 #'    leaflet() |> 
 #'    addTiles() |> 
 #'    addMarkers(~경도, ~위도, popup = ~as.character(사고유형), label = ~as.character(사고유형))
@@ -69,11 +68,48 @@ NULL
 #' 국립환경과학원에서 제공하는 축산계 오염원에 대한 조사정보
 #' https://www.data.go.kr/data/3045217/fileData.do
 #'
-#' @format A data frame with 18 variables: \code{법정동코드}, \code{시도},
-#'   \code{시군구}, \code{읍면동}, \code{리}, \code{축종}, \code{법적규제}, \code{사육두수.두.},
-#'   \code{농가수.호.}, \code{가축분뇨발생량.m3.일.}, \code{자가처리_정화방류.m3.일.}, \code{자가처리_퇴비화.m3.일.}, 
-#'   \code{자가처리_액비화.m3.일.}, \code{미처리.m3.일.}, \code{위탁처리_공공처리시설.m3.일.}, \code{위탁처리_공동처리시설.m3.일.}, 
-#'   \code{위탁처리_재활용신고자.m3.일.}, and \code{위탁처리_가축분뇨처리업.m3.일.}.
+#' @format A data frame with 18 variables
+#' \describe{
+#'   \item{법정동코드}{법정동코드}
+#'   \item{시도}{시도}
+#'   \item{시군구}{시군구}
+#'   \item{읍면동}{읍면동}
+#'   \item{리}{리}
+#'   \item{축종}{축종}
+#'   \item{법적규제}{법적규제}
+#'   \item{사육두수.두.}{사육두수}
+#'   \item{농가수.호.}{농가수}
+#'   \item{가축분뇨발생량.m3.일.}{가축분뇨발생량/m3/일}
+#'   \item{자가처리_정화방류.m3.일.}{자가처리 중 정화방류양/m3/일}
+#'   \item{자가처리_퇴비화.m3.일.}{자가처리 중 퇴비화양/m3/일}
+#'   \item{자가처리_액비화.m3.일.}{자가처리 중 액비화양/m3/일}
+#'   \item{미처리.m3.일.}{미처리양/m3/일}
+#'   \item{위탁처리_공공처리시설.m3.일.}{위탁처리 중 공공처리시설양/m3/일}
+#'   \item{위탁처리_공동처리시설.m3.일.}{위탁처리 중 공동처리시설양/m3/일} 
+#'   \item{위탁처리_재활용신고자.m3.일.}{위탁처리 중 재활용신고자양/m3/일}
+#'   \item{위탁처리_가축분뇨처리업.m3.일.}{위탁처리 중 가축분뇨처리업양/m3/일}
+#' }
+#' @examples
+#' library(highcharter)
+#' library(dplyr)
+#' library(datatoys)
+#' 
+#' pollution |> 
+#'   group_by(축종) |> 
+#'   summarise(
+#'     총분뇨발생량 = sum(가축분뇨발생량.m3.일.)
+#'   ) |> 
+#'   ungroup() |> 
+#'   arrange(desc(총분뇨발생량)) |> 
+#'   hchart(type = "column", hcaes(축종, 총분뇨발생량), name = "총발생량") |> 
+#'   hc_title(
+#'     text = "축종별 가축분뇨 총 발생량",
+#'     margin = 20,
+#'     align = "left"
+#'   ) |> 
+#'   hc_add_theme(hc_theme_538())
+
+
 "pollution"
 
 
