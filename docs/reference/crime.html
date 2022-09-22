@@ -68,6 +68,30 @@ https://www.data.go.kr/data/3074462/fileData.do</p>
     <p>A data frame with 90 variables.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">예시 코드<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">crime</span> |&gt; </span>
+<span class="r-in"><span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" class="external-link">pivot_longer</a></span><span class="op">(</span></span>
+<span class="r-in">  cols <span class="op">=</span> <span class="va">서울</span><span class="op">:</span><span class="va">도시이외</span>, </span>
+<span class="r-in">  names_to <span class="op">=</span> <span class="st">"시군"</span>, </span>
+<span class="r-in">  values_to <span class="op">=</span> <span class="st">"건"</span></span>
+<span class="r-in"><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3,344 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    범죄대분류 범죄중분류 시군         건</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 강력범죄   살인기수   서울         67</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 강력범죄   살인기수   부산         20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 강력범죄   살인기수   대구         13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 강력범죄   살인기수   인천         17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 강력범죄   살인기수   광주         11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 강력범죄   살인기수   대전          8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 강력범죄   살인기수   울산         12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 강력범죄   살인기수   세종          2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 강력범죄   살인기수   경기.고양     8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 강력범죄   살인기수   경기.과천     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 3,334 more rows</span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>목차</h2>
     </nav></aside></div>
 

@@ -15,4 +15,12 @@ crime
 범죄대분류, 범죄중분류, 서울, 부산, 대구, 인천, 광주, 대전 울산, 세종, 경기도 지역으로 구분하여 발생 건수 제공
 https://www.data.go.kr/data/3074462/fileData.do
 }
+\examples{
+crime |> 
+  tidyr::pivot_longer(
+    cols = 서울:도시이외, 
+    names_to = "시군", 
+    values_to = "건"
+  )  
+}
 \keyword{datasets}

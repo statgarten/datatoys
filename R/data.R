@@ -122,6 +122,13 @@ NULL
 #' https://www.data.go.kr/data/3074462/fileData.do
 #' 
 #' @format A data frame with 90 variables.
+#' @examples 
+#' crime |> 
+#'   tidyr::pivot_longer(
+#'     cols = 서울:도시이외, 
+#'     names_to = "시군", 
+#'     values_to = "건"
+#'   )  
 "crime"
 
 
