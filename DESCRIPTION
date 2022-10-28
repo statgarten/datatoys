@@ -5,6 +5,8 @@ Version: 0.1.0
 Authors@R: c(
               person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"),
                       comment = c(ORCID = "0000-0002-4643-0191")),
+              person("Dongook", "Son", email = "dongook@bulkrum.kr", role = c("aut"),
+                      comment = c(ORCID = "0000-0003-1226-5260")),
               person("Hara", "Chang", email = "hara.chang@antller.com", role = c("aut"),
                       comment = c(ORCID = ""))
             )
