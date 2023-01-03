@@ -6,6 +6,12 @@
 \title{보건복지부 아동학대 신고정보}
 \format{
 A data frame with 4 variables.
+\describe{
+.   \item{기간}{기간}
+   \item{구분}{구분}
+   \item{신고자}{신고자}
+   \item{신고건수}{신고건수}
+ }
 }
 \usage{
 childAbuse

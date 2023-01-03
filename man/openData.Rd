@@ -6,6 +6,21 @@
 \title{공공데이터활용지원센터 공공데이터포털 목록개방현황}
 \format{
 A list with 13 data frame.
+\describe{
+   \item{목록키}{목록키}
+   \item{목록유형}{API, FILE, STD}
+   \item{목록명}{목록명}
+   \item{목록설명}{목록설명}
+   \item{조회수}{조회수}
+   \item{분류체계}{분류체계}
+   \item{기관코드}{기관코드}
+   \item{기관명}{기관명}
+   \item{국가중점여부}{Y, N}
+   \item{표준데이터여부}{Y, N}
+   \item{목록.등록일}{목록.등록일}
+   \item{목록.수정일}{목록.수정일}
+   \item{목록.URL}{목록.URL}
+}
 }
 \usage{
 openData

@@ -6,6 +6,13 @@
 \title{소방청 전국 소방서 정보}
 \format{
 A data frame with 5 variables.
+\describe{
+   \item{순번}{순번}
+   \item{본부명}{본부명}
+   \item{소방서}{소방서}
+   \item{주소}{주소}
+   \item{전화번호}{전화번호}
+ }
 }
 \usage{
 fireStation

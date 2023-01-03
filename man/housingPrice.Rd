@@ -6,6 +6,28 @@
 \title{국토교통부 2021 공동주택 공시가격 정보}
 \format{
 A data frame with 20 variables.
+\describe{
+   \item{기준연도}{기준연도}
+   \item{기준월}{기준월}
+   \item{법정동코드}{법정동코드}
+   \item{도로명주소}{도로명주소}
+   \item{시도}{시도}
+   \item{시군구}{시군구}
+   \item{읍면}{읍면}
+   \item{동리}{동리}
+   \item{특수지코드}{특수지코드}
+   \item{본번}{본번}
+   \item{부번}{부번}
+   \item{특수지명}{특수지명}
+   \item{단지명}{단지명}
+   \item{동명}{동명}
+   \item{호명}{호명}
+   \item{전용면적}{전용면적}
+   \item{공시가격}{공시가격}
+   \item{단지코드}{단지코드}
+   \item{동코드}{동코드}
+   \item{호코드}{호코드}
+ }
 }
 \usage{
 housingPrice

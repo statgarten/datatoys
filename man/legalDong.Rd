@@ -6,6 +6,17 @@
 \title{국토교통부 법정동 정보}
 \format{
 A data frame with 9 variables.
+\describe{
+   \item{법정동코드}{법정동코드}
+   \item{시도명}{시도명}
+   \item{시군구명}{시군구명}
+   \item{읍면동명}{읍면동명}
+   \item{리명}{리명}
+   \item{순위}{순위}
+   \item{생성일자}{생성일자}
+   \item{삭제일자}{삭제일자}
+   \item{과거법정동코드}{과거법정동코드}
+ }
 }
 \usage{
 legalDong

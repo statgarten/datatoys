@@ -6,6 +6,15 @@
 \title{한국장학재단 장학금 정보}
 \format{
 A data frame with 7 variables.
+\describe{
+   \item{학제별}{대학, 전문대학}
+   \item{설립별}{국공립, 사립}
+   \item{대학명}{대학명}
+   \item{지역별}{지역별}
+   \item{입학정원.합.명.}{입학정원_합_명}
+   \item{평균입학금.원.}{평균입학금_원}
+   \item{평균등록금.원.}{평균등록금_원_}
+ }
 }
 \usage{
 tuition

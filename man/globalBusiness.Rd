@@ -5,7 +5,7 @@
 \alias{globalBusiness}
 \title{대한무역투자진흥공사 해외진출기업 정보}
 \format{
-A data frame with 19 variables.
+
 }
 \usage{
 globalBusiness
