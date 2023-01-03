@@ -527,6 +527,10 @@ NULL
 #' https://www.data.go.kr/data/15042010/fileData.do
 #'
 #' @format A data frame with 2 variables.
+#' \describe{
+#'    \item{동물이름}{동물이름}
+#'    \item{건수}{건수}
+#' }
 "petNames"
 
 
