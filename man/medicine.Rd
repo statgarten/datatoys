@@ -6,6 +6,16 @@
 \title{건강보험심사평가원 의약품 주성분 정보}
 \format{
 A data frame with 8 variables.
+\describe{
+   \item{일반명코드}{일반명코드}
+   \item{제형구분코드}{제형구분코드}
+   \item{제형}{과립제,세립, 액제, 산제, 경질캡슐제, 주사제, 정제,저작정, 장용정제 등}
+   \item{일반명}{일반명}
+   \item{분류번호}{분류번호}
+   \item{투여}{내복, 주사, 외용}
+   \item{함량}{함량}
+   \item{단위}{단위} 
+ }
 }
 \usage{
 medicine

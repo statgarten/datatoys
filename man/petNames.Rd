@@ -6,6 +6,10 @@
 \title{마포구 반려동물 이름 통계}
 \format{
 A data frame with 2 variables.
+\describe{
+   \item{동물이름}{동물이름}
+   \item{건수}{건수}
+ }
 }
 \usage{
 petNames

@@ -8,7 +8,7 @@
 A data frame with 4 variables.
 \describe{
   \item{연도}{연도}
-  \item{사업분류}{사업분류}
+  \item{사업분류}{최빈국(LDCs), 기타저소득국(LICs), 중저소득국(LMICs), 고중소득국(UMICs), 미분류, 수원국리스트외 지역}
   \item{지원액_원화}{원화 기준 지원액}
   \item{지원액_달러}{달러 기준 지원액}
  }
@@ -20,5 +20,8 @@ odaKR
 한국국제협력단에서 제공하는 소득수준별 ODA 실적통계로 1991년부터 2019년까지의 연도별, 
 사업분류별, 지원액(원화), 지원액(달러)
 https://www.data.go.kr/data/15060094/fileData.do
+}
+\examples{
+DT::datatable(odaKR)
 }
 \keyword{datasets}
