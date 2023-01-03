@@ -363,6 +363,17 @@ NULL
 #' https://www.data.go.kr/data/15057234/openapi.do
 #'
 #' @format A data frame with 9 variables.
+#' \describe{
+#'    \item{시군명}{시군명}
+#'    \item{음식점명}{음식점명}
+#'    \item{맛집전화번호 }{맛집전화번호}
+#'    \item{대표음식명 }{대표음식명}
+#'    \item{소재지우편번호}{소재지우편번호}
+#'    \item{소재지도로명주소}{소재지도로명주소}
+#'    \item{소재지지번주소}{소재지지번주소}
+#'    \item{WGS84위도}{WGS84위도}
+#'    \item{WGS84경도}{WGS84경도}
+#' }
 "restaurant"
 
 
