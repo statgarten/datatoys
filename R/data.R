@@ -563,6 +563,12 @@ NULL
 #' https://www.data.go.kr/data/15065291/fileData.do
 #'
 #' @format A data frame with 4 variables.
+#' \describe{
+#'.   \item{기간}{기간}
+#'    \item{구분}{구분}
+#'    \item{신고자}{신고자}
+#'    \item{신고건수}{신고건수}
+#' }
 "childAbuse"
 
 
