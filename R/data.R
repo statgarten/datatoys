@@ -20,7 +20,7 @@ NULL
 
 
 #' 도로교통공단 사망교통사고 정보
-#'
+#' 
 #' 도로교통공단에서 제공하는 사망 교통사고에 대한 개별정보(발생일시, 사고유형, 위치좌표 등)
 #' 부상자수 = 중상자수 + 경상자수 + 부상신고자수
 #' https://www.data.go.kr/data/15070340/fileData.do
@@ -215,14 +215,6 @@ NULL
 #'   \item{도시이외}{도시이외}
 #' }
 #' @examples
-#' crime |> 
-#'   tidyr::pivot_longer(
-#'     cols = 서울:도시이외, 
-#'     names_to = "시군", 
-#'     values_to = "건"
-#'   )  
-"crime"
-#' @examples 
 #' crime |> 
 #'   tidyr::pivot_longer(
 #'     cols = 서울:도시이외, 
