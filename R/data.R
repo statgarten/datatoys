@@ -308,6 +308,14 @@ NULL
 #' https://www.data.go.kr/data/3076606/fileData.do
 #'
 #' @format A data frame with 6 variables.
+#' \describe{
+#'    \item{연도}{연도}
+#'    \item{변동사유발생연월일}{변동사유발생연월일}
+#'    \item{판매업종류 }{휴업, 신규등록, 폐업, 등록취소}
+#'    \item{구분}{구분}
+#'    \item{업체명}{업체명}
+#'    \item{소재지}{소재지}
+#' }
 "gasStation"
 
 
