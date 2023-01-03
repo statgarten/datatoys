@@ -384,6 +384,8 @@ NULL
 #' 국민연금공단에서 제공하는 법정동단위 지역별, 국민연금 가입 사업장 정보(단, 개인사업장 및 2인 이하 법인 사업장 정보 미제공).
 #' Last Update: 2022-05-18;
 #' https://www.data.go.kr/data/15083277/fileData.do
+#'
+#'@format A data frame with 22 variables.
 #'\describe{
 #'    \item{자료생성년월}{자료생성년월}
 #'    \item{사업장명}{사업장명}
@@ -408,7 +410,6 @@ NULL
 #'    \item{신규취득자수}{신규취득자수}
 #'    \item{상실가입자수}{상실가입자수}
 #'}
-#' @format A data frame with 22 variables.
 "nationalPension"
 
 
@@ -419,6 +420,8 @@ NULL
 #' 서울특별시 우체국 정보에 대한 데이터로 전체기관명, 대표 전화번호, 새우편번호, 도로명주소, 행정시, 행정구, 행정동 정보.
 #' Last Update: 2021-05-27;
 #' https://www.data.go.kr/data/15047367/fileData.do
+#' 
+#' @format A data frame with 14 variables.
 #'\describe{
 #'    \item{키값}{키값}
 #'    \item{기관코드}{기관코드}
@@ -435,7 +438,6 @@ NULL
 #'    \item{행정구}{행정구}
 #'    \item{행정동}{행정동}
 #'}
-#' @format A data frame with 14 variables.
 "postOffice"
 
 
