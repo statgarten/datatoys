@@ -544,6 +544,12 @@ NULL
 #' https://www.data.go.kr/data/15083266/fileData.do
 #'
 #' @format A data frame with 4 variables.
+#' \describe{
+#'    \item{지역}{지역}
+#'    \item{지원센터명}{지원센터명}
+#'    \item{기부자명}{기부자명}
+#'    \item{합계}{합계}
+#'}
 "foodBank"
 
 
