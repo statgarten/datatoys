@@ -473,6 +473,15 @@ NULL
 #' https://www.data.go.kr/data/15083256/fileData.do
 #'
 #' @format A data frame with 7 variables.
+#' \describe{
+#'    \item{상품명}{상품명}
+#'    \item{조사일}{조사일}
+#'    \item{판매가격}{판매가격}
+#'    \item{판매업소}{판매업소}
+#'    \item{제조사}{제조사}
+#'    \item{세일여부}{Y, N}
+#'    \item{원플러스원}{N, }
+#' }
 "necessariesPrice"
 
 
