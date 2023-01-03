@@ -88,7 +88,7 @@ NULL
 #'   \item{위탁처리_공동처리시설.m3.일.}{위탁처리 중 공동처리시설양/m3/일} 
 #'   \item{위탁처리_재활용신고자.m3.일.}{위탁처리 중 재활용신고자양/m3/일}
 #'   \item{위탁처리_가축분뇨처리업.m3.일.}{위탁처리 중 가축분뇨처리업양/m3/일}
-#' }
+#'  }
 #' @examples
 #' library(highcharter)
 #' library(dplyr)
@@ -233,7 +233,7 @@ NULL
 #' https://www.data.go.kr/data/15038576/fileData.do
 #'
 #' @format A data frame with 16 variables.
-#\describe{
+#'\describe{
 #'   \item{대학명}{대학명}
 #'   \item{학제별}{전문대학, 대학}
 #'   \item{설립별}{사립, 국공립}
@@ -250,7 +250,7 @@ NULL
 #'   \item{교내장학금.교직원장학금"}{교내장학금 교직원장학금}
 #'   \item{교내장학금.기타}{교내장학금 기타}
 #'   \item{총계.원.}{총계.원}
-}
+#'   }
 "scholarship"
 
 
@@ -264,12 +264,7 @@ NULL
 #' https://www.data.go.kr/data/15007122/fileData.do
 #'
 #' @format A data frame with 31 variables.
-#' #\describe{
-#'     
-#' 
-#' 
-#' }
-#' 
+#'\describe{
 #' \item{기준년도}{기준년도}
 #' \item{가입자.일련번호}{가입자.일련번호}
 #' \item{시도코드}{시도코드}
