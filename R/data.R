@@ -10,7 +10,7 @@ NULL
 #' @format A data frame with 4 variables.
 #' \describe{
 #'   \item{연도}{연도}
-#'   \item{사업분류}{사업분류}
+#'   \item{사업분류}{최빈국(LDCs), 기타저소득국(LICs), 중저소득국(LMICs), 고중소득국(UMICs), 미분류, 수원국리스트외 지역}
 #'   \item{지원액_원화}{원화 기준 지원액}
 #'   \item{지원액_달러}{달러 기준 지원액}
 #'  }
