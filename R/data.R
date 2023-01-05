@@ -776,7 +776,7 @@ NULL
 #'    \item{전화번호}{해당 소방서 전화번호}
 #'  }
 #' @examples
-#' DT::datatable(carInspection)
+#' DT::datatable(fireStation)
 
 "fireStation"
 
@@ -797,10 +797,15 @@ NULL
 #'   \item{TCHOL}{총콜레스테롤}
 #'   \item{TG}{중성지방}
 #'   \item{HDL}{HDL콜레스테롤}
-#'   \item{ANE}{빈혈 진료여부(있음:1, 없음:0)}
-#'   \item{IHD}{허혈심장질환 진료여부(있음:1, 없음:0)}
-#'   \item{STK}{뇌혈관질환 진료여부(있음:1, 없음:0)}
+#'   \item{ANE}{빈혈 진료여부 
+#'   1: 있음, 0: 없음}
+#'   \item{IHD}{허혈심장질환 진료여부
+#'   1: 있음, 0: 없음}
+#'   \item{STK}{뇌혈관질환 진료여부
+#'   1: 있음, 0: 없음}
 #'  }
+#' @examples
+#' DT::datatable(bloodTest)
 "bloodTest"
 
 
