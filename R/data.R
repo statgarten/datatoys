@@ -701,11 +701,14 @@ NULL
 #'
 #' @format A data frame with 4 variables.
 #' \describe{
-#'.   \item{기간}{기간}
-#'    \item{구분}{구분}
-#'    \item{신고자}{신고자}
-#'    \item{신고건수}{신고건수}
+#'    \item{기간}{아동학대 신고 기간}
+#'    년도별, 2013년~2018년
+#'    \item{구분}{아동학대 신고 지역 구분}
+#'    \item{신고자}{아동학대 신고자 구분}
+#'    \item{신고건수}{아동학대 신고건수}
 #'  }
+#' @examples
+#' DT::datatable(childAbuse)
 "childAbuse"
 
 
