@@ -594,14 +594,17 @@ NULL
 #'
 #' @format A data frame with 7 variables.
 #' \describe{
-#'    \item{상품명}{상품명}
-#'    \item{조사일}{조사일}
-#'    \item{판매가격}{판매가격}
-#'    \item{판매업소}{판매업소}
-#'    \item{제조사}{제조사}
-#'    \item{세일여부}{Y, N}
-#'    \item{원플러스원}{N, }
+#'    \item{상품명}{해당 생필품 상품명}
+#'    \item{조사일}{해당 생필품 가격 데이터 조사일}
+#'    \item{판매가격}{해당 생필품 상품 판매가격}
+#'    \item{판매업소}{해당 생필품 상품 판매업소}
+#'    \item{제조사}{해당 생필품 상품 제조사}
+#'    \item{세일여부}{해당 생필품 상품의 세일 여부
+#'    Y : 세일 , N : 세일 안함}
+#'    \item{원플러스원}{해당 생필품 상품의 원플러스원 여부}
 #'  }
+#' @examples
+#' DT::datatable(necessariesPrice)
 "necessariesPrice"
 
 
