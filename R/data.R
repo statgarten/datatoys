@@ -681,10 +681,12 @@ NULL
 #' @format A data frame with 4 variables.
 #' \describe{
 #'    \item{지역}{지역}
-#'    \item{지원센터명}{지원센터명}
-#'    \item{기부자명}{기부자명}
-#'    \item{합계}{합계}
-#'. }
+#'    \item{지원센터명}{지원받은 센터명}
+#'    \item{기부자명}{푸드뱅크에 기부자명}
+#'    \item{합계}{기부 합계}
+#' }
+#' @examples
+#' DT::datatable(foodBank)
 "foodBank"
 
 
