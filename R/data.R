@@ -1525,17 +1525,17 @@ NULL
 #'
 #' @format A data frame with 11 variables.
 #' \describe{
-#'   \item{정류장아이디}{정류장 아이디}
-#'   \item{정류장.명칭}{정류장 명칭}
+#'   \item{정류장아이디}{해당 정류장 아이디}
+#'   \item{정류장.명칭}{해당 정류장 명칭}
 #'   \item{정류장.유형}{정류장 유형(0:공용, 1:일반시내, 2:좌석시내, 3:직행좌석형시내, 4:일반형시외, 5:좌석형시외, 6:고속형시외, 7:마을버스)}
 #'   \item{중앙차로.여부}{중앙차로 여부(Y/N)}
 #'   \item{노드영문명}{노드영문명}
-#'   \item{위도}{GPS 위도(WGS84)}
-#'   \item{경도}{GPS 경도(WGS84)}
-#'   \item{수집일시}{정보 수집일시}
-#'   \item{단축아이디}{모바일(ARS) 단축 아이디}
-#'   \item{도시코드}{도시코드}
-#'   \item{도시명}{도시명}
+#'   \item{위도}{해당 정류소의 GPS 위도(WGS84)}
+#'   \item{경도}{해당 정류소의 GPS 경도(WGS84)}
+#'   \item{수집일시}{해당 정보 수집일시}
+#'   \item{단축아이디}{모바일(ARS), 단축 아이디}
+#'   \item{도시코드}{해당 정류소의 도시코드}
+#'   \item{도시명}{해당 정류소의 도시명}
 #'  }
 #'  
 #' @examples
@@ -1546,6 +1546,8 @@ NULL
 #'   leaflet() |> 
 #'   addTiles() |> 
 #'   addMarkers(~경도, ~위도, popup = ~as.character(정류장.명칭), label = ~as.character(정류장.명칭))
+#' @examples
+#' DT::datatable(busStation)
 "busStation"
 
 
