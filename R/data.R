@@ -661,9 +661,11 @@ NULL
 #'
 #' @format A data frame with 2 variables.
 #' \describe{
-#'    \item{동물이름}{동물이름}
-#'    \item{건수}{건수}
+#'    \item{동물이름}{마포구 반려동물 이름}
+#'    \item{건수}{마포구 반려동물 이름 건수}
 #'  }
+#' @examples
+#' DT::datatable(petNames)
 "petNames"
 
 
