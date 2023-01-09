@@ -16,7 +16,7 @@ NULL
 #'   \item{지원액_원화}{원화 기준 지원액}
 #'   \item{지원액_달러}{달러 기준 지원액}
 #'  }
-#'  @source \url{hhttps://www.data.go.kr/data/15060336/fileData.do}{공공데이터포털:통일·외교 - 외교}
+#'  @source \url{https://www.data.go.kr/data/15060336/fileData.do}{공공데이터포털:통일·외교 - 외교}
 #' @examples
 #' DT::datatable(head(odaKR, 50))
 "odaKR"
