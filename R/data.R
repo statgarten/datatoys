@@ -18,7 +18,7 @@ NULL
 #'  }
 #'  @source \url{hhttps://www.data.go.kr/data/15060336/fileData.do}{공공데이터포털:통일·외교 - 외교}
 #' @examples
-#' DT::datatable(odaKR)
+#' DT::datatable(head(odaKR, 50))
 "odaKR"
 
 
@@ -82,7 +82,7 @@ NULL
 #'    leaflet() |> 
 #'    addTiles() |> 
 #'    addMarkers(~경도, ~위도, popup = ~as.character(사고유형), label = ~as.character(사고유형))
-#'  DT::datatable(accident)
+#' DT::datatable(head(accident, 50))
 "accident"
 
 
@@ -124,7 +124,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/3045217/fileData.do}{공공데이터포털:환경 - 상하수도·수질}
 #' @examples
-#' DT::datatable(pollution)
+#' DT::datatable(head(pollution, 50))
 #' library(highcharter)
 #' library(dplyr)
 #' library(datatoys)
@@ -255,7 +255,7 @@ NULL
 #'     names_to = "시군", 
 #'     values_to = "건"
 #'   )  
-#' DT::datatable(crime)
+#' DT::datatable(head(crime, 50))
 "crime"
 
 
@@ -288,7 +288,7 @@ NULL
 #'   }
 #' @source \url{https://www.data.go.kr/data/15038576/fileData.do}{공공데이터포털:교육 - 고등교육}
 #' @examples
-#' DT::datatable(scholarship)
+#' DT::datatable(head(scholarship, 50))
 "scholarship"
 
 
@@ -365,7 +365,7 @@ NULL
 #'}
 #' @source \url{https://www.data.go.kr/data/15007122/fileData.do}{공공데이터포털:보건 - 보건의료}
 #' @examples
-#' DT::datatable(medicalCheckup)
+#' DT::datatable(head(medicalCheckup, 50))
 "medicalCheckup"
 
 
@@ -388,7 +388,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/3076606/fileData.do}{공공데이터포털:산업·통상·중소기업 - 에너지및자원개발}
 #' @examples
-#' DT::datatable(gasStation)
+#' DT::datatable(head(gasStation, 50))
 "gasStation"
 
 
@@ -432,7 +432,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/3073746/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
 #' @examples
-#' DT::datatable(housingPrice)
+#' DT::datatable(head(housingPrice, 50))
 "housingPrice"
 
 
@@ -459,7 +459,7 @@ NULL
 #'    WGS84: 측지기준계의 종류 중 하나}
 #' @source \url{https://www.data.go.kr/data/15057234/openapi.do}{공공데이터포털:보건 - 식품의약안전}
 #' @examples
-#' DT::datatable(restaurant)
+#' DT::datatable(head(restaurant, 50))
 "restaurant"
 
 
@@ -508,7 +508,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15083277/fileData.do}{공공데이터포털:사회복지 - 공적연금}
 #' @examples
-#' DT::datatable(nationalPension)
+#' DT::datatable(head(nationalPension, 50))
 "nationalPension"
 
 
@@ -540,7 +540,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15047367/fileData.do}{공공데이터포털:통신 - 우정}
 #' @examples
-#' DT::datatable(postOffice)
+#' DT::datatable(head(postOffice,50))
 "postOffice"
 
 
@@ -573,7 +573,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15067461/fileData.do}{공공데이터포털-]:보건 - 건강보험}
 #' @examples
-#' DT::datatable(medicine)
+#' DT::datatable(head(medicine,50))
 "medicine"
 
 
@@ -597,7 +597,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15083256/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
 #' @examples
-#' DT::datatable(necessariesPrice)
+#' DT::datatable(head(necessariesPrice,50))
 "necessariesPrice"
 
 
@@ -640,7 +640,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15003297/fileData.do}{공공데이터포털:산업·통상·중소기업 - 무역및투자유치}
 #' @examples
-#' DT::datatable(globalBusiness)
+#' DT::datatable(head(globalBusiness,50))
 "globalBusiness"
 
 
@@ -658,7 +658,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15042010/fileData.do}{공공데이터포털 : 일반공공행정 - 일반행정}
 #' @examples
-#' DT::datatable(petNames)
+#' DT::datatable(head(petNames,50))
 "petNames"
 
 
@@ -679,7 +679,7 @@ NULL
 #' }
 #' @source \url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:사회복지 - 사회복지일반}
 #' @examples
-#' DT::datatable(foodBank)
+#' DT::datatable(head(foodBank,50))
 "foodBank"
 
 
@@ -701,7 +701,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15065291/fileData.do}{공공데이터포털:사회복지 - 보육·가족및여성}
 #' @examples
-#' DT::datatable(childAbuse)
+#' DT::datatable(head(childAbuse,50))
 "childAbuse"
 
 
@@ -748,7 +748,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/3041572/fileData.do}{공공데이터포털:교통및물류 - 도로}
 #' @examples
-#' DT::datatable(carInspection)
+#' DT::datatable(head(carInspection,50))
 "carInspection"
 
 
@@ -770,7 +770,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15048242/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
 #' @examples
-#' DT::datatable(fireStation)
+#' DT::datatable(head(head(fireStation,50))
 
 "fireStation"
 
@@ -799,7 +799,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15095107/fileData.do}{공공데이터포털:보건 - 보건의료}
 #' @examples
-#' DT::datatable(bloodTest)
+#' DT::datatable(head(bloodTest, 50))
 "bloodTest"
 
 
@@ -835,7 +835,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15052910/fileData.do}{공공데이터포털:통일·외교 - 외교}
 #' @examples
-#' DT::datatable(odaNews)
+#' DT::datatable(head(odaNews, 50))
 "odaNews"
 
 
@@ -864,7 +864,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15063424/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
 #' @examples
-#' DT::datatable(legalDong)
+#' DT::datatable(head(legalDong, 50))
 "legalDong"
 
 
@@ -911,7 +911,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15051059/fileData.do}{공공데이터포털:보건 - 건강보험}
 #' @examples
-#' DT::datatable(hospitalInfo)
+#' DT::datatable(head(hospitalInfo,50))
 "hospitalInfo"
 
 
@@ -942,7 +942,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15051059/fileData.do}{공공데이터포털:보건 - 건강보험}
 #' @examples
-#' DT::datatable(pharmacyInfo)
+#' DT::datatable(head(pharmacyInfo,50))
 "pharmacyInfo"
 
 
@@ -967,7 +967,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:교육 - 고등교육}
 #' @examples
-#' DT::datatable(tuition)
+#' DT::datatable(head(tuition,50))
 "tuition"
 
 
@@ -989,7 +989,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15034381/fileData.do}{공공데이터포털:농림 - 임업·산촌}
 #' @examples
-#' DT::datatable(weather2020)
+#' DT::datatable(head(weather2020,50))
 "weather2020"
 
 
@@ -1016,7 +1016,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/3051587/fileData.do}{공공데이터포털:교통및물류 - 항공·공항}
 #' @examples
-#' DT::datatable(airport)
+#' DT::datatable(head(airport,50))
 "airport"
 
 
@@ -1125,7 +1125,7 @@ NULL
 #' }
 #' @source \url{https://www.data.go.kr/data/15088160/fileData.do}{공공데이터포털:통일·외교 - 외교}
 #' @examples
-#' DT::datatable(odaIndex)
+#' DT::datatable(head(odaIndex,50))
 "odaIndex"
 
 
@@ -1197,7 +1197,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15045017/fileData.do}{공공데이터포털:보건 - 식품의약안전}
 #' @examples
-#' DT::datatable(karaoke)
+#' DT::datatable(head(karaoke,50))
 "karaoke"
 
 
@@ -1244,7 +1244,7 @@ NULL
 #' }
 #' @source \url{https://www.data.go.kr/data/3038724/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
 #' @examples
-#' DT::datatable(fire)
+#' DT::datatable(head(fire,50))
 "fire"
 
 
@@ -1419,7 +1419,7 @@ NULL
 #' }
 #' @source \url{https://www.data.go.kr/data/15047698/fileData.do}{공공데이터포털-보건 - 식품의약안전}
 #' @examples
-#' DT::datatable(foodNutrients)
+#' DT::datatable(head(foodNutrients,50))
 "foodNutrients" 
 
 
@@ -1453,7 +1453,7 @@ NULL
 #' }
 #' @source \url{https://www.data.go.kr/data/15062804/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
 #' @examples
-#' DT::datatable(openData)
+#' DT::datatable(head(openData,50))
 "openData" 
 
 
@@ -1480,7 +1480,7 @@ NULL
 #' }
 #' @source \url{https://www.data.go.kr/data/15017366/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
 #' @examples
-#' DT::datatable(elevator)
+#' DT::datatable(head(elevator,50))
 "elevator" 
 
 
@@ -1502,7 +1502,7 @@ NULL
 #'    \item{발생횟수}{해당 범죄 발생 장소의 발생횟수}
 #' @source \url{https://www.data.go.kr/data/3074463/fileData.do}{공공데이터포털:공공질서및안전 - 경찰}
 #' @examples
-#' DT::datatable(crimePlace)
+#' DT::datatable(head(crimePlace,50))
 "crimePlace" 
 
 
@@ -1540,7 +1540,7 @@ NULL
 #'   addTiles() |> 
 #'   addMarkers(~경도, ~위도, popup = ~as.character(정류장.명칭), label = ~as.character(정류장.명칭))
 #' @examples
-#' DT::datatable(busStation)
+#' DT::datatable(head(busStation,50))
 "busStation"
 
 
@@ -1602,7 +1602,7 @@ NULL
 #'   addTiles() |> 
 #'   addMarkers(~병원경도, ~병원위도, popup = ~as.character(기관명), label = ~as.character(기관명))
 #' @examples
-#' DT::datatable(seoulER)
+#' DT::datatable(head(seoulER,50))
 "seoulER"
 
 
@@ -1647,5 +1647,5 @@ NULL
 #'   addTiles() |> 
 #'   addMarkers(~경도, ~위도, popup = ~as.character(`병원명/센터명`), label = ~as.character(`병원명/센터명`)) |> 
 #'   addMarkers(~병원경도, ~병원위도, popup = ~as.character(기관명), label = ~as.character(기관명), data = datatoys::seoulER)
-#' DT::datatable(gyeonggiER)
+#' DT::datatable(head(gyeonggiER,50))
 "gyeonggiER"
