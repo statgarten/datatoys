@@ -466,8 +466,8 @@ NULL
 #'
 #' 국민연금공단에서 제공하는 법정동단위 지역별, 국민연금 가입 사업장 정보(단, 개인사업장 및 2인 이하 법인 사업장 정보 미제공).
 #'
-#'@format A data frame with 22 variables.
-#'\describe{
+#' @format A data frame with 22 variables.
+#' \describe{
 #'    \item{자료생성년월}{자료생성년월
 #'    월(영어).년(숫자)으로 기입}
 #'    \item{사업장명}{국민연금 가입 사업장명}
@@ -602,8 +602,7 @@ NULL
 #'
 #' @format A data frame with 19 variables.
 #' \describe{
-#'    \item{구분}{해당 해외진출기업의 대륙
-#'    아시아}
+#'    \item{구분}{해당 해외진출기업의 대륙 : 아시아}
 #'    \item{국가명}{해당 기업이 진출한 국가명}
 #'    \item{진출지역}{해당 기업이 진출한 지역명}
 #'    \item{회사명.국문.}{해당 해외진출기업 국문 회사명}
@@ -611,8 +610,7 @@ NULL
 #'    \item{주소}{해당 해외진출기업 주소}
 #'    \item{홈페이지}{해당 해외진출기업 홈페이지}
 #'    \item{진출년도}{해당 해외진출기업 진출년도}
-#'    \item{진출형태}{해당 해외진출기업 진출형태
-#'    생산법인, 지점, 판매법인, 서비스법인,연락사무소}
+#'    \item{진출형태}{해당 해외진출기업 진출형태 : 생산법인, 지점, 판매법인, 서비스법인,연락사무소}
 #'    \item{투자형태}{해당 해외진출기업 투자형태
 #'    M&A, 단독, 합자, 합작}
 #'    \item{외국사.합작지분}{해당 해외진출기업 외국사 합작지분}
@@ -1099,7 +1097,7 @@ NULL
 #'    \item{KOICA.지원.규모_농림수산}{KOICA 지원 농림수산 규모}
 #'    \item{KOICA.지원.규모_보건}{KOICA 지원  보건 규모}
 #'    \item{KOICA.지원.규모_전체}{KOICA 지원  전체 규모}
-#' }
+#'  }
 #' @source \url{https://www.data.go.kr/data/15088160/fileData.do}
 #' @examples
 #' DT::datatable(head(odaIndex,50))
