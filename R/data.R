@@ -454,6 +454,7 @@ NULL
 #'    WGS84: 측지기준계의 종류 중 하나}
 #'    \item{WGS84경도}{해당 음식점의 WGS84 경도
 #'    WGS84: 측지기준계의 종류 중 하나}
+#'  }
 #' @source \url{https://www.data.go.kr/data/15057234/openapi.do}
 #' @examples
 #' DT::datatable(head(restaurant, 50))
