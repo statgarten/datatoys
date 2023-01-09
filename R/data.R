@@ -966,8 +966,6 @@ NULL
 #'    기상청관측지점번호,관측시각,지중온도30CM,지중온도20CM,지중온도10CM,지중온도5CM,지면온도,현상번호,지면상태코드,시정,최저운고,운형코드,중하층운량,전운량}
 #'  }
 #' @source \url{https://www.data.go.kr/data/15034381/fileData.do}
-#' @examples
-#' DT::datatable(head(weather2020,50))
 "weather2020"
 
 
