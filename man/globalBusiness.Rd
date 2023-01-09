@@ -7,12 +7,17 @@
 \format{
 
 }
+\source{
+\url{https://www.data.go.kr/data/15003297/fileData.do}{공공데이터포털:산업·통상·중소기업 - 무역및투자유치}
+}
 \usage{
 globalBusiness
 }
 \description{
 대한무역투자진흥공사에서 제공하는 전세계 124개국의 해외진출기업의 회사명, 주소, 홈페이지, 진출년도, 진출형태, 투자형태 등의 정보.
 Last Update: 2021-09-27;
-https://www.data.go.kr/data/15003297/fileData.do
+}
+\examples{
+DT::datatable(head(globalBusiness,50))
 }
 \keyword{datasets}

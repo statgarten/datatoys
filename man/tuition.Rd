@@ -7,14 +7,19 @@
 \format{
 A data frame with 7 variables.
 \describe{
-   \item{학제별}{대학, 전문대학}
-   \item{설립별}{국공립, 사립}
-   \item{대학명}{대학명}
-   \item{지역별}{지역별}
-   \item{입학정원.합.명.}{입학정원_합_명}
-   \item{평균입학금.원.}{평균입학금_원}
-   \item{평균등록금.원.}{평균등록금_원_}
+   \item{학제별}{해당 대학 학제 구분
+   대학, 전문대학}
+   \item{설립별}{해당 대학 설립 구분
+   국공립, 사립}
+   \item{대학명}{해당 대학명}
+   \item{지역별}{해당 대학 지역구분}
+   \item{입학정원.합.명.}{해당 대학 입학정원 합(명))}
+   \item{평균입학금.원.}{해당 평균 입학금(원)}
+   \item{평균등록금.원.}{해당 평균 등록금(원)}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:교육 - 고등교육}
 }
 \usage{
 tuition
@@ -22,6 +27,8 @@ tuition
 \description{
 한국장학재단에서 제공하는 매년 4월 대학정보공시 기준의 대학별 입학정원, 평균입학금, 평균등록금 정보(분교, 캠퍼스는 본교에 통합 산출).
 Last Update: 2022-05-25;
-https://www.data.go.kr/data/3071171/fileData.do
+}
+\examples{
+DT::datatable(head(tuition,50))
 }
 \keyword{datasets}

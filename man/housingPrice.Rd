@@ -5,29 +5,10 @@
 \alias{housingPrice}
 \title{국토교통부 2021 공동주택 공시가격 정보}
 \format{
-A data frame with 20 variables.
-\describe{
-   \item{기준연도}{기준연도}
-   \item{기준월}{기준월}
-   \item{법정동코드}{법정동코드}
-   \item{도로명주소}{도로명주소}
-   \item{시도}{시도}
-   \item{시군구}{시군구}
-   \item{읍면}{읍면}
-   \item{동리}{동리}
-   \item{특수지코드}{특수지코드}
-   \item{본번}{본번}
-   \item{부번}{부번}
-   \item{특수지명}{특수지명}
-   \item{단지명}{단지명}
-   \item{동명}{동명}
-   \item{호명}{호명}
-   \item{전용면적}{전용면적}
-   \item{공시가격}{공시가격}
-   \item{단지코드}{단지코드}
-   \item{동코드}{동코드}
-   \item{호코드}{호코드}
- }
+
+}
+\source{
+\url{https://www.data.go.kr/data/3073746/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
 }
 \usage{
 housingPrice
@@ -35,6 +16,8 @@ housingPrice
 \description{
 국토교통부에서 제공하는 2021년도 공동주택 공시가격정보입니다. 
 Last Update: 2021-10-29;
-https://www.data.go.kr/data/3073746/fileData.do
+}
+\examples{
+DT::datatable(head(housingPrice, 50))
 }
 \keyword{datasets}

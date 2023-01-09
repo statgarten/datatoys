@@ -7,16 +7,21 @@
 \format{
 A data frame with 9 variables.
 \describe{
-   \item{법정동코드}{법정동코드}
-   \item{시도명}{시도명}
-   \item{시군구명}{시군구명}
-   \item{읍면동명}{읍면동명}
-   \item{리명}{리명}
+   \item{법정동코드}{해당 지역 법정동코드
+   법정동 : 법률로 지정한 행정구역 단위
+   법정동코드 : 10자리로 구성, 광역시(2자리) + 시군구(3자리) + 읍면동(3자리) + 리(2자리)}
+   \item{시도명}{해당 지역 시 또는 도명}
+   \item{시군구명}{해당 지역 시 또는 군, 구명}
+   \item{읍면동명}{해당 지역 읍 또는 면, 동명}
+   \item{리명}{해당 지역 리명}
    \item{순위}{순위}
-   \item{생성일자}{생성일자}
-   \item{삭제일자}{삭제일자}
-   \item{과거법정동코드}{과거법정동코드}
+   \item{생성일자}{해당 지역 법정동코드 생성일자}
+   \item{삭제일자}{해당 지역 법정동코드 삭제일자}
+   \item{과거법정동코드}{해당 지역 과거법정동코드}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15063424/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
 }
 \usage{
 legalDong
@@ -27,6 +32,8 @@ legalDong
 행정표준코드관리시스템(https://www.code.go.kr)에서 제공하는 법정동코드 자료를 바탕으로 시스템 사용 용도에 
 맞춰 가공한 데이터로 정보가 상이할 수 있음.
 Last Update: 2021-12-17;
-https://www.data.go.kr/data/15063424/fileData.do
+}
+\examples{
+DT::datatable(head(legalDong, 50))
 }
 \keyword{datasets}

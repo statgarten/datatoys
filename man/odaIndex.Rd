@@ -5,89 +5,10 @@
 \alias{odaIndex}
 \title{한국국제협력단 협력국 개발지표 및 ODA 지원 실적}
 \format{
-A list with 80 data frame.
-\describe{
-#'    \item{WB_국가명}{WB_국가명}
-   \item{ISO3_국가코드}{ISO3 국가코드}
-   \item{DAC_국가코드}{DAC 국가코드}
-   \item{UNDP_국가명}{UNDP 국가명}
-   \item{WB_지역}{WB 지역}
-   \item{KOICA_국가명_국문}{KOICA 국가명 국문}
-   \item{KOICA_지역명_국문}{KOICA 지역명 국문}
-   \item{KOICA_지역명_영문}{KOICA 지역명 영문}
-   \item{KOICA_지역명_부서}{KOICA 지역명 부서}
-   \item{국가협력전략.대상국가}{yes, no}
-   \item{KOICA.사무소.주재.여부}{yes, no}
-   \item{겸임국.관할.사무소명}{겸임국.관할.사무소명}
-   \item{OECD_국가명}{OECD 국가명}
-   \item{OECD소득.기준}{OECD소득 기준}
-   \item{인구수_기준연도}{2020, 2011}
-   \item{인구수}{인구수}
-   \item{GDP_기준연도}{GDP_기준연도}
-   \item{X1인당.국내총생산}{X1인당.국내총생산}
-   \item{국민총생산.기준연도}{국민총생산.기준연도}
-   \item{X1인당.국민총생산}{X1인당.국민총생산}
-   \item{빈곤율.기준연도}{빈곤율.기준연도}
-   \item{빈곤율}{빈곤율}
-   \item{지니계수.기준연도}{지니계수.기준연도}
-   \item{지니계수}{지니계수}
-   \item{문해율.기준연도}{문해율.기준연도}
-   \item{문해율}{문해율}
-   \item{중등학교.등록율.여학생..기준연도}{중등학교.등록율.여학생..기준연도}
-   \item{중등학교.등록율.여학생.}{중등학교.등록율.여학생.}
-   \item{중등학교.등록률.남학생..기준연도}{중등학교.등록률.남학생..기준연도}
-   \item{중등학교.등록율.남학생.}{중등학교.등록율.남학생.}
-   \item{중등학교.등록율.젠더.패리티.인덱스.기준연도}{중등학교.등록율.젠더.패리티.인덱스.기준연도}
-   \item{중등학교.등록율.젠더.패리티.인덱스}{중등학교.등록율.젠더.패리티.인덱스}
-   \item{세금.기준연도}{세금.기준연도}
-   \item{세금}{세금}
-   \item{ODA.순.수원액.기준연도}{ODA.순.수원액.기준연도}
-   \item{ODA.순.수원액}{ODA.순.수원액}
-   \item{기업여건.기준연도}{기업여건.기준연도}
-   \item{기업여건}{기업여건}
-   \item{해외직접투자.기준연도}{해외직접투자.기준연도}
-   \item{해외직접투자}{해외직접투자}
-   \item{X100명당.이동통신.사용률.기준연도}{X100명당.이동통신.사용률.기준연도}
-   \item{X100명당.이동통신.사용률}{X100명당.이동통신.사용률}
-   \item{X1인당.전기.소비량.기준연도}{X1인당 전기 소비량 기준연도}
-   \item{X1인당.전기.소비량}{X1인당 전기 소비량}
-   \item{인터넷.사용률.기준연도}{인터넷 사용률 기준연도}
-   \item{인터넷.사용률}{인터넷 사용률}
-   \item{취약국가.지수.기준연도}{취약국가 지수 기준연도}
-   \item{취약국가.지수}{취약국가 지수}
-   \item{취약국가.순위}{취약국가 순위}
-   \item{부패인식지수.기준연도}{부패인식지수 기준연도}
-   \item{부패인식점수}{부패인식점수}
-   \item{부패인식순위}{부패인식순위}
-   \item{전자정부.지수.기준연도}{전자정부 지수 기준연도}
-   \item{전자정부.지수.순위}{전자정부 지수 순위}
-   \item{전자정부지수}{전자정부지수}
-   \item{인간개발지수.기준연도}{인간개발지수 기준연도}
-   \item{인간개발지수순위}{인간개발지수순위}
-   \item{인간개발지수}{인간개발지수}
-   \item{젠더개발지수.기준연도}{젠더개발지수 기준연도}
-   \item{젠더개발지수}{젠더개발지수}
-   \item{젠더.불평등.지수.기준연도}{젠더 불평등 지수 기준연도}
-   \item{젠더.불평등.지수}{젠더 불평등 지수}
-   \item{여성국회의원.비율.기준연도}{여성국회의원비율기준연도}
-   \item{여성국회의원.비율}{여성국회의원 비율}
-   \item{여성실업률.기준연도}{여성실업률 기준연도}
-   \item{여성실업률}{여성실업률}
-   \item{ODA.규모.기준연도}{ODA.규모 기준연도}
-   \item{수원국.ODA.규모}{수원국.ODA 규모}
-   \item{양자.지원.규모}{양자 지원 규모}
-   \item{GNI.대비.ODA.비율}{GNI 대비 ODA 비율}
-   \item{한국.ODA.규모.기준연도}{한국 ODA 규모기준연도}
-   \item{한국.ODA.규모}{한국 ODA 규모}
-   \item{KOICA.지원.규모_공공행정}{KOICA 지원 규모_공공행정}
-   \item{KOICA.지원.규모_교육}{KOICA 지원 규모_교육}
-   \item{KOICA.지원.규모_기술환경에너지}{KOICA 지원 규모_기술환경에너지}
-   \item{KOICA.지원.규모_기타}{KOICA 지원 규모_기타}
-   \item{KOICA.지원.규모_긴급구호}{KOICA 지원 규모_긴급구호}
-   \item{KOICA.지원.규모_농림수산}{KOICA 지원 규모_농림수산}
-   \item{KOICA.지원.규모_보건}{KOICA 지원 규모_보건}
-   \item{KOICA.지원.규모_전체}{KOICA 지원 규모_전체}
+
 }
+\source{
+\url{https://www.data.go.kr/data/15088160/fileData.do}{공공데이터포털:통일·외교 - 외교}
 }
 \usage{
 odaIndex
@@ -98,6 +19,8 @@ odaIndex
 *출처: World Bank Open data, Human Development Data Center, Fragile States Index, Transparency International, 
 UN Department of Economic and Social Affairs Public Institutions, OECD Statistics, KOICA ODA 정보센터
 Last Update: 2022-05-13;
-https://www.data.go.kr/data/15088160/fileData.do
+}
+\examples{
+DT::datatable(head(odaIndex,50))
 }
 \keyword{datasets}

@@ -7,9 +7,12 @@
 \format{
 A data frame with 2 variables.
 \describe{
-   \item{동물이름}{동물이름}
-   \item{건수}{건수}
+   \item{동물이름}{마포구 반려동물 이름}
+   \item{건수}{마포구 반려동물 이름 건수}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15042010/fileData.do}{공공데이터포털 : 일반공공행정 - 일반행정}
 }
 \usage{
 petNames
@@ -17,6 +20,8 @@ petNames
 \description{
 서울특별시 마포구 지역경제과에서 제공하는 반려동물 이름 현황데이터. 동물이름, 동물 수 데이터를 제공.
 Last Update: 2021-09-01;
-https://www.data.go.kr/data/15042010/fileData.do
+}
+\examples{
+DT::datatable(head(petNames,50))
 }
 \keyword{datasets}

@@ -7,18 +7,21 @@
 \format{
 A data frame with 11 variables.
 \describe{
-  \item{정류장아이디}{정류장 아이디}
-  \item{정류장.명칭}{정류장 명칭}
+  \item{정류장아이디}{해당 정류장 아이디}
+  \item{정류장.명칭}{해당 정류장 명칭}
   \item{정류장.유형}{정류장 유형(0:공용, 1:일반시내, 2:좌석시내, 3:직행좌석형시내, 4:일반형시외, 5:좌석형시외, 6:고속형시외, 7:마을버스)}
   \item{중앙차로.여부}{중앙차로 여부(Y/N)}
   \item{노드영문명}{노드영문명}
-  \item{위도}{GPS 위도(WGS84)}
-  \item{경도}{GPS 경도(WGS84)}
-  \item{수집일시}{정보 수집일시}
-  \item{단축아이디}{모바일(ARS) 단축 아이디}
-  \item{도시코드}{도시코드}
-  \item{도시명}{도시명}
+  \item{위도}{해당 정류소의 GPS 위도(WGS84)}
+  \item{경도}{해당 정류소의 GPS 경도(WGS84)}
+  \item{수집일시}{해당 정보 수집일시}
+  \item{단축아이디}{모바일(ARS), 단축 아이디}
+  \item{도시코드}{해당 정류소의 도시코드}
+  \item{도시명}{해당 정류소의 도시명}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15067528/fileData.do}{공공데이터포털:	교통및물류 - 도로}
 }
 \usage{
 busStation
@@ -26,7 +29,6 @@ busStation
 \description{
 버스정보시스템(BIS)이 구축된 지자체 중 국가대중교통정보센터(TAGO)와 연계된 136개 지자체에 대한 버스정류장 위치정보 데이터. 안동-예천의 경우 안동, 원주-횡성은 원주, 제주-서귀포는 제주, 대전-계룡은 대전, 목포-무안-신안-영암은 목포, 영덕-청송-영양은 영덕으로 통합. 이용허락범위 제한 없음.
 Last Update: 2021-09-16;
-https://www.data.go.kr/data/15067528/fileData.do
 }
 \examples{
 library(leaflet)
@@ -36,5 +38,6 @@ busStation |>
   leaflet() |> 
   addTiles() |> 
   addMarkers(~경도, ~위도, popup = ~as.character(정류장.명칭), label = ~as.character(정류장.명칭))
+DT::datatable(head(busStation,50))
 }
 \keyword{datasets}
