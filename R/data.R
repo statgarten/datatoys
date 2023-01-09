@@ -400,7 +400,7 @@ NULL
 #' Last Update: 2021-10-29;
 #'
 #' @format A data frame with 20 variables.
-#'\describe{
+#' \describe{
 #'    \item{기준연도}{해당 정보의 기준연도}
 #'    \item{기준월}{해당 정보의 기준월}
 #'    \item{법정동코드}{해당 공동주택의 법정동코드
@@ -770,7 +770,7 @@ NULL
 #'  }
 #' @source \url{https://www.data.go.kr/data/15048242/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
 #' @examples
-#' DT::datatable(head(head(fireStation,50))
+#' DT::datatable(head(fireStation,50))
 
 "fireStation"
 

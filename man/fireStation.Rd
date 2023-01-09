@@ -25,6 +25,6 @@ fireStation
 Last Update: 2022-04-18;
 }
 \examples{
-DT::datatable(head(head(fireStation,50))
+DT::datatable(head(fireStation,50))
 }
 \keyword{datasets}
