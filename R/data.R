@@ -16,7 +16,7 @@ NULL
 #'   \item{지원액_원화}{원화 기준 지원액}
 #'   \item{지원액_달러}{달러 기준 지원액}
 #'  }
-#'  @source \url{https://www.data.go.kr/data/15060336/fileData.do}{공공데이터포털:통일·외교 - 외교}
+#'  @source \url{https://www.data.go.kr/data/15060336/fileData.do}
 #' @examples
 #' DT::datatable(head(odaKR, 50))
 "odaKR"
@@ -72,7 +72,7 @@ NULL
 #'   \item{위도}{해당 사망 교통사고가 발생한 위도
 #'   지구 위의 위치를 나타내는 좌표축 중에서 가로로 된 것}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15070340/fileData.do}{공공데이터포털:	공공질서및안전 - 안전관리}
+#' @source \url{https://www.data.go.kr/data/15070340/fileData.do}
 #' @examples
 #'  library(leaflet)
 #'  accident |> 
@@ -122,7 +122,7 @@ NULL
 #'   \item{위탁처리_가축분뇨처리업.m3.일.}{위탁처리 중 가축분뇨처리업양(1일기준)
 #'   가축분뇨처리업(개인 또는 법인) : 가축분뇨법 제28조에 따른 가축분뇨관련영업 중 자원화시설(퇴비·액비를 만드는 시설은 제외한다.) 또는 정화시설을 갖추어 가축분뇨를 최종적으로 안전하게 처리하는 시설로 이송하여 처리하는 경우}
 #'  }
-#' @source \url{https://www.data.go.kr/data/3045217/fileData.do}{공공데이터포털:환경 - 상하수도·수질}
+#' @source \url{https://www.data.go.kr/data/3045217/fileData.do}
 #' @examples
 #' DT::datatable(head(pollution, 50))
 #' library(highcharter)
@@ -247,7 +247,7 @@ NULL
 #'   \item{기타도시}{기타도시에서 발생한 범죄 건수}
 #'   \item{도시이외}{도시이외에서 발생한 범죄 건수}
 #'  }
-#' @source \url{https://www.data.go.kr/data/3074462/fileData.do}{공공데이터포털:공공질서및안전 - 경찰}
+#' @source \url{https://www.data.go.kr/data/3074462/fileData.do}
 #' @examples
 #' crime |> 
 #'   tidyr::pivot_longer(
@@ -286,7 +286,7 @@ NULL
 #'   \item{교내장학금.기타}{5개 사유(성적우수, 저소득층, 근로, 재난, 교직원)에 해당하지 않는 교내 장학금}
 #'   \item{총계.원.}{교외 장학금 및 교내장학금 합계}
 #'   }
-#' @source \url{https://www.data.go.kr/data/15038576/fileData.do}{공공데이터포털:교육 - 고등교육}
+#' @source \url{https://www.data.go.kr/data/15038576/fileData.do}
 #' @examples
 #' DT::datatable(head(scholarship, 50))
 "scholarship"
@@ -363,7 +363,7 @@ NULL
 #'  0(없음), 1(있음)}
 #'  \item{데이터.공개일자}{데이터 작성 기준일자}
 #'}
-#' @source \url{https://www.data.go.kr/data/15007122/fileData.do}{공공데이터포털:보건 - 보건의료}
+#' @source \url{https://www.data.go.kr/data/15007122/fileData.do}
 #' @examples
 #' DT::datatable(head(medicalCheckup, 50))
 "medicalCheckup"
@@ -386,7 +386,7 @@ NULL
 #'    \item{업체명}{주유소 업체명}
 #'    \item{소재지}{주유소 소재지}
 #'  }
-#' @source \url{https://www.data.go.kr/data/3076606/fileData.do}{공공데이터포털:산업·통상·중소기업 - 에너지및자원개발}
+#' @source \url{https://www.data.go.kr/data/3076606/fileData.do}
 #' @examples
 #' DT::datatable(head(gasStation, 50))
 "gasStation"
@@ -430,7 +430,7 @@ NULL
 #'    \item{동코드}{해당 정보의 도로명주소의 동코드}
 #'    \item{호코드}{해당 정보의 도로명주소의 호코드}
 #'  }
-#' @source \url{https://www.data.go.kr/data/3073746/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
+#' @source \url{https://www.data.go.kr/data/3073746/fileData.do}
 #' @examples
 #' DT::datatable(head(housingPrice, 50))
 "housingPrice"
@@ -457,7 +457,7 @@ NULL
 #'    WGS84: 측지기준계의 종류 중 하나}
 #'    \item{WGS84경도}{해당 음식점의 WGS84 경도
 #'    WGS84: 측지기준계의 종류 중 하나}
-#' @source \url{https://www.data.go.kr/data/15057234/openapi.do}{공공데이터포털:보건 - 식품의약안전}
+#' @source \url{https://www.data.go.kr/data/15057234/openapi.do}
 #' @examples
 #' DT::datatable(head(restaurant, 50))
 "restaurant"
@@ -506,7 +506,7 @@ NULL
 #'    \item{신규취득자수}{해당 사업장 국민연금 신규 취득자수}
 #'    \item{상실가입자수}{해당 사업장 국민연금 상실 가입자수}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15083277/fileData.do}{공공데이터포털:사회복지 - 공적연금}
+#' @source \url{https://www.data.go.kr/data/15083277/fileData.do}
 #' @examples
 #' DT::datatable(head(nationalPension, 50))
 "nationalPension"
@@ -538,7 +538,7 @@ NULL
 #'    \item{행정구}{해당 우체국의 행정구}
 #'    \item{행정동}{해당 우체국의 행정동}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15047367/fileData.do}{공공데이터포털:통신 - 우정}
+#' @source \url{https://www.data.go.kr/data/15047367/fileData.do}
 #' @examples
 #' DT::datatable(head(postOffice,50))
 "postOffice"
@@ -571,7 +571,7 @@ NULL
 #'    \item{함량}{해당 의약품 함량}
 #'    \item{단위}{해당 의약품 함량 단위} 
 #'  }
-#' @source \url{https://www.data.go.kr/data/15067461/fileData.do}{공공데이터포털-]:보건 - 건강보험}
+#' @source \url{https://www.data.go.kr/data/15067461/fileData.do}
 #' @examples
 #' DT::datatable(head(medicine,50))
 "medicine"
@@ -595,7 +595,7 @@ NULL
 #'    Y : 세일 , N : 세일 안함}
 #'    \item{원플러스원}{해당 생필품 상품의 원플러스원 여부}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15083256/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
+#' @source \url{https://www.data.go.kr/data/15083256/fileData.do}
 #' @examples
 #' DT::datatable(head(necessariesPrice,50))
 "necessariesPrice"
@@ -638,7 +638,7 @@ NULL
 #'    \item{관할무역관}{해당 해외진출기업 관할무역관명
 #'    오클랜드무역관, 비엔티안무역관, 쿠알라룸푸르무역관, 양곤무역관, 호치민무역관, 하노이무역관}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15003297/fileData.do}{공공데이터포털:산업·통상·중소기업 - 무역및투자유치}
+#' @source \url{https://www.data.go.kr/data/15003297/fileData.do}
 #' @examples
 #' DT::datatable(head(globalBusiness,50))
 "globalBusiness"
@@ -656,7 +656,7 @@ NULL
 #'    \item{동물이름}{마포구 반려동물 이름}
 #'    \item{건수}{마포구 반려동물 이름 건수}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15042010/fileData.do}{공공데이터포털 : 일반공공행정 - 일반행정}
+#' @source \url{https://www.data.go.kr/data/15042010/fileData.do}
 #' @examples
 #' DT::datatable(head(petNames,50))
 "petNames"
@@ -677,7 +677,7 @@ NULL
 #'    \item{기부자명}{푸드뱅크에 기부자명}
 #'    \item{합계}{기부 합계}
 #' }
-#' @source \url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:사회복지 - 사회복지일반}
+#' @source \url{https://www.data.go.kr/data/15060094/fileData.do/}
 #' @examples
 #' DT::datatable(head(foodBank,50))
 "foodBank"
@@ -699,7 +699,7 @@ NULL
 #'    \item{신고자}{아동학대 신고자 구분}
 #'    \item{신고건수}{아동학대 신고건수}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15065291/fileData.do}{공공데이터포털:사회복지 - 보육·가족및여성}
+#' @source \url{https://www.data.go.kr/data/15065291/fileData.do}
 #' @examples
 #' DT::datatable(head(childAbuse,50))
 "childAbuse"
@@ -711,7 +711,6 @@ NULL
 #' 
 #' 한국교통안전공단에서 운영하고 있는 자동차검사소 정보. 해당 지역별 리스트와 위도, 경도 등 각종 정보를 제공.
 #' Last Update: 2021-09-27;
-#' https://www.data.go.kr/data/3041572/fileData.do
 #'
 #' @format A data frame with 22 variables.
 #' \describe{
@@ -746,7 +745,7 @@ NULL
 #'    \item{관리기관명}{해당 자동차검사소 관리기관명}
 #'    \item{데이터기준일자}{해당 데이터의 기준일자}
 #'  }
-#' @source \url{https://www.data.go.kr/data/3041572/fileData.do}{공공데이터포털:교통및물류 - 도로}
+#' @source \url{https://www.data.go.kr/data/3041572/fileData.do}
 #' @examples
 #' DT::datatable(head(carInspection,50))
 "carInspection"
@@ -768,7 +767,7 @@ NULL
 #'    \item{주소}{해당 소방서 주소}
 #'    \item{전화번호}{해당 소방서 전화번호}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15048242/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
+#' @source \url{https://www.data.go.kr/data/15048242/fileData.do}
 #' @examples
 #' DT::datatable(head(fireStation,50))
 
@@ -797,7 +796,7 @@ NULL
 #'   \item{STK}{뇌혈관질환 진료여부
 #'   1: 있음, 0: 없음}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15095107/fileData.do}{공공데이터포털:보건 - 보건의료}
+#' @source \url{https://www.data.go.kr/data/15095107/fileData.do}
 #' @examples
 #' DT::datatable(head(bloodTest, 50))
 "bloodTest"
@@ -833,7 +832,7 @@ NULL
 #'    \item{링크}{개발 협력 동향기사 링크}
 #'    \item{날짜}{개발 협력 동향기사 날짜}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15052910/fileData.do}{공공데이터포털:통일·외교 - 외교}
+#' @source \url{https://www.data.go.kr/data/15052910/fileData.do}
 #' @examples
 #' DT::datatable(head(odaNews, 50))
 "odaNews"
@@ -862,7 +861,7 @@ NULL
 #'    \item{삭제일자}{해당 지역 법정동코드 삭제일자}
 #'    \item{과거법정동코드}{해당 지역 과거법정동코드}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15063424/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
+#' @source \url{https://www.data.go.kr/data/15063424/fileData.do}
 #' @examples
 #' DT::datatable(head(legalDong, 50))
 "legalDong"
@@ -909,7 +908,7 @@ NULL
 #'    \item{x좌표}{해당 병의원 x좌표}
 #'    \item{y좌표}{해당 병의원 y좌표}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15051059/fileData.do}{공공데이터포털:보건 - 건강보험}
+#' @source \url{https://www.data.go.kr/data/15051059/fileData.do}
 #' @examples
 #' DT::datatable(head(hospitalInfo,50))
 "hospitalInfo"
@@ -940,7 +939,7 @@ NULL
 #'    \item{x좌표}{해당 약국 x좌표}
 #'    \item{y좌표}{해당 약국 y좌표}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15051059/fileData.do}{공공데이터포털:보건 - 건강보험}
+#' @source \url{https://www.data.go.kr/data/15051059/fileData.do}
 #' @examples
 #' DT::datatable(head(pharmacyInfo,50))
 "pharmacyInfo"
@@ -965,7 +964,7 @@ NULL
 #'    \item{평균입학금.원.}{해당 평균 입학금(원)}
 #'    \item{평균등록금.원.}{해당 평균 등록금(원)}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:교육 - 고등교육}
+#' @source \url{https://www.data.go.kr/data/15060094/fileData.do/}
 #' @examples
 #' DT::datatable(head(tuition,50))
 "tuition"
@@ -987,7 +986,7 @@ NULL
 #'    \item{hour}{시간단위 농업기상
 #'    기상청관측지점번호,관측시각,지중온도30CM,지중온도20CM,지중온도10CM,지중온도5CM,지면온도,현상번호,지면상태코드,시정,최저운고,운형코드,중하층운량,전운량}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15034381/fileData.do}{공공데이터포털:농림 - 임업·산촌}
+#' @source \url{https://www.data.go.kr/data/15034381/fileData.do}
 #' @examples
 #' DT::datatable(head(weather2020,50))
 "weather2020"
@@ -1014,7 +1013,7 @@ NULL
 #'    \item{한글국가명}{해당 공항 한글국가명}
 #'    \item{영문도시명}{해당 공항 영문도시명}
 #'  }
-#' @source \url{https://www.data.go.kr/data/3051587/fileData.do}{공공데이터포털:교통및물류 - 항공·공항}
+#' @source \url{https://www.data.go.kr/data/3051587/fileData.do}
 #' @examples
 #' DT::datatable(head(airport,50))
 "airport"
@@ -1123,7 +1122,7 @@ NULL
 #'    \item{KOICA.지원.규모_보건}{KOICA 지원  보건 규모}
 #'    \item{KOICA.지원.규모_전체}{KOICA 지원  전체 규모}
 #' }
-#' @source \url{https://www.data.go.kr/data/15088160/fileData.do}{공공데이터포털:통일·외교 - 외교}
+#' @source \url{https://www.data.go.kr/data/15088160/fileData.do}
 #' @examples
 #' DT::datatable(head(odaIndex,50))
 "odaIndex"
@@ -1195,7 +1194,7 @@ NULL
 #'    \item{전통업소주된음식}{해당 단란주점 전통업소주된음식}
 #'    \item{홈페이지}{해당 단란주점 홈페이지}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15045017/fileData.do}{공공데이터포털:보건 - 식품의약안전}
+#' @source \url{https://www.data.go.kr/data/15045017/fileData.do}
 #' @examples
 #' DT::datatable(head(karaoke,50))
 "karaoke"
@@ -1242,7 +1241,7 @@ NULL
 #'    단독주택, 기타 들불, 오토바이, 일반빌딩, 다세대주택, 승용자동차, PC방(인터넷게임제공업), 기타야외, 기타 일상서비스, 쓰레기, 아파트, 금속기계 및 기구공업, 그 밖의 공업, 상점가, 커피숍,다방,카페(휴게), 노래연습장, 치킨,족발 등}
 #'    \item{지번동}{해당 화재의 지번동}
 #' }
-#' @source \url{https://www.data.go.kr/data/3038724/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
+#' @source \url{https://www.data.go.kr/data/3038724/fileData.do}
 #' @examples
 #' DT::datatable(head(fire,50))
 "fire"
@@ -1417,7 +1416,7 @@ NULL
 #'    \item{발행기관}{해당 정보 발행기관
 #'    국립농업과학원}
 #' }
-#' @source \url{https://www.data.go.kr/data/15047698/fileData.do}{공공데이터포털-보건 - 식품의약안전}
+#' @source \url{https://www.data.go.kr/data/15047698/fileData.do}
 #' @examples
 #' DT::datatable(head(foodNutrients,50))
 "foodNutrients" 
@@ -1451,7 +1450,7 @@ NULL
 #'    \item{목록.수정일}{해당 공공데이터 목록 수정일}
 #'    \item{목록.URL}{해당 공공데이터 목록 URL}
 #' }
-#' @source \url{https://www.data.go.kr/data/15062804/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
+#' @source \url{https://www.data.go.kr/data/15062804/fileData.do}
 #' @examples
 #' DT::datatable(head(openData,50))
 "openData" 
@@ -1478,7 +1477,7 @@ NULL
 #'    \item{정격속도_ms}{해당 승강기 정격속도}
 #'    \item{대수}{해당 승강기 보유 건물의 승강기 대수}
 #' }
-#' @source \url{https://www.data.go.kr/data/15017366/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
+#' @source \url{https://www.data.go.kr/data/15017366/fileData.do}
 #' @examples
 #' DT::datatable(head(elevator,50))
 "elevator" 
@@ -1500,7 +1499,7 @@ NULL
 #'    \item{장소}{해당 범죄 발생 장소
 #'    아파트.연립다세대, 단독주택, 고속도로, 노상, 백화점, 슈퍼마켓, 편의점, 대형할인매장, 상점, 시장.노점, 숙박업소.목욕탕, 유흥접객업소, 사무실, 공장, 공사장.광산, 창고, 역.대합실, 지하철, 기타표통수단내, 흥행장, 유원지, 학교, 금융기관, 의료기관, 종교기관, 산야, 해상, 부대, 구금장소, 공지, 주차장, 공중화장실, 피씨방}
 #'    \item{발생횟수}{해당 범죄 발생 장소의 발생횟수}
-#' @source \url{https://www.data.go.kr/data/3074463/fileData.do}{공공데이터포털:공공질서및안전 - 경찰}
+#' @source \url{https://www.data.go.kr/data/3074463/fileData.do}
 #' @examples
 #' DT::datatable(head(crimePlace,50))
 "crimePlace" 
@@ -1530,7 +1529,7 @@ NULL
 #'   \item{도시코드}{해당 정류소의 도시코드}
 #'   \item{도시명}{해당 정류소의 도시명}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15067528/fileData.do}{공공데이터포털:	교통및물류 - 도로}
+#' @source \url{https://www.data.go.kr/data/15067528/fileData.do}
 #' @examples
 #' library(leaflet)
 #' 
@@ -1593,7 +1592,7 @@ NULL
 #'    \item{병원위도}{해당 병원 병원위도}
 #'    \item{작업시간}{해당 병원 작업시간}
 #' }
-#' @source \url{https://www.data.go.kr/data/15088910/fileData.do}{공공데이터포털:보건 - 보건의료}
+#' @source \url{https://www.data.go.kr/data/15088910/fileData.do}
 #' @examples
 #' library(leaflet)
 #' 
@@ -1638,7 +1637,7 @@ NULL
 #'    \item{지역외상센터여부}{해당 응급의료기관 및 응급의료지원센터의 지역외상센터여부
 #'    Y or NA}
 #' }
-#' @source \url{https://www.data.go.kr/data/15011313/fileData.do}{공공데이터포털:보건 - 보건의료}
+#' @source \url{https://www.data.go.kr/data/15011313/fileData.do}
 #' @examples
 #' library(leaflet)
 #' 
