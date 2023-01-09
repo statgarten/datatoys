@@ -374,7 +374,6 @@ NULL
 #' 산업통상자원부 전국 주유소 등록현황
 #'
 #' 산업통상자원부에서 제공하는 전국 주유소 등록현황(전국 주유소 신규 등록 , 휴업, 폐업 현황 정보, 연도, 변동사유발생연월일, 판매업종류 등).
-#' Last Update: 2022-03-10;
 #'
 #' @format A data frame with 6 variables.
 #' \describe{
@@ -397,7 +396,6 @@ NULL
 #' 국토교통부 2021 공동주택 공시가격 정보
 #'
 #' 국토교통부에서 제공하는 2021년도 공동주택 공시가격정보입니다. 
-#' Last Update: 2021-10-29;
 #'
 #' @format A data frame with 20 variables.
 #' \describe{
@@ -442,7 +440,6 @@ NULL
 #'
 #' 경기도 지역 특산물을 활용한 향토 특색음식점으로 경기도를 대표할 수 있는 맛, 위생, 서비스가 우수한 업소를 발굴하여 
 #' 경기으뜸맛집으로 육성하고자 선정된 맛집 현황입니다. 음식점명, 맛집전화번호, 대표음식명, 주소, 위경도 등의 정보를 제공합니다.
-#' Last Update: 2017-11-20;
 #'
 #' @format A data frame with 9 variables.
 #' \describe{
@@ -468,7 +465,6 @@ NULL
 #' 국민연금공단 국민연금사업장 정보
 #'
 #' 국민연금공단에서 제공하는 법정동단위 지역별, 국민연금 가입 사업장 정보(단, 개인사업장 및 2인 이하 법인 사업장 정보 미제공).
-#' Last Update: 2022-05-18;
 #'
 #'@format A data frame with 22 variables.
 #'\describe{
@@ -517,7 +513,6 @@ NULL
 #' 서울특별시 우체국 정보
 #'
 #' 서울특별시 우체국 정보에 대한 데이터로 전체기관명, 대표 전화번호, 새우편번호, 도로명주소, 행정시, 행정구, 행정동 정보.
-#' Last Update: 2021-05-27;
 #' 
 #' @format A data frame with 14 variables.
 #'\describe{
@@ -550,7 +545,6 @@ NULL
 #'
 #' 건강보험심사평가원에서 제공하는 의약품 주성분(일반명) 현황에 대한 데이터셋. 
 #' 의약품주성분 코드, 성분명, 제형구분, 투여, 함량, 단위 등 정보를 제공.
-#' Last Update: 2021-10-25;
 #'
 #' @format A data frame with 8 variables.
 #' \describe{
@@ -582,7 +576,6 @@ NULL
 #' 한국소비자원 생필품가격 정보
 #'
 #' 한국소비자원 참가격정보서비스에 접수된 상품별 생필품 가격 데이터 현황(상품명, 판매업소, 판매가격 등).
-#' Last Update: 2022-05-23;
 #'
 #' @format A data frame with 7 variables.
 #' \describe{
@@ -606,7 +599,6 @@ NULL
 #' 대한무역투자진흥공사 해외진출기업 정보
 #'
 #' 대한무역투자진흥공사에서 제공하는 전세계 124개국의 해외진출기업의 회사명, 주소, 홈페이지, 진출년도, 진출형태, 투자형태 등의 정보.
-#' Last Update: 2021-09-27;
 #'
 #' @format A data frame with 19 variables.
 #' \describe{
@@ -649,7 +641,6 @@ NULL
 #' 마포구 반려동물 이름 통계
 #'
 #' 서울특별시 마포구 지역경제과에서 제공하는 반려동물 이름 현황데이터. 동물이름, 동물 수 데이터를 제공.
-#' Last Update: 2021-09-01;
 #'
 #' @format A data frame with 2 variables.
 #' \describe{
@@ -668,7 +659,6 @@ NULL
 #' 한국사회복지협의회 2021 전국푸드뱅크 기부자 통계
 #' 
 #' 한국사회복지협의회에서 제공하는 2021년 전국푸드뱅크 기부자 통계.
-#' Last Update: 2022-03-18;
 #'
 #' @format A data frame with 4 variables.
 #' \describe{
@@ -689,7 +679,6 @@ NULL
 #' 
 #' 보건복지부 아동학대 신고정보에 대한 해당연도 말 시점의 시도별, 의심사례, 일반상담, 동일신고, 
 #' 해외발생, 교직원, 의료인 등 신고현황통계.
-#' Last Update: 2022-06-30;
 #'
 #' @format A data frame with 4 variables.
 #' \describe{
@@ -710,7 +699,6 @@ NULL
 #' 한국교통안전공단 자동차검사소 정보
 #' 
 #' 한국교통안전공단에서 운영하고 있는 자동차검사소 정보. 해당 지역별 리스트와 위도, 경도 등 각종 정보를 제공.
-#' Last Update: 2021-09-27;
 #'
 #' @format A data frame with 22 variables.
 #' \describe{
@@ -757,7 +745,6 @@ NULL
 #' 소방청 전국 소방서 정보
 #' 
 #' 소방청에서 제공하는 전국 소방서 정보.
-#' Last Update: 2022-04-18;
 #'
 #' @format A data frame with 5 variables.
 #' \describe{
@@ -779,7 +766,6 @@ NULL
 #' 국민건강보험공단 2014-15 혈액검사 데이터
 #' 
 #' 국민건강보험공단에서 제공하는 2014~2015년 일반검진 및 생애전환기 건강검진 혈액검사 데이터.
-#' Last Update: 2021-11-24;
 #'
 #' @format A data frame with 5 variables.
 #' \describe{
@@ -808,7 +794,6 @@ NULL
 #' 
 #' 한국국제협력단에서 제공하는 국가별 개발 협력 동향정보 데이터. 지역, 국가, 관할사무소, 구분(공여국/수원국/국제기구/KOICA), 
 #' KOICA 12대분야 및 기타, 동향기사 제목 및 본문내용, 출처, 링크 정보를 제공. 
-#' Last Update: 2022-06-29;
 #'
 #' @format A data frame with 16 variables.
 #' \describe{
@@ -845,7 +830,6 @@ NULL
 #' 토지행정시스템에서 사용하는 법정동 데이터. 현존하는 법정동코드는 삭제일자가 없으며, 과거법정동코드는
 #' 행정표준코드관리시스템(https://www.code.go.kr)에서 제공하는 법정동코드 자료를 바탕으로 시스템 사용 용도에 
 #' 맞춰 가공한 데이터로 정보가 상이할 수 있음.
-#' Last Update: 2021-12-17;
 #'
 #' @format A data frame with 9 variables.
 #' \describe{
@@ -872,7 +856,6 @@ NULL
 #' 건강보험심사평가원 병의원 기본정보
 #' 
 #' 건강보험심사평가원에서 제공하는 병의원 기본정보 데이터셋.
-#' Last Update: 2022-04-14;
 #'
 #' @format A data frame with 29 variables.
 #' \describe{
@@ -917,7 +900,6 @@ NULL
 #' 건강보험심사평가원 약국 기본정보
 #' 
 #' 건강보험심사평가원에서 제공하는 약국 기본정보 데이터셋.
-#' Last Update: 2022-04-14;
 #'
 #' @format A data frame with 15 variables.
 #' \describe{
@@ -950,7 +932,6 @@ NULL
 #' 한국장학재단 장학금 정보
 #' 
 #' 한국장학재단에서 제공하는 매년 4월 대학정보공시 기준의 대학별 입학정원, 평균입학금, 평균등록금 정보(분교, 캠퍼스는 본교에 통합 산출).
-#' Last Update: 2022-05-25;
 #'
 #' @format A data frame with 7 variables.
 #' \describe{
@@ -975,7 +956,6 @@ NULL
 #' 농림축산식품부 농업 종관기상 데이터
 #' 
 #' 농림축산식품부에서 제공하는 농업 종관기상 데이터.
-#' Last Update: 2021-03-26;
 #'
 #' @format A list with 3 data frame.
 #' \describe{
@@ -997,7 +977,6 @@ NULL
 #' 국토교통부 전세계 공항정보
 #' 
 #' 국토교통부에서 제공하는 전세계 공항의 영문 공항명, 한글 공항명, IATA 코드, ICAO 코드, 국가명, 지역명에 대한 정보.
-#' Last Update: 2022-06-10;
 #'
 #' @format A list with 8 data frame.
 #' \describe{
@@ -1027,7 +1006,6 @@ NULL
 #' *개발지표: 인구, 경제, 인간개발, 빈곤, 교육, 재정, 거버넌스, 비즈니스, 산업인프라, 성평등
 #' *출처: World Bank Open data, Human Development Data Center, Fragile States Index, Transparency International, 
 #' UN Department of Economic and Social Affairs Public Institutions, OECD Statistics, KOICA ODA 정보센터
-#' Last Update: 2022-05-13;
 #'
 #' @format A list with 80 data frame.
 #' \describe{
@@ -1134,7 +1112,6 @@ NULL
 #' 행정안전부 단란주점 영업 정보
 #' 
 #' 행정안전부에서 제공하는 단란주점 영업 정보. 주로 주류와 함께 음식류를 조리 및 판매하는 곳으로 손님이 노래를 부르는 행위가 허용되는 업소정보 데이터로 인허가일자, 영업상태, 사업장명, 소재지주소 등의 정보등을 제공. * 좌표계 : 중부원점TM(EPSG:2097).
-#' Last Update: 2021-11-19;
 #'
 #' @format A list with 48 data frame.
 #' \describe{
@@ -1206,8 +1183,6 @@ NULL
 #' 소방청 화재통계
 #' 
 #' 소방청에서 제공하는 장소별 원인별 화재통계.
-#' Last Update: 2020-03-19;
-
 #'
 #' @format A list with 18 data frame.
 #' \describe{
@@ -1256,7 +1231,6 @@ NULL
 #' 식품의약품안전처에서 제공하는 농축수산물, 가공식품 및 음식 영양성분 데이터베이스. 이용허락범위: 저작자표시(CC BY). 
 #' 본 저작물은 '식품의약품안전처'에서 '2020년'작성하여 공공누리 제1유형으로 개방한 '식품영양성분 데이터베이스를'을 이용하였으며, 
 #' 해당 저작물은 '식품의약품안전처 식품영양성분 데이터베이스(https://www.foodsafetykorea.go.kr/fcdb/index.do)'에서 무료로 다운받으실 수 있습니다.
-#' Last Update: 2020-10-28;
 #'
 #' @format A list with 146 data frame.
 #' \describe{
@@ -1429,7 +1403,6 @@ NULL
 #' 
 #' 공공기관이 등록하여 공공데이터포털에서 개방중인 목록 정보(목록명, 목록타입(파일, API), 표준데이터 여부, 국가중점여부, 등록기관, 
 #' 기관 분류, 분류체계, 등록일, 마지막 수정일) 를 제공. 이용허락범위 제한 없음.
-#' Last Update: 2022-07-01;
 #'
 #' @format A list with 13 data frame.
 #' \describe{
@@ -1462,7 +1435,6 @@ NULL
 #' 한국승강기안전공단 국내 승강기 보유 현황
 #' 
 #' 한국승강기안전공단에서 제공하는 국내 승강기 보유 현황. 이용허락범위 제한 없음.
-#' Last Update: 2022-02-22;
 #'
 #' @format A list with 8 data frame.
 #' \describe{
@@ -1488,7 +1460,6 @@ NULL
 #' 경찰청 범죄 발생 장소별 통계
 #' 
 #' 경찰청에서 제공하는 범죄유형별(강력범죄, 폭력범죄, 지능범죄 등)로 범죄장소(아파트, 단독주택, 고속도로, 노상 ,백화점, 슈퍼마켓 등)별 통계. 이용허락범위 제한 없음.
-#' Last Update: 2022-10-08;
 #'
 #' @format A list with 4 data frame.
 #' \describe{
@@ -1513,7 +1484,6 @@ NULL
 #' 국토교통부 전국 버스 정류장 위치정보
 #' 
 #' 버스정보시스템(BIS)이 구축된 지자체 중 국가대중교통정보센터(TAGO)와 연계된 136개 지자체에 대한 버스정류장 위치정보 데이터. 안동-예천의 경우 안동, 원주-횡성은 원주, 제주-서귀포는 제주, 대전-계룡은 대전, 목포-무안-신안-영암은 목포, 영덕-청송-영양은 영덕으로 통합. 이용허락범위 제한 없음.
-#' Last Update: 2021-09-16;
 #'
 #' @format A data frame with 11 variables.
 #' \describe{
@@ -1548,7 +1518,6 @@ NULL
 #' 서울특별시 응급실 위치 정보
 #' 
 #' 서울특별시에서 제공하는 서울시 응급실 위치 정보. 주소, 병원분류명, 응급의료기관, 응급실운영여부, 비고, 기관설명상세, 간이약도, 기관명, 대표전화, 응급실 전화, 진료시간, 병원경도, 병원위도 등의 항목으로 구성. 본 저작물은 서울특별시에서 2021년 작성하여 공공누리 제1유형으로 개방한 '서울특별시 응급실 위치 정보(작성자:서울특별시 빅데이터담당관)'을 이용하였으며, 저작물은 '서울시 열린 데이터 광장(http://data.seoul.go.kr/dataList/OA-20338/S/1/datasetView.do)'에서 무료로 다운받으실 수 있습니다.
-#' Last Update: 2021-09-16;
 #'
 #' @format A data frame with 34 variables.
 #' \describe{
@@ -1612,7 +1581,6 @@ NULL
 #' 경기도 응급의료기관 및 응급의료지원센터 현황
 #' 
 #' 경기도 내 응급의료기관 및 응급의료지원센터 현황. 기관 및 센터의 소재지 주소와 대표 전화번호 등의 정보를 제공. 이용허락범위 제한 없음.
-#' Last Update: 2022-05-02;
 #'
 #' @format A data frame with 14 variables.
 #' \describe{
