@@ -5,10 +5,23 @@
 \alias{restaurant}
 \title{경기도 맛집 정보}
 \format{
-
+A data frame with 9 variables.
+\describe{
+   \item{시군명}{해당 음식점의 시 또는 군명}
+   \item{음식점명}{해당 음식점명}
+   \item{맛집전화번호 }{해당 음식점 전화번호}
+   \item{대표음식명 }{해당 음식점의 대표음식명}
+   \item{소재지우편번호}{해당 음식점 우편번호}
+   \item{소재지도로명주소}{해당 음식점 도로명주소}
+   \item{소재지지번주소}{해당 음식점 지번주소}
+   \item{WGS84위도}{해당 음식점의 WGS84 위도
+   WGS84: 측지기준계의 종류 중 하나}
+   \item{WGS84경도}{해당 음식점의 WGS84 경도
+   WGS84: 측지기준계의 종류 중 하나}
+ }
 }
 \source{
-\url{https://www.data.go.kr/data/15057234/openapi.do}{공공데이터포털:보건 - 식품의약안전}
+\url{https://www.data.go.kr/data/15057234/openapi.do}
 }
 \usage{
 restaurant
@@ -16,7 +29,6 @@ restaurant
 \description{
 경기도 지역 특산물을 활용한 향토 특색음식점으로 경기도를 대표할 수 있는 맛, 위생, 서비스가 우수한 업소를 발굴하여 
 경기으뜸맛집으로 육성하고자 선정된 맛집 현황입니다. 음식점명, 맛집전화번호, 대표음식명, 주소, 위경도 등의 정보를 제공합니다.
-Last Update: 2017-11-20;
 }
 \examples{
 DT::datatable(head(restaurant, 50))

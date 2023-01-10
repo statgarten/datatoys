@@ -8,14 +8,13 @@
 
 }
 \source{
-\url{https://www.data.go.kr/data/3073746/fileData.do}{공공데이터포털:지역개발 - 지역및도시}
+\url{https://www.data.go.kr/data/3073746/fileData.do}
 }
 \usage{
 housingPrice
 }
 \description{
-국토교통부에서 제공하는 2021년도 공동주택 공시가격정보입니다. 
-Last Update: 2021-10-29;
+국토교통부에서 제공하는 2021년도 공동주택 공시가격정보입니다.
 }
 \examples{
 DT::datatable(head(housingPrice, 50))

@@ -39,14 +39,13 @@ A list with 18 data frame.
 }
 }
 \source{
-\url{https://www.data.go.kr/data/3038724/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
+\url{https://www.data.go.kr/data/3038724/fileData.do}
 }
 \usage{
 fire
 }
 \description{
 소방청에서 제공하는 장소별 원인별 화재통계.
-Last Update: 2020-03-19;
 }
 \examples{
 DT::datatable(head(fire,50))

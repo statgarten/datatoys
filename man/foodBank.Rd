@@ -14,14 +14,13 @@ A data frame with 4 variables.
 }
 }
 \source{
-\url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:사회복지 - 사회복지일반}
+\url{https://www.data.go.kr/data/15060094/fileData.do/}
 }
 \usage{
 foodBank
 }
 \description{
 한국사회복지협의회에서 제공하는 2021년 전국푸드뱅크 기부자 통계.
-Last Update: 2022-03-18;
 }
 \examples{
 DT::datatable(head(foodBank,50))

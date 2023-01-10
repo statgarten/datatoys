@@ -17,14 +17,13 @@ A data frame with 6 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/3076606/fileData.do}{공공데이터포털:산업·통상·중소기업 - 에너지및자원개발}
+\url{https://www.data.go.kr/data/3076606/fileData.do}
 }
 \usage{
 gasStation
 }
 \description{
 산업통상자원부에서 제공하는 전국 주유소 등록현황(전국 주유소 신규 등록 , 휴업, 폐업 현황 정보, 연도, 변동사유발생연월일, 판매업종류 등).
-Last Update: 2022-03-10;
 }
 \examples{
 DT::datatable(head(gasStation, 50))

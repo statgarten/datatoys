@@ -71,7 +71,7 @@ A data frame with 31 variables.
 }
 }
 \source{
-\url{https://www.data.go.kr/data/15007122/fileData.do}{공공데이터포털:보건 - 보건의료}
+\url{https://www.data.go.kr/data/15007122/fileData.do}
 }
 \usage{
 medicalCheckup

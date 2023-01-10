@@ -19,14 +19,13 @@ A data frame with 7 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15060094/fileData.do/}{공공데이터포털:교육 - 고등교육}
+\url{https://www.data.go.kr/data/15060094/fileData.do/}
 }
 \usage{
 tuition
 }
 \description{
 한국장학재단에서 제공하는 매년 4월 대학정보공시 기준의 대학별 입학정원, 평균입학금, 평균등록금 정보(분교, 캠퍼스는 본교에 통합 산출).
-Last Update: 2022-05-25;
 }
 \examples{
 DT::datatable(head(tuition,50))

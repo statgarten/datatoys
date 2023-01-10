@@ -28,7 +28,7 @@ A data frame with 16 variables.
   }
 }
 \source{
-\url{https://www.data.go.kr/data/15038576/fileData.do}{공공데이터포털:교육 - 고등교육}
+\url{https://www.data.go.kr/data/15038576/fileData.do}
 }
 \usage{
 scholarship

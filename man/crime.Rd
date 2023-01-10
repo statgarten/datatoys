@@ -100,7 +100,7 @@ A data frame with 90 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/3074462/fileData.do}{공공데이터포털:공공질서및안전 - 경찰}
+\url{https://www.data.go.kr/data/3074462/fileData.do}
 }
 \usage{
 crime

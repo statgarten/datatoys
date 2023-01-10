@@ -30,14 +30,13 @@ A data frame with 14 variables.
 }
 }
 \source{
-\url{https://www.data.go.kr/data/15011313/fileData.do}{공공데이터포털:보건 - 보건의료}
+\url{https://www.data.go.kr/data/15011313/fileData.do}
 }
 \usage{
 gyeonggiER
 }
 \description{
 경기도 내 응급의료기관 및 응급의료지원센터 현황. 기관 및 센터의 소재지 주소와 대표 전화번호 등의 정보를 제공. 이용허락범위 제한 없음.
-Last Update: 2022-05-02;
 }
 \examples{
 library(leaflet)

@@ -18,14 +18,13 @@ A data frame with 7 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15083256/fileData.do}{공공데이터포털:일반공공행정 - 일반행정}
+\url{https://www.data.go.kr/data/15083256/fileData.do}
 }
 \usage{
 necessariesPrice
 }
 \description{
 한국소비자원 참가격정보서비스에 접수된 상품별 생필품 가격 데이터 현황(상품명, 판매업소, 판매가격 등).
-Last Update: 2022-05-23;
 }
 \examples{
 DT::datatable(head(necessariesPrice,50))

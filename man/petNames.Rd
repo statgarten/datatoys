@@ -12,14 +12,13 @@ A data frame with 2 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15042010/fileData.do}{공공데이터포털 : 일반공공행정 - 일반행정}
+\url{https://www.data.go.kr/data/15042010/fileData.do}
 }
 \usage{
 petNames
 }
 \description{
 서울특별시 마포구 지역경제과에서 제공하는 반려동물 이름 현황데이터. 동물이름, 동물 수 데이터를 제공.
-Last Update: 2021-09-01;
 }
 \examples{
 DT::datatable(head(petNames,50))

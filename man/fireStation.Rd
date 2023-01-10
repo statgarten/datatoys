@@ -15,14 +15,13 @@ A data frame with 5 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15048242/fileData.do}{공공데이터포털:공공질서및안전 - 안전관리}
+\url{https://www.data.go.kr/data/15048242/fileData.do}
 }
 \usage{
 fireStation
 }
 \description{
 소방청에서 제공하는 전국 소방서 정보.
-Last Update: 2022-04-18;
 }
 \examples{
 DT::datatable(head(fireStation,50))

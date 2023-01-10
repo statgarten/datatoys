@@ -51,7 +51,7 @@ A data frame with 23 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15070340/fileData.do}{공공데이터포털:	공공질서및안전 - 안전관리}
+\url{https://www.data.go.kr/data/15070340/fileData.do}
 }
 \usage{
 accident

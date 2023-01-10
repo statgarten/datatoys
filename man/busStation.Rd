@@ -21,14 +21,13 @@ A data frame with 11 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15067528/fileData.do}{공공데이터포털:	교통및물류 - 도로}
+\url{https://www.data.go.kr/data/15067528/fileData.do}
 }
 \usage{
 busStation
 }
 \description{
 버스정보시스템(BIS)이 구축된 지자체 중 국가대중교통정보센터(TAGO)와 연계된 136개 지자체에 대한 버스정류장 위치정보 데이터. 안동-예천의 경우 안동, 원주-횡성은 원주, 제주-서귀포는 제주, 대전-계룡은 대전, 목포-무안-신안-영암은 목포, 영덕-청송-영양은 영덕으로 통합. 이용허락범위 제한 없음.
-Last Update: 2021-09-16;
 }
 \examples{
 library(leaflet)

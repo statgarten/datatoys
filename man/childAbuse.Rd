@@ -15,7 +15,7 @@ A data frame with 4 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15065291/fileData.do}{공공데이터포털:사회복지 - 보육·가족및여성}
+\url{https://www.data.go.kr/data/15065291/fileData.do}
 }
 \usage{
 childAbuse
@@ -23,7 +23,6 @@ childAbuse
 \description{
 보건복지부 아동학대 신고정보에 대한 해당연도 말 시점의 시도별, 의심사례, 일반상담, 동일신고, 
 해외발생, 교직원, 의료인 등 신고현황통계.
-Last Update: 2022-06-30;
 }
 \examples{
 DT::datatable(head(childAbuse,50))

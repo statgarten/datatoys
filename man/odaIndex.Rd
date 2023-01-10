@@ -8,7 +8,7 @@
 
 }
 \source{
-\url{https://www.data.go.kr/data/15088160/fileData.do}{공공데이터포털:통일·외교 - 외교}
+\url{https://www.data.go.kr/data/15088160/fileData.do}
 }
 \usage{
 odaIndex
@@ -18,7 +18,6 @@ odaIndex
 *개발지표: 인구, 경제, 인간개발, 빈곤, 교육, 재정, 거버넌스, 비즈니스, 산업인프라, 성평등
 *출처: World Bank Open data, Human Development Data Center, Fragile States Index, Transparency International, 
 UN Department of Economic and Social Affairs Public Institutions, OECD Statistics, KOICA ODA 정보센터
-Last Update: 2022-05-13;
 }
 \examples{
 DT::datatable(head(odaIndex,50))

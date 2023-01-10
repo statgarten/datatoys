@@ -27,14 +27,13 @@ A data frame with 15 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15051059/fileData.do}{공공데이터포털:보건 - 건강보험}
+\url{https://www.data.go.kr/data/15051059/fileData.do}
 }
 \usage{
 pharmacyInfo
 }
 \description{
 건강보험심사평가원에서 제공하는 약국 기본정보 데이터셋.
-Last Update: 2022-04-14;
 }
 \examples{
 DT::datatable(head(pharmacyInfo,50))

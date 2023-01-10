@@ -21,14 +21,13 @@ A list with 8 data frame.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/3051587/fileData.do}{공공데이터포털:교통및물류 - 항공·공항}
+\url{https://www.data.go.kr/data/3051587/fileData.do}
 }
 \usage{
 airport
 }
 \description{
 국토교통부에서 제공하는 전세계 공항의 영문 공항명, 한글 공항명, IATA 코드, ICAO 코드, 국가명, 지역명에 대한 정보.
-Last Update: 2022-06-10;
 }
 \examples{
 DT::datatable(head(airport,50))

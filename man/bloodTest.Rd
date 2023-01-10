@@ -22,14 +22,13 @@ A data frame with 5 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15095107/fileData.do}{공공데이터포털:보건 - 보건의료}
+\url{https://www.data.go.kr/data/15095107/fileData.do}
 }
 \usage{
 bloodTest
 }
 \description{
 국민건강보험공단에서 제공하는 2014~2015년 일반검진 및 생애전환기 건강검진 혈액검사 데이터.
-Last Update: 2021-11-24;
 }
 \examples{
 DT::datatable(head(bloodTest, 50))

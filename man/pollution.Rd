@@ -40,7 +40,7 @@ A data frame with 18 variables
  }
 }
 \source{
-\url{https://www.data.go.kr/data/3045217/fileData.do}{공공데이터포털:환경 - 상하수도·수질}
+\url{https://www.data.go.kr/data/3045217/fileData.do}
 }
 \usage{
 pollution

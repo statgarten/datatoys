@@ -16,16 +16,12 @@ A list with 3 data frame.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15034381/fileData.do}{공공데이터포털:농림 - 임업·산촌}
+\url{https://www.data.go.kr/data/15034381/fileData.do}
 }
 \usage{
 weather2020
 }
 \description{
 농림축산식품부에서 제공하는 농업 종관기상 데이터.
-Last Update: 2021-03-26;
-}
-\examples{
-DT::datatable(head(weather2020,50))
 }
 \keyword{datasets}

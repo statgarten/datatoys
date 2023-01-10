@@ -26,7 +26,7 @@ A data frame with 8 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15067461/fileData.do}{공공데이터포털-]:보건 - 건강보험}
+\url{https://www.data.go.kr/data/15067461/fileData.do}
 }
 \usage{
 medicine
@@ -34,7 +34,6 @@ medicine
 \description{
 건강보험심사평가원에서 제공하는 의약품 주성분(일반명) 현황에 대한 데이터셋. 
 의약품주성분 코드, 성분명, 제형구분, 투여, 함량, 단위 등 정보를 제공.
-Last Update: 2021-10-25;
 }
 \examples{
 DT::datatable(head(medicine,50))

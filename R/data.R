@@ -516,7 +516,7 @@ NULL
 #' 서울특별시 우체국 정보에 대한 데이터로 전체기관명, 대표 전화번호, 새우편번호, 도로명주소, 행정시, 행정구, 행정동 정보.
 #' 
 #' @format A data frame with 14 variables.
-#'\describe{
+#' \describe{
 #'    \item{키값}{해당 우체국 키값}
 #'    \item{기관코드}{해당 우체국 기관코드}
 #'    \item{유형1}{우정}
@@ -966,6 +966,10 @@ NULL
 #'    기상청관측지점번호,관측시각,지중온도30CM,지중온도20CM,지중온도10CM,지중온도5CM,지면온도,현상번호,지면상태코드,시정,최저운고,운형코드,중하층운량,전운량}
 #'  }
 #' @source \url{https://www.data.go.kr/data/15034381/fileData.do}
+#' @examples
+#' DT::datatable(head(weather2020$code,50))
+#' DT::datatable(head(weather2020$day,50))
+#' DT::datatable(head(weather2020$hour,50))
 "weather2020"
 
 

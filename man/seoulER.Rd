@@ -49,14 +49,13 @@ A data frame with 34 variables.
 }
 }
 \source{
-\url{https://www.data.go.kr/data/15088910/fileData.do}{공공데이터포털:보건 - 보건의료}
+\url{https://www.data.go.kr/data/15088910/fileData.do}
 }
 \usage{
 seoulER
 }
 \description{
 서울특별시에서 제공하는 서울시 응급실 위치 정보. 주소, 병원분류명, 응급의료기관, 응급실운영여부, 비고, 기관설명상세, 간이약도, 기관명, 대표전화, 응급실 전화, 진료시간, 병원경도, 병원위도 등의 항목으로 구성. 본 저작물은 서울특별시에서 2021년 작성하여 공공누리 제1유형으로 개방한 '서울특별시 응급실 위치 정보(작성자:서울특별시 빅데이터담당관)'을 이용하였으며, 저작물은 '서울시 열린 데이터 광장(http://data.seoul.go.kr/dataList/OA-20338/S/1/datasetView.do)'에서 무료로 다운받으실 수 있습니다.
-Last Update: 2021-09-16;
 }
 \examples{
 library(leaflet)

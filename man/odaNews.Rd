@@ -29,15 +29,14 @@ A data frame with 16 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15052910/fileData.do}{공공데이터포털:통일·외교 - 외교}
+\url{https://www.data.go.kr/data/15052910/fileData.do}
 }
 \usage{
 odaNews
 }
 \description{
 한국국제협력단에서 제공하는 국가별 개발 협력 동향정보 데이터. 지역, 국가, 관할사무소, 구분(공여국/수원국/국제기구/KOICA), 
-KOICA 12대분야 및 기타, 동향기사 제목 및 본문내용, 출처, 링크 정보를 제공. 
-Last Update: 2022-06-29;
+KOICA 12대분야 및 기타, 동향기사 제목 및 본문내용, 출처, 링크 정보를 제공.
 }
 \examples{
 DT::datatable(head(odaNews, 50))
