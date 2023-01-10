@@ -24,4 +24,9 @@ weather2020
 \description{
 농림축산식품부에서 제공하는 농업 종관기상 데이터.
 }
+\examples{
+DT::datatable(head(weather2020$code,50))
+DT::datatable(head(weather2020$day,50))
+DT::datatable(head(weather2020$hour,50))
+}
 \keyword{datasets}
