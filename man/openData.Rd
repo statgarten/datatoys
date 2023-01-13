@@ -7,20 +7,26 @@
 \format{
 A list with 13 data frame.
 \describe{
-   \item{목록키}{목록키}
-   \item{목록유형}{API, FILE, STD}
-   \item{목록명}{목록명}
-   \item{목록설명}{목록설명}
-   \item{조회수}{조회수}
-   \item{분류체계}{분류체계}
-   \item{기관코드}{기관코드}
-   \item{기관명}{기관명}
-   \item{국가중점여부}{Y, N}
-   \item{표준데이터여부}{Y, N}
-   \item{목록.등록일}{목록.등록일}
-   \item{목록.수정일}{목록.수정일}
-   \item{목록.URL}{목록.URL}
+   \item{목록키}{해당 공공데이터 목록키}
+   \item{목록유형}{해당 공공데이터 목록유형
+   API, FILE, STD}
+   \item{목록명}{해당 공공데이터 목록명}
+   \item{목록설명}{해당 공공데이터 목록설명}
+   \item{조회수}{해당 공공데이터 조회수}
+   \item{분류체계}{해당 공공데이터 분류체계
+   교통물류, 문화관광, 공공행정, 법률, 교육, 사회복지, 농축수산, 과학기술, 재난안전, 보건의료, 국토관리, 산업고용, 통일외교안보, 재정금융, 식품건강, 환경기상}
+   \item{기관코드}{해당 공공데이터 기관코드}
+   \item{기관명}{해당 공공데이터 기관명}
+   \item{국가중점여부}{해당 공공데이터 국가중점여부
+   Y, N}
+   \item{표준데이터여부}{해당 공공데이터 표준데이터여부 Y, N}
+   \item{목록.등록일}{해당 공공데이터 목록 등록일}
+   \item{목록.수정일}{해당 공공데이터 목록 수정일}
+   \item{목록.URL}{해당 공공데이터 목록 URL}
 }
+}
+\source{
+\url{https://www.data.go.kr/data/15062804/fileData.do}
 }
 \usage{
 openData
@@ -28,7 +34,8 @@ openData
 \description{
 공공기관이 등록하여 공공데이터포털에서 개방중인 목록 정보(목록명, 목록타입(파일, API), 표준데이터 여부, 국가중점여부, 등록기관, 
 기관 분류, 분류체계, 등록일, 마지막 수정일) 를 제공. 이용허락범위 제한 없음.
-Last Update: 2022-07-01;
-https://www.data.go.kr/data/15062804/fileData.do
+}
+\examples{
+DT::datatable(head(openData,50))
 }
 \keyword{datasets}

@@ -7,21 +7,26 @@
 \format{
 A data frame with 7 variables.
 \describe{
-   \item{상품명}{상품명}
-   \item{조사일}{조사일}
-   \item{판매가격}{판매가격}
-   \item{판매업소}{판매업소}
-   \item{제조사}{제조사}
-   \item{세일여부}{Y, N}
-   \item{원플러스원}{N, }
+   \item{상품명}{해당 생필품 상품명}
+   \item{조사일}{해당 생필품 가격 데이터 조사일}
+   \item{판매가격}{해당 생필품 상품 판매가격}
+   \item{판매업소}{해당 생필품 상품 판매업소}
+   \item{제조사}{해당 생필품 상품 제조사}
+   \item{세일여부}{해당 생필품 상품의 세일 여부
+   Y : 세일 , N : 세일 안함}
+   \item{원플러스원}{해당 생필품 상품의 원플러스원 여부}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15083256/fileData.do}
 }
 \usage{
 necessariesPrice
 }
 \description{
 한국소비자원 참가격정보서비스에 접수된 상품별 생필품 가격 데이터 현황(상품명, 판매업소, 판매가격 등).
-Last Update: 2022-05-23;
-https://www.data.go.kr/data/15083256/fileData.do
+}
+\examples{
+DT::datatable(head(necessariesPrice,50))
 }
 \keyword{datasets}

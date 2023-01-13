@@ -7,29 +7,35 @@
 \format{
 A data frame with 15 variables.
 \describe{
-   \item{암호화요양기호}{암호화요양기호}
-   \item{요양기관명}{요양기관명}
-   \item{종별코드}{약국}
-   \item{종별코드명}{종별코드명}
-   \item{시도코드}{시도코드}
-   \item{시도코드명}{부산, 서울, 광주, 충북, 경기, 충남, 울산, 경남, 대전, 세종시, 제주, 전북, 대구, 강원, 경북, 전남, 인}
-   \item{시군구코드}{시군구코드}
-   \item{시군구코드명}{시군구코드명}
-   \item{읍면동}{읍면동}
-   \item{우편번호}{우편번호}
-   \item{주소}{주소}
-   \item{전화번호}{전화번호}
-   \item{개설일자}{개설일자}
-   \item{x좌표}{x좌표}
-   \item{y좌표}{y좌표}
+   \item{암호화요양기호}{해당 약국 암호화요양기호}
+   \item{요양기관명}{해당 약국 명}
+   \item{종별코드}{해당 약국 종별코드}
+   \item{종별코드명}{해당 약국 종별코드명
+   약국}
+   \item{시도코드}{해당 약국 시도코드}
+   \item{시도코드명}{해당 약국 시도코드명
+   부산, 서울, 광주, 충북, 경기, 충남, 울산, 경남, 대전, 세종시, 제주, 전북, 대구, 강원, 경북, 전남, 인천}
+   \item{시군구코드}{해당 약국 시군구코드}
+   \item{시군구코드명}{해당 약국 시군구코드명}
+   \item{읍면동}{해당 약국 읍면동}
+   \item{우편번호}{해당 약국 우편번호}
+   \item{주소}{해당 약국 주소}
+   \item{전화번호}{해당 약국 전화번호}
+   \item{개설일자}{해당 약국 개설일자}
+   \item{x좌표}{해당 약국 x좌표}
+   \item{y좌표}{해당 약국 y좌표}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15051059/fileData.do}
 }
 \usage{
 pharmacyInfo
 }
 \description{
 건강보험심사평가원에서 제공하는 약국 기본정보 데이터셋.
-Last Update: 2022-04-14;
-https://www.data.go.kr/data/15051059/fileData.do
+}
+\examples{
+DT::datatable(head(pharmacyInfo,50))
 }
 \keyword{datasets}

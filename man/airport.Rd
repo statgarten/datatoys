@@ -7,22 +7,29 @@
 \format{
 A list with 8 data frame.
 \describe{
-   \item{영문공항명}{영문공항명}
-   \item{한글공항명}{한글공항명}
-   \item{공항코드1.IATA.}{공항코드1 IATA}
-   \item{공항코드2.ICAO.}{공항코드2 ICAO}
-   \item{지역}{유럽, 중남미, 아프리카, 중동, 북미, 아시아, 대양주, 남미}
-   \item{영문국가명}{영문국가명}
-   \item{한글국가명}{한글국가명}
-   \item{영문도시명}{영문도시명}
+   \item{영문공항명}{해당 공항 영문공항명}
+   \item{한글공항명}{해당 공항 한글공항명}
+   \item{공항코드1.IATA.}{해당 공항 IATA 공항코드
+   IATA : International Air Transport Association, 국제항공운송협회에서 제정한 국제표준으로 세 문자 코드로 구성되어 있으며, 세계의 모든 공항이 IATA에 의해 중복되지 않게 코드를 부여받는다.}
+   \item{공항코드2.ICAO.}{해당 공항 ICAO 공항코드
+    국제 민간 항공 기구(ICAO/OACI)에서 비행정보구역(FIR)과 공항에 부여하는 코드}
+   \item{지역}{해당 공항 지역
+   유럽, 중남미, 아프리카, 중동, 북미, 아시아, 대양주, 남미}
+   \item{영문국가명}{해당 공항 영문국가명}
+   \item{한글국가명}{해당 공항 한글국가명}
+   \item{영문도시명}{해당 공항 영문도시명}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/3051587/fileData.do}
 }
 \usage{
 airport
 }
 \description{
 국토교통부에서 제공하는 전세계 공항의 영문 공항명, 한글 공항명, IATA 코드, ICAO 코드, 국가명, 지역명에 대한 정보.
-Last Update: 2022-06-10;
-https://www.data.go.kr/data/3051587/fileData.do
+}
+\examples{
+DT::datatable(head(airport,50))
 }
 \keyword{datasets}

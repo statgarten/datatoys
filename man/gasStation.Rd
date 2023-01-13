@@ -7,20 +7,25 @@
 \format{
 A data frame with 6 variables.
 \describe{
-   \item{연도}{연도}
-   \item{변동사유발생연월일}{변동사유발생연월일}
-   \item{판매업종류 }{휴업, 신규등록, 폐업, 등록취소}
-   \item{구분}{구분}
-   \item{업체명}{업체명}
-   \item{소재지}{소재지}
+   \item{연도}{주유소 변동사유(신규 등록, 휴업, 폐업 현황)발생 연도}
+   \item{변동사유발생연월일}{주유소 변동사유(신규 등록, 휴업, 폐업 현황) 발생 연월일}
+   \item{판매업종류}{주유소}
+   \item{구분}{주유소 현황
+   휴업, 신규등록, 폐업, 등록취소}
+   \item{업체명}{주유소 업체명}
+   \item{소재지}{주유소 소재지}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/3076606/fileData.do}
 }
 \usage{
 gasStation
 }
 \description{
-산업통상자원부에서 제공하는 전국 주유소 등록현황(전국 주유소 신규 등록 , 휴업, 폐업 현황 정보, 연도, 변동사유발생연월일, 판매업종류 등). 
-Last Update: 2022-03-10;
-https://www.data.go.kr/data/3076606/fileData.do
+산업통상자원부에서 제공하는 전국 주유소 등록현황(전국 주유소 신규 등록 , 휴업, 폐업 현황 정보, 연도, 변동사유발생연월일, 판매업종류 등).
+}
+\examples{
+DT::datatable(head(gasStation, 50))
 }
 \keyword{datasets}

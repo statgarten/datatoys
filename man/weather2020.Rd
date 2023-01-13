@@ -7,17 +7,26 @@
 \format{
 A list with 3 data frame.
 \describe{
-   \item{code}{기상청관측지점번호, 기상청지점명, 기상청설치위도, 기상청설치경도}
-   \item{day}{  기상청관측지점번호, 관측시각, 지중온도150CM, X9_9강수, 최저해면기압, 평균상대습도, 평균상대습도시각, 최대순간풍속풍향 등}
-   \item{hour}{기상청관측지점번호,관측시각,지중온도30CM,지중온도20CM,지중온도10CM,지중온도5CM,지면온도,현상번호,지면상태코드,시정,최저운고,운형코드,중하층운량,전운량}
+   \item{code}{기상청 데이터
+   기상청관측지점번호, 기상청지점명, 기상청설치위도, 기상청설치경도}
+   \item{day}{일단위 농업기상
+   기상청관측지점번호, 관측시각, 지중온도150CM, X9_9강수, 최저해면기압, 평균상대습도, 평균상대습도시각, 최대순간풍속풍향 등}
+   \item{hour}{시간단위 농업기상
+   기상청관측지점번호,관측시각,지중온도30CM,지중온도20CM,지중온도10CM,지중온도5CM,지면온도,현상번호,지면상태코드,시정,최저운고,운형코드,중하층운량,전운량}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15034381/fileData.do}
 }
 \usage{
 weather2020
 }
 \description{
 농림축산식품부에서 제공하는 농업 종관기상 데이터.
-Last Update: 2021-03-26;
-https://www.data.go.kr/data/15034381/fileData.do
+}
+\examples{
+DT::datatable(head(weather2020$code,50))
+DT::datatable(head(weather2020$day,50))
+DT::datatable(head(weather2020$hour,50))
 }
 \keyword{datasets}
