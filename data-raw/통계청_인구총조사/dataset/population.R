@@ -1,6 +1,6 @@
 library(tidyverse)
 
-population <- readxl::read_excel("/Users/youngjunna/Google_drive/06 프로그래밍/datatoys/data-raw/통계청_인구총조사/dataset/alltime_population.xlsx")
+population <- readxl::read_excel("alltime_population.xlsx")
 
 
 population <- population %>% 
@@ -15,3 +15,4 @@ population <- population %>%
   ) 
 
 usethis::use_data(population, overwrite = TRUE)
+

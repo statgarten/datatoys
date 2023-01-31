@@ -1,6 +1,26 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 통계청 인구총조사
+#'
+#' 통계청에서 제공하는 인구총조사,  대한민국 영토 내에 상주하는 모든 내국인·외국인
+#'
+#' @format A data frame with 5 variables:
+#' \describe{
+#'   \item{행정구역별}{해당 연도 대한민국 영토 내에 상주하는 모든 내국인·외국인과 이들이 살고 있는 거처}
+#'   \item{연령별}{해당 연도에 조사된 인구를 연령별(5살)로 나눈 연령대}
+#'   \item{연도}{조사기준 시점 현재}
+#'   \item{분류}{각 행정구역 연령별 인구수를 성별로 나눈 기준
+#'   남자, 여자}
+#'   \item{인구수}{해당 연도, 각 행정구역 연령별 인구 수}
+#' }
+#' @source \url{https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1IN0001_ENG&conn_path=I2}
+#' @examples
+#' DT::datatable(head(population, 50))
+"population"
+
+
+
 #' 한국국제협력단 소득수준별 ODA 실적통계
 #'
 #' 한국국제협력단에서 제공하는 소득수준별 ODA 실적통계로 1991년부터 2019년까지의 연도별, 사업분류별, 지원액(원화), 지원액(달러)
