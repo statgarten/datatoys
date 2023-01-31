@@ -7,15 +7,26 @@
 \format{
 A data frame with 8 variables.
 \describe{
-   \item{일반명코드}{일반명코드}
-   \item{제형구분코드}{제형구분코드}
-   \item{제형}{과립제,세립, 액제, 산제, 경질캡슐제, 주사제, 정제,저작정, 장용정제 등}
-   \item{일반명}{일반명}
-   \item{분류번호}{분류번호}
-   \item{투여}{내복, 주사, 외용}
-   \item{함량}{함량}
-   \item{단위}{단위} 
+   \item{일반명코드}{주성분에 대한 코드
+   총 9자리로 구성
+   1~4자리 : 주성분 일련번호
+   5~6자리 : 함량 일련번호
+   7 : 투여경로구분코드
+   8~9 : 제형구분코드}
+   \item{제형구분코드}{제형구분코드
+   일반명코드의 8~9자리 코드}
+   \item{제형}{해당 의약품의 제형 명칭
+   과립제,세립, 액제, 산제, 경질캡슐제, 주사제, 정제,저작정, 장용정제 등}
+   \item{일반명}{해당 의약품의 일반명}
+   \item{분류번호}{해당 의약품 분류번호}
+   \item{투여}{해당 의약품 투여방식
+   내복, 주사, 외용}
+   \item{함량}{해당 의약품 함량}
+   \item{단위}{해당 의약품 함량 단위} 
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15067461/fileData.do}
 }
 \usage{
 medicine
@@ -23,7 +34,8 @@ medicine
 \description{
 건강보험심사평가원에서 제공하는 의약품 주성분(일반명) 현황에 대한 데이터셋. 
 의약품주성분 코드, 성분명, 제형구분, 투여, 함량, 단위 등 정보를 제공.
-Last Update: 2021-10-25;
-https://www.data.go.kr/data/15067461/fileData.do
+}
+\examples{
+DT::datatable(head(medicine,50))
 }
 \keyword{datasets}

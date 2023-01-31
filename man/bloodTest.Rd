@@ -13,17 +13,24 @@ A data frame with 5 variables.
   \item{TCHOL}{총콜레스테롤}
   \item{TG}{중성지방}
   \item{HDL}{HDL콜레스테롤}
-  \item{ANE}{빈혈 진료여부(있음:1, 없음:0)}
-  \item{IHD}{허혈심장질환 진료여부(있음:1, 없음:0)}
-  \item{STK}{뇌혈관질환 진료여부(있음:1, 없음:0)}
+  \item{ANE}{빈혈 진료여부 
+  1: 있음, 0: 없음}
+  \item{IHD}{허혈심장질환 진료여부
+  1: 있음, 0: 없음}
+  \item{STK}{뇌혈관질환 진료여부
+  1: 있음, 0: 없음}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15095107/fileData.do}
 }
 \usage{
 bloodTest
 }
 \description{
 국민건강보험공단에서 제공하는 2014~2015년 일반검진 및 생애전환기 건강검진 혈액검사 데이터.
-Last Update: 2021-11-24;
-https://www.data.go.kr/data/15095107/fileData.do
+}
+\examples{
+DT::datatable(head(bloodTest, 50))
 }
 \keyword{datasets}

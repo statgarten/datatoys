@@ -7,28 +7,34 @@
 \format{
 A data frame with 14 variables.
 \describe{
-   \item{키값}{키값}
-   \item{기관코드}{기관코드}
+   \item{키값}{해당 우체국 키값}
+   \item{기관코드}{해당 우체국 기관코드}
    \item{유형1}{우정}
    \item{유형2}{우정_우체국}
    \item{대표기관명}{미래부}
-   \item{전체기관명}{전체기관명}
-   \item{최하위기관명}{최하위기관명}
-   \item{대표전화번호}{대표전화번호}
-   \item{새우편번호}{새우편번호}
-   \item{주소}{주소}
-   \item{도로명주소}{도로명주소}
-   \item{행정시}{행정시}
-   \item{행정구}{행정구}
-   \item{행정동}{행정동}
+   \item{전체기관명}{우체국 전체이름
+   (예) 미래창조과학부 우정사업본부 서울지방우정청 서울송파우체국 서울삼전동우체국}
+   \item{최하위기관명}{최하위기관명
+   (예) 서울삼전동우체국}
+   \item{대표전화번호}{해당 우체국 대표전화번호}
+   \item{새우편번호}{해당 우체국 새우편번호}
+   \item{주소}{해당 우체국 주소}
+   \item{도로명주소}{해당 우체국 도로명주소}
+   \item{행정시}{해당 우체국의 행정시}
+   \item{행정구}{해당 우체국의 행정구}
+   \item{행정동}{해당 우체국의 행정동}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15047367/fileData.do}
 }
 \usage{
 postOffice
 }
 \description{
 서울특별시 우체국 정보에 대한 데이터로 전체기관명, 대표 전화번호, 새우편번호, 도로명주소, 행정시, 행정구, 행정동 정보.
-Last Update: 2021-05-27;
-https://www.data.go.kr/data/15047367/fileData.do
+}
+\examples{
+DT::datatable(head(postOffice,50))
 }
 \keyword{datasets}

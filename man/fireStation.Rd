@@ -8,18 +8,22 @@
 A data frame with 5 variables.
 \describe{
    \item{순번}{순번}
-   \item{본부명}{본부명}
-   \item{소방서}{소방서}
-   \item{주소}{주소}
-   \item{전화번호}{전화번호}
+   \item{본부명}{해당 소방서 본부명}
+   \item{소방서}{해당 소방서명}
+   \item{주소}{해당 소방서 주소}
+   \item{전화번호}{해당 소방서 전화번호}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15048242/fileData.do}
 }
 \usage{
 fireStation
 }
 \description{
 소방청에서 제공하는 전국 소방서 정보.
-Last Update: 2022-04-18;
-https://www.data.go.kr/data/15048242/fileData.do
+}
+\examples{
+DT::datatable(head(fireStation,50))
 }
 \keyword{datasets}

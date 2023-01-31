@@ -8,17 +8,21 @@
 A data frame with 4 variables.
 \describe{
    \item{지역}{지역}
-   \item{지원센터명}{지원센터명}
-   \item{기부자명}{기부자명}
-   \item{합계}{합계}
-. }
+   \item{지원센터명}{지원받은 센터명}
+   \item{기부자명}{푸드뱅크에 기부자명}
+   \item{합계}{기부 합계}
+}
+}
+\source{
+\url{https://www.data.go.kr/data/15060094/fileData.do/}
 }
 \usage{
 foodBank
 }
 \description{
 한국사회복지협의회에서 제공하는 2021년 전국푸드뱅크 기부자 통계.
-Last Update: 2022-03-18;
-https://www.data.go.kr/data/15083266/fileData.do
+}
+\examples{
+DT::datatable(head(foodBank,50))
 }
 \keyword{datasets}

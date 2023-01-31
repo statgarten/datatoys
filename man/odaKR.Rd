@@ -7,21 +7,26 @@
 \format{
 A data frame with 4 variables.
 \describe{
-  \item{연도}{연도}
-  \item{사업분류}{최빈국(LDCs), 기타저소득국(LICs), 중저소득국(LMICs), 고중소득국(UMICs), 미분류, 수원국리스트외 지역}
+  \item{연도}{ODA 지원한 연도 : 1991 ~ 2019}
+  \item{사업분류}{최빈국(LDCs : Least developed countries) : 최저개발국이라고도 하며, 1인당 GDP와 GDP 중 제조업 비중 및 성인 문자해득률 등을 기준으로 최빈국을 지정함
+  기타저소득국(LICs : Low-income countries) : 취약국가라고도 하며 부가 가난한 사람들을 포함한 국민들에게 기본적인 서비스를 제공할 의사가 없거나 제공할 수 없는 국가를 말한다.
+  중저소득국(LMICs : Low and Middle-income countries) : GNP 766불∼3,035불
+  고중소득국(UMICs : Upper Middle-Income Countries) GNP 3,036불 ∼9,385불
+  미분류, 수원국리스트외 지역}
   \item{지원액_원화}{원화 기준 지원액}
   \item{지원액_달러}{달러 기준 지원액}
  }
+}
+\source{
+\url{https://www.data.go.kr/data/15060336/fileData.do}
 }
 \usage{
 odaKR
 }
 \description{
-한국국제협력단에서 제공하는 소득수준별 ODA 실적통계로 1991년부터 2019년까지의 연도별, 
-사업분류별, 지원액(원화), 지원액(달러)
-https://www.data.go.kr/data/15060094/fileData.do
+한국국제협력단에서 제공하는 소득수준별 ODA 실적통계로 1991년부터 2019년까지의 연도별, 사업분류별, 지원액(원화), 지원액(달러)
 }
 \examples{
-DT::datatable(odaKR)
+DT::datatable(head(odaKR, 50))
 }
 \keyword{datasets}
