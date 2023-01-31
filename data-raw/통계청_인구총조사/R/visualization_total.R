@@ -1,8 +1,6 @@
-setwd("/Users/seungwoo/Desktop/population_R/")
-rm(list=ls())
 #preprocessing.R의 dataframe 불러오기
 library(readxl)
-df_1234 = read_excel("/Users/seungwoo/Desktop/population_R/dataset/alltime_population.xlsx")
+df_1234 = read_excel("alltime_population.xlsx")
 
 # 북한 지역 제거
 df_1234 <- df_1234[!(df_1234$행정구역별 =="황해도"),]
@@ -231,6 +229,26 @@ for (i in yearList){
   df <- rbind(df, temp)
 }
 
+head(df)
+datatoys::population %>% 
+  mutate(
+    행정구역별 = ifelse(행정구역별 == "제주특별자치도", "제주도", 행정구역별)
+  ) %>% 
+  group_by(행정구역별, 연도) %>% 
+  summarise(
+    인구수 = sum(인구수, na.rm = TRUE)
+  ) %>% 
+  mutate(
+    인구수_10000 = 인구수/10000
+  ) %>% 
+  ungroup() %>% 
+  group_by(연도) %>% 
+  arrange(연도, desc(인구수)) %>% 
+  mutate(
+    rank = row_number()
+  ) %>%
+  ungroup()
+ 
 #'제주'로 합쳤으니 '제주도'와 '제주특별자치도' data 삭제
 df <- df[!(df$area =="제주도"),]
 df <- df[!(df$area =="제주특별자치도"), ]
