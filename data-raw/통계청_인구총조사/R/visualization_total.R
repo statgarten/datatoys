@@ -7,42 +7,43 @@ library(ggplot2)
 library(gganimate)
 library(readxl)
 library(tidyverse)
+library(datatoys)
 
-population <- readxl::read_excel("alltime_population.xlsx")
+# devtools::install_github("klutometis/roxygen")
+
+setwd("datatoys/")
+roxygen2::roxygenise()
+devtools::document()
+
+rm(list=ls())
+population <- datatoys::population
+
+
+population <- subset(population, 행정구역별 != "황해도" & 행정구역별 != "평안북도" & 행정구역별 != "평안남도" & 행정구역별 != "함경북도" & 행정구역별 != "함경남도" & 행정구역별 != "함경북도")
+
+# population[population$행정구역별 == "서울특별시", "행정구역별"] = "서울"
+# population[population$행정구역별 == "부산광역시", "행정구역별"] = "부산"
+# population[population$행정구역별 == "충청북도", "행정구역별"] = "충북"
+# population[population$행정구역별 == "충청남도", "행정구역별"] = "충남"
+# population[population$행정구역별 == "전라북도", "행정구역별"] = "전북"
+# population[population$행정구역별 == "전라남도", "행정구역별"] = "전남"
+# population[population$행정구역별 == "경상북도", "행정구역별"] = "경북"
+# population[population$행정구역별 == "경상남도", "행정구역별"] = "경남"
+# population[population$행정구역별 == "대구광역시", "행정구역별"] = "대구"
+# population[population$행정구역별 == "광주광역시", "행정구역별"] = "광주"
+# population[population$행정구역별 == "대전광역시", "행정구역별"] = "대전"
+# population[population$행정구역별 == "울산광역시", "행정구역별"] = "울산"
+# population[population$행정구역별 == "인천광역시", "행정구역별"] = "인천"
+# population[population$행정구역별 == "경기도", "행정구역별"] = "경기"
+# population[population$행정구역별 == "강원도", "행정구역별"] = "강원"
+# population[population$행정구역별 == "제주도", "행정구역별"] = "제주"
+# population[population$행정구역별 == "세종특별자치시", "행정구역별"] = "세종"
+
+
 
 population <- population %>% 
-  pivot_longer(cols = 3:90, values_to = "인구수") %>% 
-  separate(name, sep = " ", into = c("연도", "분류")) %>% 
   mutate(
-    연도 = parse_number(연도)
-  ) %>% 
-  filter(분류 %in% c("남자인구(명)", "여자인구(명)")) %>% 
-  mutate(
-    분류 = stringr::str_sub(분류, 1, 2)
-  ) 
-
-population <- subset(population, 행정구역별 != "황해도" & 행정구역별 != "평안북도" & 행정구역별 != "함경북도" & 행정구역별 != "함경남도" & 행정구역별 != "함경북도")
-
-population[population$행정구역별 == "서울특별시", "행정구역별"] = "서울"
-population[population$행정구역별 == "부산광역시", "행정구역별"] = "부산"
-population[population$행정구역별 == "충청북도", "행정구역별"] = "충북"
-population[population$행정구역별 == "충청남도", "행정구역별"] = "충남"
-population[population$행정구역별 == "전라북도", "행정구역별"] = "전북"
-population[population$행정구역별 == "전라남도", "행정구역별"] = "전남"
-population[population$행정구역별 == "경상북도", "행정구역별"] = "경북"
-population[population$행정구역별 == "경상남도", "행정구역별"] = "경남"
-population[population$행정구역별 == "대구광역시", "행정구역별"] = "대구"
-population[population$행정구역별 == "광주광역시", "행정구역별"] = "광주"
-population[population$행정구역별 == "대전광역시", "행정구역별"] = "대전"
-population[population$행정구역별 == "울산광역시", "행정구역별"] = "울산"
-population[population$행정구역별 == "인천광역시", "행정구역별"] = "인천"
-population[population$행정구역별 == "경기도", "행정구역별"] = "경기"
-population[population$행정구역별 == "강원도", "행정구역별"] = "강원"
-population[population$행정구역별 == "제주도", "행정구역별"] = "제주"
-population[population$행정구역별 == "세종특별자치시", "행정구역별"] = "세종"
-
-population <- population %>% 
-  mutate(
+    행정구역별 = recode(행정구역별, "서울특별시" = "서울","부산광역시" = "부산","충청북도" = "충북","충청남도" = "충남","전라북도" = "전북","전라남도" = "전남","경상북도" = "경북","경상남도" = "경남","대구광역시" = "대구","광주광역시" = "광주","대전광역시" = "대전","울산광역시" = "울산","인천광역시" = "인천","경기도" = "경기","강원도" = "강원","제주도" = "제주","세종특별자치시" = "세종"),
     행정구역별 = ifelse(행정구역별 == "제주특별자치도", "제주", 행정구역별)
   ) %>% 
   group_by(행정구역별, 연도) %>% 

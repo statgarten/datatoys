@@ -1,5 +1,5 @@
 library(tidyverse)
-
+setwd("Desktop/datatoys/data-raw/통계청_인구총조사/dataset/")
 population <- readxl::read_excel("alltime_population.xlsx")
 
 
@@ -15,4 +15,4 @@ population <- population %>%
   ) 
 
 usethis::use_data(population, overwrite = TRUE)
-d
+
