@@ -15,8 +15,6 @@ setwd("datatoys/")
 roxygen2::roxygenise()
 devtools::document()
 
-rm(list=ls())
-
 population <- datatoys::population
 
 # df_1234 <- df_1234[!(df_1234$행정구역별 =="황해도"),]
