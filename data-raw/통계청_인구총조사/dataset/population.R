@@ -1,5 +1,6 @@
 library(tidyverse)
-setwd("Desktop/datatoys/data-raw/통계청_인구총조사/dataset/")
+getwd()
+setwd("Users/seungwoo/Desktop/datatoys/data-raw/통계청_인구총조사/dataset/")
 population <- readxl::read_excel("alltime_population.xlsx")
 
 
@@ -14,5 +15,4 @@ population <- population %>%
     분류 = stringr::str_sub(분류, 1, 2)
   ) 
 
-usethis::use_data(population, overwrite = TRUE)
 
