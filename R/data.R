@@ -1720,3 +1720,27 @@ NULL
 #'   addMarkers(~병원경도, ~병원위도, popup = ~as.character(기관명), label = ~as.character(기관명), data = datatoys::seoulER)
 #' DT::datatable(head(gyeonggiER,50))
 "gyeonggiER"
+
+
+
+
+
+
+#' 경찰청 음주운전 적발 기록 현황
+#' 
+#' 음주운전 적발기록을 통한 음주예방을 위해 경찰처에서 공개한 자료. 이용허락범위 제한 없음.
+#'
+#' @format A data frame with 8 variables.
+#' \describe{
+#'    \item{성별}{음주운전자의 성별}
+#'    \item{적발횟수}{음주운전자의 누적 적발 횟수}
+#'    \item{나이}{음주운전자의 나이}
+#'    \item{알콜농도}{음주운전자의 적발 당시 알콜농도}
+#'    \item{측정일시}{음주운전 측정 일시 yyyy-mm-dd hh:mm:ss 형태}
+#'    \item{관할경찰서}{단속 관할 경찰서 이름}
+#'    \item{나이불명}{나이 불명 여부}
+#'    \item{측정}{측정거부 및 정상측정}
+#' }
+#' @source \url{https://www.data.go.kr/data/15043308/fileData.do}
+#' @examples
+"drunkdrive"
