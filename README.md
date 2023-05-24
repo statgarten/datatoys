@@ -30,6 +30,7 @@ adventure!**
 | restaurant       | 경기도                 | 맛집 정보                             |
 | crime            | 경찰청                 | 범죄 발생 지역별 통계                 |
 | crimePlace       | 경찰청                 | 범죄 발생 장소별 통계                 |
+| drunkdrive       | 경찰청                 | 음주운전 적발 기록 현황               |
 | openData         | 공공데이터활용지원센터 | 공공데이터포털 목록개방현황           |
 | pollution        | 국립환경과학원         | 축산오염원조사정보                    |
 | medicalCheckup   | 국민건강보험           | 일반건강검진결과                      |
@@ -44,12 +45,14 @@ adventure!**
 | accident         | 도로교통공단           | 사망교통사고 정보                     |
 | petNames         | 마포구                 | 반려동물 이름 통계                    |
 | childAbuse       | 보건복지부             | 아동학대 신고정보                     |
+| liquor           | 보건복지부             | 주류관련 통계                         |
 | gasStation       | 산업통상자원부         | 전국 주유소 등록현황                  |
 | postOffice       | 서울특별시             | 우체국 정보                           |
 | seoulER          | 서울특별시             | 응급실 위치 정보                      |
 | fire             | 소방청                 | 화재통계                              |
 | fireStation      | 소방청                 | 전국 소방서 정보                      |
 | foodNutrients    | 식품의약품안전처       | 식품영양성분 데이터베이스             |
+| population       | 통계청                 | 인구총조사                            |
 | carInspection    | 한국교통안전공단       | 자동차검사소 정보                     |
 | odaIndex         | 한국국제협력단         | 협력국 개발지표 및 ODA 지원 실적      |
 | odaKR            | 한국국제협력단         | 소득수준별 ODA 실적통계               |

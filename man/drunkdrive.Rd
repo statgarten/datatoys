@@ -26,4 +26,7 @@ drunkdrive
 \description{
 음주운전 적발기록을 통한 음주예방을 위해 경찰처에서 공개한 자료. 이용허락범위 제한 없음.
 }
+\examples{
+DT::datatable(head(drunkdrive))
+}
 \keyword{datasets}
