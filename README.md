@@ -62,4 +62,5 @@ adventure!**
 | elevator         | 한국승강기안전공단     | 국내 승강기 보유 현황                 |
 | scholarship      | 한국장학재단           | 2020년도 장학금 수혜현황              |
 | tuition          | 한국장학재단           | 장학금 정보                           |
+| Kcalendar        | 한국천문연구원         | 특일 정보                             |
 | karaoke          | 행정안전부             | 단란주점 영업 정보                    |
