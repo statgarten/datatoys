@@ -22,14 +22,28 @@ knitr::opts_chunk$set(
 
 Let's play with data! We prepared toy data for data newbies. This package contains some datasets provided by the [Public Data Portal](https://data.go.kr) in Republic of Korea. It makes you can play with data for fun like children! Install the package, and **start your adventure!**
 
+우리 데이터로 놀아볼까요?! 여기 시작하는 사람들을 위한 재밌는 데이터가 있습니다. 이 패키지에는 공공데이터포털, 통계청 등에서 제공하는 재밌는 데이터셋이 포함되어 있습니다. 우리 삶에 닿아 있는 데이터를 다루다 보면 데이터 분석에 재미를 느끼게 될거에요. 패키지를 설치하고 모험을 시작해 보세요!
+
 ## Installation
 
 ```
 # Install development version from GitHub
+# install.packages("remotes")
 remotes::install_github("statgarten/datatoys")
 ```
 
-## A List of datasets
+## For python users
+Let's play with datatoys in [python](https://github.com/statgarten/datatoys-python). You can easily load datatoys into a `pandas.DataFrame` format.
+
+```
+# Install from pip
+pip install datatoys
+```
+
+
+## A list of datasets
+A total `r nrow(data(package = "datatoys")$results)` datasets are available (Last check point: `r Sys.time()`).
+
 ```{r echo=FALSE, message=FALSE}
 library(datatoys)
 library(dplyr)
@@ -39,7 +53,9 @@ data(package = "datatoys")$results %>%
   select(Item, Title) %>%
   rename("데이터셋" = "Item") %>%
   tidyr::separate(Title, c("출처", "설명"), sep = " ", extra = "merge") %>%
-  arrange(출처) %>%
+  arrange(데이터셋) %>%
+  mutate(번호 = row_number()) %>% 
+  select(번호, everything()) %>% 
   knitr::kable()
 ```
 
