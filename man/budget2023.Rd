@@ -29,7 +29,7 @@ A data frame with 13 variables.
 budget2023
 }
 \description{
-2023년 정부 연도별 세출/지출 예산편성 현황(총액), 기금운용계획안
+2023년 정부 연도별 세출/지출 예산편성 현황(총액), 기금운용계획안. 이용허락범위 제한 없음.
 }
 \examples{
 DT::datatable(head(budget2023))
