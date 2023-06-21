@@ -82,232 +82,321 @@
 <p>Play gives children a chance to practice what they are learning - Fred Rogers</p>
 </blockquote>
 <p>Let’s play with data! We prepared toy data for data newbies. This package contains some datasets provided by the <a href="https://data.go.kr" class="external-link">Public Data Portal</a> in Republic of Korea. It makes you can play with data for fun like children! Install the package, and <strong>start your adventure!</strong></p>
+<p>우리 데이터로 놀아볼까요?! 여기 시작하는 사람들을 위한 재밌는 데이터가 있습니다. 이 패키지에는 공공데이터포털, 통계청 등에서 제공하는 재밌는 데이터셋이 포함되어 있습니다. 우리 삶에 닿아 있는 데이터를 다루다 보면 데이터 분석에 재미를 느끼게 될거에요. 패키지를 설치하고 모험을 시작해 보세요!</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install development version from GitHub</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"statgarten/datatoys"</span>)</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("remotes")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"statgarten/datatoys"</span>)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="a-list-of-datasets">A List of datasets<a class="anchor" aria-label="anchor" href="#a-list-of-datasets"></a>
+<h2 id="for-python-users">For python users<a class="anchor" aria-label="anchor" href="#for-python-users"></a>
 </h2>
+<p>Let’s play with datatoys in <a href="https://github.com/statgarten/datatoys-python" class="external-link">python</a>. You can easily load datatoys into a <code>pandas.DataFrame</code> format.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install from pip</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pip install datatoys</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="a-list-of-datasets">A list of datasets<a class="anchor" aria-label="anchor" href="#a-list-of-datasets"></a>
+</h2>
+<p>A total 47 datasets are available (Last check point: 2023-06-21 11:52:41).</p>
 <table class="table">
 <colgroup>
-<col width="22%">
-<col width="29%">
-<col width="48%">
+<col width="6%">
+<col width="18%">
+<col width="24%">
+<col width="51%">
 </colgroup>
 <thead><tr class="header">
+<th align="right">번호</th>
 <th align="left">데이터셋</th>
 <th align="left">출처</th>
 <th align="left">설명</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">hospitalInfo</td>
-<td align="left">건강보험심사평가원</td>
-<td align="left">병의원 기본정보</td>
+<td align="right">1</td>
+<td align="left">accident</td>
+<td align="left">도로교통공단</td>
+<td align="left">사망교통사고 정보</td>
 </tr>
 <tr class="even">
-<td align="left">medicine</td>
-<td align="left">건강보험심사평가원</td>
-<td align="left">의약품 주성분 정보</td>
-</tr>
-<tr class="odd">
-<td align="left">pharmacyInfo</td>
-<td align="left">건강보험심사평가원</td>
-<td align="left">약국 기본정보</td>
-</tr>
-<tr class="even">
-<td align="left">gyeonggiER</td>
-<td align="left">경기도</td>
-<td align="left">응급의료기관 및 응급의료지원센터 현황</td>
-</tr>
-<tr class="odd">
-<td align="left">restaurant</td>
-<td align="left">경기도</td>
-<td align="left">맛집 정보</td>
-</tr>
-<tr class="even">
-<td align="left">crime</td>
-<td align="left">경찰청</td>
-<td align="left">범죄 발생 지역별 통계</td>
-</tr>
-<tr class="odd">
-<td align="left">crimePlace</td>
-<td align="left">경찰청</td>
-<td align="left">범죄 발생 장소별 통계</td>
-</tr>
-<tr class="even">
-<td align="left">drunkdrive</td>
-<td align="left">경찰청</td>
-<td align="left">음주운전 적발 기록 현황</td>
-</tr>
-<tr class="odd">
-<td align="left">openData</td>
-<td align="left">공공데이터활용지원센터</td>
-<td align="left">공공데이터포털 목록개방현황</td>
-</tr>
-<tr class="even">
-<td align="left">pollution</td>
-<td align="left">국립환경과학원</td>
-<td align="left">축산오염원조사정보</td>
-</tr>
-<tr class="odd">
-<td align="left">medicalCheckup</td>
-<td align="left">국민건강보험</td>
-<td align="left">일반건강검진결과</td>
-</tr>
-<tr class="even">
-<td align="left">bloodTest</td>
-<td align="left">국민건강보험공단</td>
-<td align="left">2014-15 혈액검사 데이터</td>
-</tr>
-<tr class="odd">
-<td align="left">nationalPension</td>
-<td align="left">국민연금공단</td>
-<td align="left">국민연금사업장 정보</td>
-</tr>
-<tr class="even">
+<td align="right">2</td>
 <td align="left">airport</td>
 <td align="left">국토교통부</td>
 <td align="left">전세계 공항정보</td>
 </tr>
 <tr class="odd">
+<td align="right">3</td>
+<td align="left">birthRate</td>
+<td align="left">통계청</td>
+<td align="left">시도/인구동태건수 및 동태율(출생,사망,혼인,이혼)</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">bloodTest</td>
+<td align="left">국민건강보험공단</td>
+<td align="left">2014-15 혈액검사 데이터</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">budget2023</td>
+<td align="left">기획재정부</td>
+<td align="left">연도별 세출 및 지출 예산현황</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
 <td align="left">busStation</td>
 <td align="left">국토교통부</td>
 <td align="left">전국 버스 정류장 위치정보</td>
 </tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">busyMetro</td>
+<td align="left">서울교통공사</td>
+<td align="left">지하철혼잡도정보</td>
+</tr>
 <tr class="even">
-<td align="left">housingPrice</td>
-<td align="left">국토교통부</td>
-<td align="left">2021 공동주택 공시가격 정보</td>
+<td align="right">8</td>
+<td align="left">carInspection</td>
+<td align="left">한국교통안전공단</td>
+<td align="left">자동차검사소 정보</td>
 </tr>
 <tr class="odd">
-<td align="left">legalDong</td>
-<td align="left">국토교통부</td>
-<td align="left">법정동 정보</td>
+<td align="right">9</td>
+<td align="left">cheerUp</td>
+<td align="left">서울특별시</td>
+<td align="left">사회적 약자를 위한 위로의 글</td>
 </tr>
 <tr class="even">
-<td align="left">weather2020</td>
-<td align="left">농림축산식품부</td>
-<td align="left">농업 종관기상 데이터</td>
-</tr>
-<tr class="odd">
-<td align="left">globalBusiness</td>
-<td align="left">대한무역투자진흥공사</td>
-<td align="left">해외진출기업 정보</td>
-</tr>
-<tr class="even">
-<td align="left">accident</td>
-<td align="left">도로교통공단</td>
-<td align="left">사망교통사고 정보</td>
-</tr>
-<tr class="odd">
-<td align="left">petNames</td>
-<td align="left">마포구</td>
-<td align="left">반려동물 이름 통계</td>
-</tr>
-<tr class="even">
+<td align="right">10</td>
 <td align="left">childAbuse</td>
 <td align="left">보건복지부</td>
 <td align="left">아동학대 신고정보</td>
 </tr>
 <tr class="odd">
-<td align="left">liquor</td>
-<td align="left">보건복지부</td>
-<td align="left">주류관련 통계</td>
+<td align="right">11</td>
+<td align="left">crime</td>
+<td align="left">경찰청</td>
+<td align="left">범죄 발생 지역별 통계</td>
 </tr>
 <tr class="even">
-<td align="left">gasStation</td>
-<td align="left">산업통상자원부</td>
-<td align="left">전국 주유소 등록현황</td>
+<td align="right">12</td>
+<td align="left">crimePlace</td>
+<td align="left">경찰청</td>
+<td align="left">범죄 발생 장소별 통계</td>
 </tr>
 <tr class="odd">
-<td align="left">postOffice</td>
-<td align="left">서울특별시</td>
-<td align="left">우체국 정보</td>
+<td align="right">13</td>
+<td align="left">drunkdrive</td>
+<td align="left">경찰청</td>
+<td align="left">음주운전 적발 기록 현황</td>
 </tr>
 <tr class="even">
-<td align="left">seoulER</td>
-<td align="left">서울특별시</td>
-<td align="left">응급실 위치 정보</td>
+<td align="right">14</td>
+<td align="left">election2020</td>
+<td align="left">중앙선거관리위원회</td>
+<td align="left">국회의원선거 개표결과 정보</td>
 </tr>
 <tr class="odd">
-<td align="left">fire</td>
-<td align="left">소방청</td>
-<td align="left">화재통계</td>
-</tr>
-<tr class="even">
-<td align="left">fireStation</td>
-<td align="left">소방청</td>
-<td align="left">전국 소방서 정보</td>
-</tr>
-<tr class="odd">
-<td align="left">foodNutrients</td>
-<td align="left">식품의약품안전처</td>
-<td align="left">식품영양성분 데이터베이스</td>
-</tr>
-<tr class="even">
-<td align="left">population</td>
-<td align="left">통계청</td>
-<td align="left">인구총조사</td>
-</tr>
-<tr class="odd">
-<td align="left">carInspection</td>
-<td align="left">한국교통안전공단</td>
-<td align="left">자동차검사소 정보</td>
-</tr>
-<tr class="even">
-<td align="left">odaIndex</td>
-<td align="left">한국국제협력단</td>
-<td align="left">협력국 개발지표 및 ODA 지원 실적</td>
-</tr>
-<tr class="odd">
-<td align="left">odaKR</td>
-<td align="left">한국국제협력단</td>
-<td align="left">소득수준별 ODA 실적통계</td>
-</tr>
-<tr class="even">
-<td align="left">odaNews</td>
-<td align="left">한국국제협력단</td>
-<td align="left">국가별 개발협력동향정보</td>
-</tr>
-<tr class="odd">
-<td align="left">foodBank</td>
-<td align="left">한국사회복지협의회</td>
-<td align="left">2021 전국푸드뱅크 기부자 통계</td>
-</tr>
-<tr class="even">
-<td align="left">necessariesPrice</td>
-<td align="left">한국소비자원</td>
-<td align="left">생필품가격 정보</td>
-</tr>
-<tr class="odd">
+<td align="right">15</td>
 <td align="left">elevator</td>
 <td align="left">한국승강기안전공단</td>
 <td align="left">국내 승강기 보유 현황</td>
 </tr>
 <tr class="even">
+<td align="right">16</td>
+<td align="left">farmGIS</td>
+<td align="left">행전안전부</td>
+<td align="left">가축사육업 로컬데이터</td>
+</tr>
+<tr class="odd">
+<td align="right">17</td>
+<td align="left">fire</td>
+<td align="left">소방청</td>
+<td align="left">화재통계</td>
+</tr>
+<tr class="even">
+<td align="right">18</td>
+<td align="left">fireStation</td>
+<td align="left">소방청</td>
+<td align="left">전국 소방서 정보</td>
+</tr>
+<tr class="odd">
+<td align="right">19</td>
+<td align="left">foodBank</td>
+<td align="left">한국사회복지협의회</td>
+<td align="left">2021 전국푸드뱅크 기부자 통계</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="left">foodNutrients</td>
+<td align="left">식품의약품안전처</td>
+<td align="left">식품영양성분 데이터베이스</td>
+</tr>
+<tr class="odd">
+<td align="right">21</td>
+<td align="left">gasStation</td>
+<td align="left">산업통상자원부</td>
+<td align="left">전국 주유소 등록현황</td>
+</tr>
+<tr class="even">
+<td align="right">22</td>
+<td align="left">globalBusiness</td>
+<td align="left">대한무역투자진흥공사</td>
+<td align="left">해외진출기업 정보</td>
+</tr>
+<tr class="odd">
+<td align="right">23</td>
+<td align="left">gyeonggiER</td>
+<td align="left">경기도</td>
+<td align="left">응급의료기관 및 응급의료지원센터 현황</td>
+</tr>
+<tr class="even">
+<td align="right">24</td>
+<td align="left">hospitalInfo</td>
+<td align="left">건강보험심사평가원</td>
+<td align="left">병의원 기본정보</td>
+</tr>
+<tr class="odd">
+<td align="right">25</td>
+<td align="left">housingPrice</td>
+<td align="left">국토교통부</td>
+<td align="left">2021 공동주택 공시가격 정보</td>
+</tr>
+<tr class="even">
+<td align="right">26</td>
+<td align="left">karaoke</td>
+<td align="left">행정안전부</td>
+<td align="left">단란주점 영업 정보</td>
+</tr>
+<tr class="odd">
+<td align="right">27</td>
+<td align="left">Kcalendar</td>
+<td align="left">한국천문연구원</td>
+<td align="left">특일 정보</td>
+</tr>
+<tr class="even">
+<td align="right">28</td>
+<td align="left">legalDong</td>
+<td align="left">국토교통부</td>
+<td align="left">법정동 정보</td>
+</tr>
+<tr class="odd">
+<td align="right">29</td>
+<td align="left">liquor</td>
+<td align="left">보건복지부</td>
+<td align="left">주류관련 통계</td>
+</tr>
+<tr class="even">
+<td align="right">30</td>
+<td align="left">medicalCheckup</td>
+<td align="left">국민건강보험</td>
+<td align="left">일반건강검진결과</td>
+</tr>
+<tr class="odd">
+<td align="right">31</td>
+<td align="left">medicine</td>
+<td align="left">건강보험심사평가원</td>
+<td align="left">의약품 주성분 정보</td>
+</tr>
+<tr class="even">
+<td align="right">32</td>
+<td align="left">nationalPension</td>
+<td align="left">국민연금공단</td>
+<td align="left">국민연금사업장 정보</td>
+</tr>
+<tr class="odd">
+<td align="right">33</td>
+<td align="left">necessariesPrice</td>
+<td align="left">한국소비자원</td>
+<td align="left">생필품가격 정보</td>
+</tr>
+<tr class="even">
+<td align="right">34</td>
+<td align="left">odaIndex</td>
+<td align="left">한국국제협력단</td>
+<td align="left">협력국 개발지표 및 ODA 지원 실적</td>
+</tr>
+<tr class="odd">
+<td align="right">35</td>
+<td align="left">odaKR</td>
+<td align="left">한국국제협력단</td>
+<td align="left">소득수준별 ODA 실적통계</td>
+</tr>
+<tr class="even">
+<td align="right">36</td>
+<td align="left">odaNews</td>
+<td align="left">한국국제협력단</td>
+<td align="left">국가별 개발협력동향정보</td>
+</tr>
+<tr class="odd">
+<td align="right">37</td>
+<td align="left">openData</td>
+<td align="left">공공데이터활용지원센터</td>
+<td align="left">공공데이터포털 목록개방현황</td>
+</tr>
+<tr class="even">
+<td align="right">38</td>
+<td align="left">petNames</td>
+<td align="left">마포구</td>
+<td align="left">반려동물 이름 통계</td>
+</tr>
+<tr class="odd">
+<td align="right">39</td>
+<td align="left">pharmacyInfo</td>
+<td align="left">건강보험심사평가원</td>
+<td align="left">약국 기본정보</td>
+</tr>
+<tr class="even">
+<td align="right">40</td>
+<td align="left">pollution</td>
+<td align="left">국립환경과학원</td>
+<td align="left">축산오염원조사정보</td>
+</tr>
+<tr class="odd">
+<td align="right">41</td>
+<td align="left">population</td>
+<td align="left">통계청</td>
+<td align="left">인구총조사</td>
+</tr>
+<tr class="even">
+<td align="right">42</td>
+<td align="left">postOffice</td>
+<td align="left">서울특별시</td>
+<td align="left">우체국 정보</td>
+</tr>
+<tr class="odd">
+<td align="right">43</td>
+<td align="left">restaurant</td>
+<td align="left">경기도</td>
+<td align="left">맛집 정보</td>
+</tr>
+<tr class="even">
+<td align="right">44</td>
 <td align="left">scholarship</td>
 <td align="left">한국장학재단</td>
 <td align="left">2020년도 장학금 수혜현황</td>
 </tr>
 <tr class="odd">
+<td align="right">45</td>
+<td align="left">seoulER</td>
+<td align="left">서울특별시</td>
+<td align="left">응급실 위치 정보</td>
+</tr>
+<tr class="even">
+<td align="right">46</td>
 <td align="left">tuition</td>
 <td align="left">한국장학재단</td>
 <td align="left">장학금 정보</td>
 </tr>
-<tr class="even">
-<td align="left">Kcalendar</td>
-<td align="left">한국천문연구원</td>
-<td align="left">특일 정보</td>
-</tr>
 <tr class="odd">
-<td align="left">karaoke</td>
-<td align="left">행정안전부</td>
-<td align="left">단란주점 영업 정보</td>
+<td align="right">47</td>
+<td align="left">weather2020</td>
+<td align="left">농림축산식품부</td>
+<td align="left">농업 종관기상 데이터</td>
 </tr>
 </tbody>
 </table>

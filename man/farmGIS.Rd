@@ -17,7 +17,7 @@ A data frame with 34 variables.
 farmGIS
 }
 \description{
-가축을 사육하여 판매하거나 젖·알·꿀을 생산하는 업소정보	. 이용허락범위 제한 없음.
+가축을 사육하여 판매하거나 젖·알·꿀을 생산하는 업소정보. 이용허락범위 제한 없음.
 }
 \examples{
 DT::datatable(head(farmGIS))

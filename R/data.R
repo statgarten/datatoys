@@ -1935,7 +1935,7 @@ NULL
 
 #' 행전안전부 가축사육업 로컬데이터
 #' 
-#' 가축을 사육하여 판매하거나 젖·알·꿀을 생산하는 업소정보	. 이용허락범위 제한 없음.
+#' 가축을 사육하여 판매하거나 젖·알·꿀을 생산하는 업소정보. 이용허락범위 제한 없음.
 #'
 #' @format A data frame with 34 variables.
 #' \describe{
@@ -1969,3 +1969,33 @@ NULL
 #'   inlmisc::AddSearchButton(group = "marker", zoom = 15, textPlaceholder = "Search here")
 
 "farmGIS"
+
+
+
+
+#' 서울특별시 사회적 약자를 위한 위로의 글
+#' 
+#' 인터넷에 흩어져 있는 좋은 글이나 이미지 발견 시 수집하여 상황에 맞게 레이블링을 수행. 개인, 민간기업 등이 인공지능 학습, 연구, 기술개발 등에 활용할 수 있으나, 학습데이터에 기반한 인공지능 제품개발, 기술연구 논문 등의 결과물에는 데이터의 출처가 서울시 열린데이터광장 임을 명기 필요.
+#'
+#' @format A data frame with 3 variables.
+#' \describe{
+#'    \item{상황}{위로받는 이의 상황에 대한 설명}
+#'    \item{위로글내용}{위로하는 내용}
+#'    \item{url}{원문출처 url}
+#'  }
+#' @source \url{https://data.seoul.go.kr/etc/aiEduData.do}
+#' @examples
+#' library(tidytext)
+#' library(ggwordcloud)
+#' library(dplyr)
+#' library(datatoys)
+#' 
+#' cheerUp %>% 
+#'   unnest_tokens(input = 위로글내용, output = word, token = "words") %>% 
+#'   count(word, sort = TRUE) %>% 
+#'   filter(nchar(word) > 1) %>% 
+#'   head(100) %>% 
+#'   ggplot(aes(label = word, size = n)) +
+#'   geom_text_wordcloud(seed = 811, family = "NanumGothic")
+
+"cheerUp"
