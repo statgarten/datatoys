@@ -22,6 +22,9 @@ cheerUp
 인터넷에 흩어져 있는 좋은 글이나 이미지 발견 시 수집하여 상황에 맞게 레이블링을 수행. 개인, 민간기업 등이 인공지능 학습, 연구, 기술개발 등에 활용할 수 있으나, 학습데이터에 기반한 인공지능 제품개발, 기술연구 논문 등의 결과물에는 데이터의 출처가 서울시 열린데이터광장 임을 명기 필요.
 }
 \examples{
+
+dplyr::glimpes(cheerUp)
+
 library(tidytext)
 library(ggwordcloud)
 library(dplyr)

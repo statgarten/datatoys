@@ -37,8 +37,8 @@ load datatoys into a `pandas.DataFrame` format.
 
 ## A list of datasets
 
-A total 47 datasets are available (Last check point: 2023-06-21
-11:52:41).
+A total 48 datasets are available (Last check point: 2023-06-23
+11:20:06).
 
 | 번호 | 데이터셋         | 출처                   | 설명                                             |
 |-----:|:-----------------|:-----------------------|:-------------------------------------------------|
@@ -86,6 +86,7 @@ A total 47 datasets are available (Last check point: 2023-06-21
 |   42 | postOffice       | 서울특별시             | 우체국 정보                                      |
 |   43 | restaurant       | 경기도                 | 맛집 정보                                        |
 |   44 | scholarship      | 한국장학재단           | 2020년도 장학금 수혜현황                         |
-|   45 | seoulER          | 서울특별시             | 응급실 위치 정보                                 |
-|   46 | tuition          | 한국장학재단           | 장학금 정보                                      |
-|   47 | weather2020      | 농림축산식품부         | 농업 종관기상 데이터                             |
+|   45 | seoulCivic       | 서울특별시             | 2022년 서울 시민생활 데이터                      |
+|   46 | seoulER          | 서울특별시             | 응급실 위치 정보                                 |
+|   47 | tuition          | 한국장학재단           | 장학금 정보                                      |
+|   48 | weather2020      | 농림축산식품부         | 농업 종관기상 데이터                             |
