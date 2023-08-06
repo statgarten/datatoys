@@ -1,6 +1,28 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 서울시립미술관 소장품 정보
+#'
+#' 서울시립미술관이 소장하고 있는 작품에 대한 작가명, 작품명, 제작연도, 규격, 재질 및 기법 등의 정보를 소개하는 OpenAPI 서비스입니다.
+#' 
+#' @format A data frame with 10 variables:
+#' \describe{
+#'   \item{부문}{작품 부문(회화, 뉴미디어 등)}
+#'   \item{수집연도}{서울시립미술관이 수집한 연도}
+#'   \item{작품명(국문)}{작품명(국문)}
+#'   \item{작품명(영문)}{작품명(영어)}
+#'   \item{작품규격}{작품 규격(11 x 11cm 또는 11분 11초 형식)}
+#'   \item{제작년도}{작품이 제작된 연도}
+#'   \item{재료(기법)}{작품에 사용된 재료 또는 기법}
+#'   \item{작품해설}{작품에 대한 해설}
+#'   \item{작가명}{작가명}
+#'   \item{이미지}{해당 작품을 볼 수 있는 이미지}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-15321/S/1/datasetView.do}
+#' @examples
+#' DT::datatable(head(Artmuseum, 50))
+"Artmuseum"
+
 #' 통계청 인구총조사
 #'
 #' 통계청에서 제공하는 인구총조사,  대한민국 영토 내에 상주하는 모든 내국인·외국인
