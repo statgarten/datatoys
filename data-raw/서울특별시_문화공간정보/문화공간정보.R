@@ -11,9 +11,6 @@ seoulCulture <- df %>%
   ) %>% 
   filter(row_number() != 17)
 
-colnames(seoulCulture)
-View(seoulCulture)
-
 seoulCulture$위도 <- as.double(seoulCulture$위도)
 seoulCulture$경도 <- as.double(seoulCulture$경도)
 

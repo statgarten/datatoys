@@ -1,6 +1,33 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 지진실내구호소
+#'
+#' 서울시 지진실내구호소 현황입니다. 시설별 주소, 면적, 좌표값 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 9 variables:
+#' \describe{
+#'   \item{시,군,구 명}{해당 지진실내구호소가 위치한 시, 군, 구}
+#'   \item{수용시설 명}{해당 지진실내구호소의 이름}
+#'   \item{도로명주소코드}{해당 지진실내구호소 도로명주소코드}
+#'   \item{상세주소}{해당 지진실내구호소 주소}
+#'   \item{시설면적}{해당 지진실내구호소의 면적}
+#'   \item{경도}{해당 지진실내구호소 경도}
+#'   \item{위도}{해당 지진실내구호소 위도}
+#'   \item{X좌표}{해당 지진실내구호소 X좌표(GRS80-중부원점)}
+#'   \item{Y좌표}{해당 지진실내구호소 Y좌표(GRS80-중부원점)}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21064/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(earthquakeShelter) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addMarkers(lng=~경도, lat=~위도,
+#'              label=~수용시설명,
+#'              popup=~paste(수용시설명, "<BR>", "시설면적 : ",시설면적,sep=""))
+"earthShelter"
 #' 문화공간정보
 #'
 #' 서울문화포털에서 제공하는 서울특별시 문화공간정보입니다. 문화시설명, 주소, 전화번호, 홈페이지, 관람시간, 관람료, 휴관일, 객석수, 위치 등의 정보를 제공합니다.
