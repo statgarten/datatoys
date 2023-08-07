@@ -12,9 +12,7 @@ seoulLibrary <- df %>%
   )
 
 dplyr::glimpse(seoulLibrary)
-colnames(seoulLibrary)
+
 usethis::use_data(seoulLibrary, overwrite = TRUE)
 
-#install.packages('leaflet')
-library(leaflet)
 
