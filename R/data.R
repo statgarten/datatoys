@@ -1,6 +1,32 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 영화관상영관인허가정보
+#'
+#' 영리를 목적으로 영화를 상영하는 장소 또는 시설 정보 현황입니다. 관리번호, 전화번호, 주소, 층수 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 13 variables:
+#' \describe{
+#'   \item{상영관명}{해당 상영관 명}
+#'   \item{관리번호}{해당 상영관 관리번호}
+#'   \item{영업상태명}{해당 상영관 영업상태 : 영업/정상 , 폐업, 취소/말소/만료/정지/중지}
+#'   \item{폐업일자}{폐업된 상영관 폐업일자}
+#'   \item{전화번호}{해당 상영관 전화번호}
+#'   \item{지번주소}{해당 상영관 지번주소}
+#'   \item{도로명주소}{해당 상영관 도로명주소}
+#'   \item{도로명우편번호}{해당 상영관 도로명우편번호}
+#'   \item{상영관 X좌표}{해당 상영관 상영관 X좌표 : EPSG:5174 사용}
+#'   \item{상영관 Y좌표}{해당 상영관 상영관 Y좌표 : EPSG:5174 사용}
+#'   \item{총 층수}{해당 상영관 상영관 총 층수}
+#'   \item{지상 층수}{해당 상영관 상영관 지상 층수}
+#'   \item{지하 층수}{해당 상영관 상영관 지하 층수}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-16053/S/1/datasetView.do}
+#' @examples
+#' DT::datatable(head(cinema, 50))
+"cinema"
+
+
 #' 자전거편의시설
 #'
 #' 서울시 자전거 편의시설현황입니다. 편의시설분류, 위도, 경도, 주소, 우편번호의 정보를 제공합니다.
@@ -13,7 +39,6 @@ NULL
 #'   \item{위도}{해당 자전거 편의시설 위도}
 #'   \item{주소}{해당 자전거 편의시설 주소}
 #'   \item{우편번호}{해당 자전거 편의시설 우편번호}
-}
 #' }
 #' @source \url{https://data.seoul.go.kr/dataList/OA-21291/S/1/datasetView.do}
 #' @examples
