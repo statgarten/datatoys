@@ -1,6 +1,134 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 무더위쉼터
+#'
+#' 서울시 무더위쉼터 현황입니다. 쉼터별 주소, 면적, 좌표, 인원, 보유품목, 운영시간 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 18 variables:
+#' \describe{
+#'   \item{쉼터명칭}{해당 무더위 쉼터 명칭}
+#'   \item{도로명주소}{해당 무더위 쉼터 도로명주소}
+#'   \item{지번상세주소}{해당 무더위 쉼터 지번상세주소}
+#'   \item{면적}{해당 무더위 쉼터 면적}
+#'   \item{이용가능인원}{해당 무더위 쉼터 이용가능인원}
+#'   \item{선풍기보유대수}{해당 무더위 쉼터 선풍기보유대수}
+#'   \item{에어컨보유대수}{해당 무더위 쉼터 에어컨보유대수}
+#'   \item{야간개방}{해당 무더위 쉼터 야간개방 : Y, N}
+#'   \item{휴일개방}{해당 무더위 쉼터 휴일개방 : Y, N}
+#'   \item{숙박가능여부}{해당 무더위 쉼터 숙박가능여부 : Y, N}
+#'   \item{사용여부}{해당 무더위 쉼터 사용여부 : Y , N}
+#'   \item{비고}{비고}
+#'   \item{운영시작일}{해당 무더위 쉼터 운영시작일}
+#'   \item{운영종료일}{해당 무더위 쉼터 운영종료일}
+#'   \item{경도}{해당 무더위 쉼터 경도}
+#'   \item{위도}{해당 무더위 쉼터 위도}
+#'   \item{X좌표}{해당 무더위 쉼터 X좌표(GRS80-중부원점)}
+#'   \item{Y좌표}{해당 무더위 쉼터 Y좌표(GRS80-중부원점)}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21065/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(coolCenter) %>% 
+#'  addTiles() %>% 
+#'  setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'  addProviderTiles('CartoDB.Positron') %>% 
+#'  addCircles(lng=~경도, lat=~위도,
+#'             label=~쉼터명칭,
+#'             popup=~paste(쉼터명칭, "<BR>", "선풍기보유대수 : ",선풍기보유대수,sep="","<BR>","에어컨보유대수 : ",에어컨보유대수))
+"coolCenter"
+
+
+#' 지진실내구호소
+#'
+#' 서울시 지진실내구호소 현황입니다. 시설별 주소, 면적, 좌표값 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 9 variables:
+#' \describe{
+#'   \item{시,군,구 명}{해당 지진실내구호소가 위치한 시, 군, 구}
+#'   \item{수용시설 명}{해당 지진실내구호소의 이름}
+#'   \item{도로명주소코드}{해당 지진실내구호소 도로명주소코드}
+#'   \item{상세주소}{해당 지진실내구호소 주소}
+#'   \item{시설면적}{해당 지진실내구호소의 면적}
+#'   \item{경도}{해당 지진실내구호소 경도}
+#'   \item{위도}{해당 지진실내구호소 위도}
+#'   \item{X좌표}{해당 지진실내구호소 X좌표(GRS80-중부원점)}
+#'   \item{Y좌표}{해당 지진실내구호소 Y좌표(GRS80-중부원점)}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21064/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(earthquakeShelter) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addMarkers(lng=~경도, lat=~위도,
+#'              label=~수용시설명,
+#'              popup=~paste(수용시설명, "<BR>", "시설면적 : ",시설면적,sep=""))
+"earthShelter"
+
+
+#' 문화공간정보
+#'
+#' 서울문화포털에서 제공하는 서울특별시 문화공간정보입니다. 문화시설명, 주소, 전화번호, 홈페이지, 관람시간, 관람료, 휴관일, 객석수, 위치 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 12 variables:
+#' \describe{
+#'   \item{분류}{문화시설분류(공연장,미술관,도서관 등등)}
+#'   \item{문화시설명}{해당 문화시설 이름}
+#'   \item{주소}{해당 문화시설 주소}
+#'   \item{위도}{해당 문화시설 위도}
+#'   \item{경도}{해당 문화시설 경도}
+#'   \item{전화번호}{해당 문화시설 전화번호}
+#'   \item{홈페이지}{해당 문화시설 홈페이지}
+#'   \item{관람시간}{해당 문화시설 관람시간}
+#'   \item{휴관일}{해당 문화시설 휴관일}
+#'   \item{개관일자}{해당 문화시설 개관일자}
+#'   \item{객석수}{해당 문화시설 객석수}
+#'   \item{대표이미지}{해당 문화시설 이미지}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-15487/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' pal <- colorFactor("viridis", seoulCulture$분류)
+#' leaflet(seoulCulture) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~경도, lat=~위도, color = ~pal(분류))
+"seoulCulture"
+
+
+#' 공공도서관현황정보
+#'
+#' 서울특별시 각 자치구의 공공도서관의 현황정보 입니다. 도서관명, 구명, 주소, 전화번호, 홈페이지주소, 운영시간, 정기휴관일, 위치정보 등을 제공합니다.
+#' 
+#' @format A data frame with 11 variables:
+#' \describe{
+#'   \item{도서관명}{해당 도서관 이름}
+#'   \item{구(코드)}{해당 도서관이 속한 위치한 구의 코드번호}
+#'   \item{구명}{해당 도서관이 위치한 구}
+#'   \item{주소}{해당 도서관의 주소}
+#'   \item{전화번호}{해당 도서관의 전화번호}
+#'   \item{홈페이지(URL)}{해당 도서관의 홈페이지 주소}
+#'   \item{운영시간}{해당 도서관의 운영시간}
+#'   \item{정기휴관일}{해당 도서관의 정기 휴관일}
+#'   \item{도서관구분}{해당 도서관의 구분(공공도서관)}
+#'   \item{위도}{해당 도서관의 위도}
+#'   \item{경도}{해당 도서관의 경도}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-15480/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' pal <- colorFactor("viridis", seoulLibrary$`구(코드)`)
+#' leaflet(seoulLibrary) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~경도, lat=~위도, color = ~pal(`구(코드)`))
+"seoulLibrary"
+
+
 #' 서울시립미술관 소장품 정보
 #'
 #' 서울시립미술관이 소장하고 있는 작품에 대한 작가명, 작품명, 제작연도, 규격, 재질 및 기법 등의 정보를 소개하는 OpenAPI 서비스입니다.
@@ -21,7 +149,8 @@ NULL
 #' @source \url{https://data.seoul.go.kr/dataList/OA-15321/S/1/datasetView.do}
 #' @examples
 #' DT::datatable(head(Artmuseum, 50))
-"Artmuseum"
+"artmuseum"
+
 
 #' 통계청 인구총조사
 #'
