@@ -1,6 +1,41 @@
 #' @importFrom tibble tibble
 NULL
 
+
+#' 사회복지시설
+#'
+#' 서울시 사회복지시설 정보 (시설명, 시설유형, 시설종류, 시설장명)
+#' 
+#' @format A data frame with 11 variables:
+#' \describe{
+#'   \item{시설명}{해당 사회복지시설명}
+#'   \item{시설유형}{해당 사회복지시설 유형}
+#'   \item{시설종류}{해당 사회복지시설 종류}
+#'   \item{시설장명}{해당 사회복지시설의 책임자}
+#'   \item{시군구명}{해당 사회복지시설이 위치한 시군구}
+#'   \item{시설주소}{해당 사회복지시설의 시설주소}
+#'   \item{수용가능인원}{해당 사회복지시설 수용가능인원, 해당 시설에서 한번에 수용가능한 대상자의 수}
+#'   \item{이용인원}{해당 사회복지시설 이용인원, 실인원}
+#'   \item{전화번호}{해당 사회복지시설 전화번호}
+#'   \item{우편번호}{해당 사회복지시설 우편번호}
+#'   \item{분류}{해당 사회복지시설 분류 : 노인, 아동, 장애인 등}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-20376/S/1/datasetView.do}
+#' @examples
+#' library(stringr)
+#' library(extrafont)
+#' 
+#' count <- socialCenter %>% 
+#'  group_by(`분류`) %>% 
+#'  summarise(`시설수` = n())
+#' font_import()
+#' y
+#' theme_set(theme_light(base_family = "NanumGothic"))
+#' p <- ggplot(count) +
+#'  geom_col(aes(x=`분류`, y=`시설수`))
+"socialCenter"
+
+
 #' 한파쉼터
 #'
 #' 서울시 한파쉼터 현황입니다. 쉼터별 주소, 면적, 좌표, 인원, 보유품목, 운영시간 등의 정보를 제공합니다.
