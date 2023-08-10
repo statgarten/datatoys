@@ -22,6 +22,12 @@
     <loc>https://statgarten.github.io/datatoys/reference/airport.html</loc>
   </url>
   <url>
+    <loc>https://statgarten.github.io/datatoys/reference/artmuseum.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/bike.html</loc>
+  </url>
+  <url>
     <loc>https://statgarten.github.io/datatoys/reference/birthRate.html</loc>
   </url>
   <url>
@@ -46,6 +52,12 @@
     <loc>https://statgarten.github.io/datatoys/reference/childAbuse.html</loc>
   </url>
   <url>
+    <loc>https://statgarten.github.io/datatoys/reference/cinema.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/coolCenter.html</loc>
+  </url>
+  <url>
     <loc>https://statgarten.github.io/datatoys/reference/crime.html</loc>
   </url>
   <url>
@@ -53,6 +65,9 @@
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/drunkdrive.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/earthShelter.html</loc>
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/election2020.html</loc>
@@ -151,10 +166,22 @@
     <loc>https://statgarten.github.io/datatoys/reference/seoulCivic.html</loc>
   </url>
   <url>
+    <loc>https://statgarten.github.io/datatoys/reference/seoulCulture.html</loc>
+  </url>
+  <url>
     <loc>https://statgarten.github.io/datatoys/reference/seoulER.html</loc>
   </url>
   <url>
+    <loc>https://statgarten.github.io/datatoys/reference/seoulLibrary.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/socialCenter.html</loc>
+  </url>
+  <url>
     <loc>https://statgarten.github.io/datatoys/reference/tuition.html</loc>
+  </url>
+  <url>
+    <loc>https://statgarten.github.io/datatoys/reference/warmingCenter.html</loc>
   </url>
   <url>
     <loc>https://statgarten.github.io/datatoys/reference/weather2020.html</loc>
