@@ -1,6 +1,119 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 영화관상영관인허가정보
+#'
+#' 영리를 목적으로 영화를 상영하는 장소 또는 시설 정보 현황입니다. 관리번호, 전화번호, 주소, 층수 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 13 variables:
+#' \describe{
+#'   \item{상영관명}{해당 상영관 명}
+#'   \item{관리번호}{해당 상영관 관리번호}
+#'   \item{영업상태명}{해당 상영관 영업상태 : 영업/정상 , 폐업, 취소/말소/만료/정지/중지}
+#'   \item{폐업일자}{폐업된 상영관 폐업일자}
+#'   \item{전화번호}{해당 상영관 전화번호}
+#'   \item{지번주소}{해당 상영관 지번주소}
+#'   \item{도로명주소}{해당 상영관 도로명주소}
+#'   \item{도로명우편번호}{해당 상영관 도로명우편번호}
+#'   \item{상영관 X좌표}{해당 상영관 상영관 X좌표 : EPSG:5174 사용}
+#'   \item{상영관 Y좌표}{해당 상영관 상영관 Y좌표 : EPSG:5174 사용}
+#'   \item{총 층수}{해당 상영관 상영관 총 층수}
+#'   \item{지상 층수}{해당 상영관 상영관 지상 층수}
+#'   \item{지하 층수}{해당 상영관 상영관 지하 층수}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-16053/S/1/datasetView.do}
+#' @examples
+#' DT::datatable(head(cinema, 50))
+"cinema"
+
+
+#' 자전거편의시설
+#'
+#' 서울시 자전거 편의시설현황입니다. 편의시설분류, 위도, 경도, 주소, 우편번호의 정보를 제공합니다.
+#' 
+#' @format A data frame with 6 variables:
+#' \describe{
+#'   \item{편의시설명}{자전거 편의 시설 명(ID)}
+#'   \item{편의시설분류}{자전거 편의시설 분류(또는 위치)}
+#'   \item{경도}{해당 자전거 편의시설 경도}
+#'   \item{위도}{해당 자전거 편의시설 위도}
+#'   \item{주소}{해당 자전거 편의시설 주소}
+#'   \item{우편번호}{해당 자전거 편의시설 우편번호}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21291/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(bike) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~경도, lat=~위도,
+#'              label=~편의시설명,
+#'              popup=~paste(편의시설명, "<BR>", "주소 : ",주소))
+"bike"
+
+#' 사회복지시설
+#'
+#' 서울시 사회복지시설 정보 (시설명, 시설유형, 시설종류, 시설장명)
+#' 
+#' @format A data frame with 11 variables:
+#' \describe{
+#'   \item{시설명}{해당 사회복지시설명}
+#'   \item{시설유형}{해당 사회복지시설 유형}
+#'   \item{시설종류}{해당 사회복지시설 종류}
+#'   \item{시설장명}{해당 사회복지시설의 책임자}
+#'   \item{시군구명}{해당 사회복지시설이 위치한 시군구}
+#'   \item{시설주소}{해당 사회복지시설의 시설주소}
+#'   \item{수용가능인원}{해당 사회복지시설 수용가능인원, 해당 시설에서 한번에 수용가능한 대상자의 수}
+#'   \item{이용인원}{해당 사회복지시설 이용인원, 실인원}
+#'   \item{전화번호}{해당 사회복지시설 전화번호}
+#'   \item{우편번호}{해당 사회복지시설 우편번호}
+#'   \item{분류}{해당 사회복지시설 분류 : 노인, 아동, 장애인 등}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-20376/S/1/datasetView.do}
+#' @examples
+#' library(stringr)
+#' library(extrafont)
+#' 
+#' count <- socialCenter %>% 
+#'  group_by(`분류`) %>% 
+#'  summarise(`시설수` = n())
+#' font_import()
+#' y
+#' theme_set(theme_light(base_family = "NanumGothic"))
+#' p <- ggplot(count) +
+#'  geom_col(aes(x=`분류`, y=`시설수`))
+"socialCenter"
+
+
+#' 한파쉼터
+#'
+#' 서울시 한파쉼터 현황입니다. 쉼터별 주소, 면적, 좌표, 인원, 보유품목, 운영시간 등의 정보를 제공합니다.
+#' 
+#' @format A data frame with 15 variables:
+#' \describe{
+#'   \item{쉼터명칭}{해당 한파쉼터 명칭}
+#'   \item{상세주소}{해당 한파쉼터 상세주소}
+#'   \item{면적}{해당 한파쉼터 면적}
+#'   \item{이용가능인원}{해당 한파쉼터 이용가능인원}
+#'   \item{난방기보유대수(열풍기)}{해당 한파쉼터 난방기보유대수(열풍기)}
+#'   \item{난방기보유대수(히터)}{해당 한파쉼터 난방기보유대수(히터)}
+#'   \item{난방기보유대수(난로)}{해당 한파쉼터 난방기보유대수(난로)}
+#'   \item{난방기보유대수(라디에이터)}{해당 한파쉼터 난방기보유대수(라디에이터)}
+#'   \item{사용여부}{해당 한파쉼터 사용여부 : Y , N}
+#'   \item{한파쉼터운영시작일}{해당 한파쉼터 운영시작일}
+#'   \item{한파쉼터운영종료일}{해당 한파쉼터 운영종료일}
+#'   \item{한파쉼터평일시작시간}{해당 한파쉼터 평일시작시간}
+#'   \item{한파쉼터평일종료시간}{해당 한파쉼터 평일종료시간}
+#'   \item{한파쉼터주말시작시간}{해당 한파쉼터 주말시작시간}
+#'   \item{한파쉼터주말종료시간}{해당 한파쉼터 주말종료시간}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21066/S/1/datasetView.do}
+#' @examples
+#' DT::datatable(head(warmingCenter, 50))
+"warmingCenter"
+
+
 #' 무더위쉼터
 #'
 #' 서울시 무더위쉼터 현황입니다. 쉼터별 주소, 면적, 좌표, 인원, 보유품목, 운영시간 등의 정보를 제공합니다.
