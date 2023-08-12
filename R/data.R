@@ -1,6 +1,42 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 통계청 장애인현황
+#'
+#'  보건복지부  장애인정책국 장애인정책과에서 제공하는 등록장애인 현황파악을 통한 효율적 정책수립 및 지원, pwd는 pwrson with difficulty 또는 person with disability의 약자이다. 
+#' 
+#' @format A data frame with 4 variables:
+#' \describe{
+#'   \item{성별}{해당 시점, 장애분류의 성별}
+#'   \item{시점}{해당 장애인현황 조사 시점}
+#'   \item{장애분류}{장애분류 : 합계,시각,청각,언어,지적,뇌병변,자폐성,정신,신장,심장,호흡기,간,안면,장루ㆍ요루,뇌전증,}
+#'   \item{인구수}{해당 시점, 성별, 장애분류의 인구수:장애인등록인구를 기준으로 하고 등록 외국인을 포함}
+#' }
+#' @source \url{https://kosis.kr/statHtml/statHtml.do?orgId=117&tblId=DT_11761_N001&vw_cd=MT_ZTITLE&list_id=G_22&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE}
+#' @examples
+#' male_2022 <- pwd %>% 
+#'   filter(시점 == 2022 & 성별 == "남자" & 장애분류 != "합계")
+#' female_2022 <- pwd %>% 
+#'   filter(시점 == 2022 & 성별 == "여자" & 장애분류 != "합계")
+#' 
+#' pwd_2022 <- rbind(male_2022,female_2022) %>% 
+#'   arrange(인구수)
+#' 
+#' pwd_2022$장애분류<- factor(pwd_2022$장애분류, levels = unique(pwd_2022$장애분류))
+#' 
+#' pp <- ggplot(data=pwd_2022, mapping = aes(x=`장애분류`, fill = `성별`, y = ifelse(test= `성별` == "여자", yes = (-1) *`인구수`, no = `인구수`))) +
+#'   geom_bar(stat="identity") +
+#'   theme_minimal(base_family = "AppleSDGothicNeo-SemiBold") +
+#'   labs(y="")+
+#'   scale_y_continuous(labels = function(x) format(abs(x), big.mark = ",", scientific = FALSE), limits = max(pwd_2022$인구수) *c(-1,1)) +
+#'   coord_flip() +
+#'   scale_fill_manual(values = c("여자" = "lightcoral", "남자" = "cornflowerblue"), labels = c("남자", "여자"))
+#' 
+#' pp
+"pwd"
+
+
+
 #' 통계청 경제활동인구조사
 #'
 #' 국민의 경제활동(취업, 실업, 노동력 등) 특성을 조사함으로써 거시경제 분석과 인력자원의 개발정책 수립에 필요한 기초 자료를 제공
@@ -57,6 +93,7 @@ NULL
 #'   ) 
 #' 
 #' animate(plot_ecoPeople, duration = 30)
+"economyPeople"
 
 
 #' 서울특별시 문화행사 정보
