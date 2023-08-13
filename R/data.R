@@ -1,6 +1,37 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 행정안정부 동물병원 정보
+#'
+#'  동물을 진료하거나 동물의 질병을 예방하는 기관정보을 제공, 주소, 경도, 위도, 직원수, 등을 제공
+#' 
+#' @format A data frame with 11 variables:
+#' \describe{
+#'   \item{영업상태명}{해당 동물병원의 영업상태명 : 폐업,휴업, 영업/정상, 취소/말소/만료/정지/중지}
+#'   \item{폐업일자}{해당 동물병원이 폐업한 동물병원의 경우, 폐업일자}
+#'   \item{전화번호}{해당 동물병원의 전화번호}
+#'   \item{소재지면적}{해당 동물병원의 소재지면적}
+#'   \item{소재지전체주소}{해당 동물병원 소재지 주소}
+#'   \item{도로명전체주소}{해당 동물병원 도로명 주소}
+#'   \item{도로명우편번호}{해당 동물병원 도로명 우편번호}
+#'   \item{사업장명}{해당 동물병원 사업장 명}
+#'   \item{경도}{해당 동물병원의 경도 (wgs84)}
+#'   \item{위도}{해당 동물병원의 위도 (wgs84)}
+#'   \item{총직원수}{해당 동물병원의 총직원수}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(animalHospital) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=~`위도`,
+#'              label =~`사업장명`)
+"animalHospital"
+
+
+
 #' 통계청 장애인현황
 #'
 #'  보건복지부  장애인정책국 장애인정책과에서 제공하는 등록장애인 현황파악을 통한 효율적 정책수립 및 지원, pwd는 pwrson with difficulty 또는 person with disability의 약자이다. 
