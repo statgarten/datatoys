@@ -1,6 +1,34 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 행정안전부 노래연습장업 정보
+#'
+#'  반주에 맞추어 노래를 부를 수 있는 반주장치 등의 시설을 갖추어 제공하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 9 variables:
+#' \describe{
+#'   \item{사업장명}{해당 노래연습장 사업장명}
+#'   \item{전화번호}{해당 노래연습장 전화번호}
+#'   \item{소재지전체주소}{해당 노래연습장 소재지전체주소}
+#'   \item{도로명전체주소}{해당 노래연습장 도로명전체주소}
+#'   \item{도로명우편번호}{해당 노래연습장 도로명우편번호}
+#'   \item{경도}{해당 노래연습장 경도}
+#'   \item{위도}{해당 노래연습장 위도}
+#'   \item{총층수}{해당 노래연습장 총층수}
+#'   \item{노래방실수}{해당 노래연습장 노래방실수}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(singingRoom) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`, "<BR>","노래방실수 : ", 노래방실수))
+"singingRoom"
+
 #' 행정안전부 안경업 정보
 #'
 #'  눈을 보호하거나 시력의 교정을 요하는 대상에게 시력의 교정 및 안경을 판매 또는 수리하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
