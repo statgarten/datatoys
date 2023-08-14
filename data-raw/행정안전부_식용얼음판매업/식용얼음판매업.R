@@ -25,5 +25,3 @@ iceMarket$경도 <-  st_coordinates(sf_iceMarket_wgs84)[, 1]
 iceMarket$위도 <-  st_coordinates(sf_iceMarket_wgs84)[, 2]
 
 usethis::use_data(iceMarket, overwrite = TRUE)
-
-

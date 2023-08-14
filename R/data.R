@@ -1,6 +1,45 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 행정안전부 목욕장업 정보
+#'
+#'  대중목욕탕, 찜질방, 사우나 등 물로 목욕 할 수 있거나 맥반석ㆍ황토 등에게 발생되는 열기 또는 원적외선 등을 이용하여 땀을 낼 수 있는 시설 및 설비 등의 서비스를 제공하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 14 variables:
+#' \describe{
+#'   \item{사업장명}{해당 목욕장업 사업장명}
+#'   \item{전화번호}{해당 목욕장업 전화번호}
+#'   \item{소재지면적}{해당 목욕장업 소재지면적}
+#'   \item{소재지우편번호}{해당 목욕장업 소재지우편번호}
+#'   \item{소재지전체주소}{해당 목욕장업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 목욕장업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 목욕장업 도로명우편번호}
+#'   \item{업태구분명}{해당 목욕장업 업태구분명 : 찜질시설서비스영업, 공동탕업, 공동탕업+찜질시설서비스영, 목욕장업 기타, 한증막업}
+#'   \item{경도}{해당 목욕장업 경도}
+#'   \item{위도}{해당 목욕장업 위도}
+#'   \item{건물지상층수}{해당 목욕장업 건물지상층수}
+#'   \item{건물지하층수}{해당 목욕장업 건물지하층수}
+#'   \item{욕실수}{해당 목욕장업 욕실수}
+#'   \item{발한실여부}{해당 목욕장업 발한실여부 : Y, N}
+#'}
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' bath_color = colorFactor('Set1', bathHouse$업태구분명)
+#' 
+#' library(leaflet)
+#' leaflet(bathHouse) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=127.9784, lat=36.866, zoom=6) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`),
+#'              color = ~bath_color(업태구분명)) %>% 
+#'   addLegend(position = 'bottomright', 
+#'             title = '업태구분', 
+#'             pal = bath_color, values = ~업태구분명, opacity = 0.5)
+"bathHouse"
+
 #' 행정안전부 식용얼음판매업 정보
 #'
 #'  식용얼음을 전문적으로 판매하는 업소정보	, 주소, 번호, 경도, 위도 등을 제공
