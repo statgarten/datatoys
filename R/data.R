@@ -1,6 +1,132 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 행정안정부 동물병원 정보
+#'
+#'  동물을 진료하거나 동물의 질병을 예방하는 기관정보을 제공, 주소, 경도, 위도, 직원수, 등을 제공
+#' 
+#' @format A data frame with 11 variables:
+#' \describe{
+#'   \item{영업상태명}{해당 동물병원의 영업상태명 : 폐업,휴업, 영업/정상, 취소/말소/만료/정지/중지}
+#'   \item{폐업일자}{해당 동물병원이 폐업한 동물병원의 경우, 폐업일자}
+#'   \item{전화번호}{해당 동물병원의 전화번호}
+#'   \item{소재지면적}{해당 동물병원의 소재지면적}
+#'   \item{소재지전체주소}{해당 동물병원 소재지 주소}
+#'   \item{도로명전체주소}{해당 동물병원 도로명 주소}
+#'   \item{도로명우편번호}{해당 동물병원 도로명 우편번호}
+#'   \item{사업장명}{해당 동물병원 사업장 명}
+#'   \item{경도}{해당 동물병원의 경도 (wgs84)}
+#'   \item{위도}{해당 동물병원의 위도 (wgs84)}
+#'   \item{총직원수}{해당 동물병원의 총직원수}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(animalHospital) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=~`위도`,
+#'              label =~`사업장명`)
+"animalHospital"
+
+
+
+#' 통계청 장애인현황
+#'
+#'  보건복지부  장애인정책국 장애인정책과에서 제공하는 등록장애인 현황파악을 통한 효율적 정책수립 및 지원, pwd는 pwrson with difficulty 또는 person with disability의 약자이다. 
+#' 
+#' @format A data frame with 4 variables:
+#' \describe{
+#'   \item{성별}{해당 시점, 장애분류의 성별}
+#'   \item{시점}{해당 장애인현황 조사 시점}
+#'   \item{장애분류}{장애분류 : 합계,시각,청각,언어,지적,뇌병변,자폐성,정신,신장,심장,호흡기,간,안면,장루ㆍ요루,뇌전증,}
+#'   \item{인구수}{해당 시점, 성별, 장애분류의 인구수:장애인등록인구를 기준으로 하고 등록 외국인을 포함}
+#' }
+#' @source \url{https://kosis.kr/statHtml/statHtml.do?orgId=117&tblId=DT_11761_N001&vw_cd=MT_ZTITLE&list_id=G_22&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE}
+#' @examples
+#' male_2022 <- pwd %>% 
+#'   filter(시점 == 2022 & 성별 == "남자" & 장애분류 != "합계")
+#' female_2022 <- pwd %>% 
+#'   filter(시점 == 2022 & 성별 == "여자" & 장애분류 != "합계")
+#' 
+#' pwd_2022 <- rbind(male_2022,female_2022) %>% 
+#'   arrange(인구수)
+#' 
+#' pwd_2022$장애분류<- factor(pwd_2022$장애분류, levels = unique(pwd_2022$장애분류))
+#' 
+#' pp <- ggplot(data=pwd_2022, mapping = aes(x=`장애분류`, fill = `성별`, y = ifelse(test= `성별` == "여자", yes = (-1) *`인구수`, no = `인구수`))) +
+#'   geom_bar(stat="identity") +
+#'   theme_minimal(base_family = "AppleSDGothicNeo-SemiBold") +
+#'   labs(y="")+
+#'   scale_y_continuous(labels = function(x) format(abs(x), big.mark = ",", scientific = FALSE), limits = max(pwd_2022$인구수) *c(-1,1)) +
+#'   coord_flip() +
+#'   scale_fill_manual(values = c("여자" = "lightcoral", "남자" = "cornflowerblue"), labels = c("남자", "여자"))
+#' 
+#' pp
+"pwd"
+
+
+
+#' 통계청 경제활동인구조사
+#'
+#' 국민의 경제활동(취업, 실업, 노동력 등) 특성을 조사함으로써 거시경제 분석과 인력자원의 개발정책 수립에 필요한 기초 자료를 제공
+#' 
+#' @format A data frame with 7 variables:
+#' \describe{
+#'   \item{연령계층별}{해당 시점의 경제활동인구 조사 연령계층 : 15-19세, 20-29세, 30-39세, 40-49세, 50-59세, 60세 이상}
+#'   \item{시점}{경제활동인구를 실시한 시점}
+#'   \item{인구 (천명)}{해당 연령계층의 총 인구}
+#'   \item{경제활동인구 (천명)}{만 15세 이상 인구 중 취업자와 실업자를 말한다}
+#'   \item{취업자 (천명)}{① 조사대상 주간 중 수입을 목적으로 1시간 이상 일한 자, ② 자기에게 직접적으로는 이득이나 수입이 오지 않더라도 자기가구에서 경영하는 농장이나 사업체의 수입을 높이는 데 도운 가족종사자로서 주당 18시간이상 일한 자(무급가족종사자), ③ 직장 또는 사업체를 가지고 있으나 조사대상 주간 중 일시적인 병, 일기불순, 휴가 또는 연가, 노동쟁의 등의 이유로 일하지 못한 일시휴직자}
+#'   \item{실업자 (천명)}{조사대상주간에 수입 있는 일을 하지 않았고, 지난 4주간 일자리를 찾아 적극적으로 구직활동을 하였던 사람으로서 일자리가 주어지면 즉시 취업이 가능한 사람}
+#'   \item{비경제활동인구 (천명)}{조사대상 주간 중 취업자도 실업자도 아닌 만 15세 이상인 자, 즉 집안에서 가사와 육아를 전담하는 가정주부, 학교에 다니는 학생, 일을 할 수 없는 연로자와 심신장애자, 자발적으로 자선사업이나 종교단체에 관여하는 자 등을 말한다}
+#' }
+#' @source \url{https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1DA7002S&vw_cd=MT_ZTITLE&list_id=B11&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE}
+#' @examples
+#' library(dplyr)
+#' library(ggplot2)
+#' library(gganimate)
+#' 
+#' ani_economyPeople <- economyPeople %>% 
+#'   mutate(
+#'     `경제활동인구비율` = `경제활동인구 (천명)` / `인구 (천명)` * 100
+#'   ) %>% 
+#'   ungroup() %>% 
+#'   arrange(시점, 연령계층별) %>% 
+#'   ungroup()
+#' 
+#' plot_ecoPeople <- ggplot(
+#'   ani_economyPeople,
+#'   aes(x = `연령계층별`, y = `경제활동인구비율`, fill = `연령계층별`)) +
+#'   theme_minimal(base_family = "AppleSDGothicNeo-SemiBold") +
+#'   geom_bar(stat='identity') + 
+#'   theme(
+#'     axis.text.x = element_text(size = 15, color = "grey3", face = "bold"),
+#'     axis.title = element_text(size = 17, color = "grey21", face = "bold"),
+#'     legend.position = "none",
+#'     plot.title = element_text(hjust = 0.5, size = 22, color = "royalblue4", face = "bold"),
+#'     axis.line = element_blank(),
+#'     panel.grid.major = element_blank(),
+#'     panel.grid.minor = element_blank(),
+#'     panel.grid.major.x = element_line(size = 0.1, color = "grey"),
+#'     plot.background = element_blank()
+#'   ) + 
+#'   labs(
+#'     title = "{closest_state} 연령별 경제활동인구비율",
+#'     subtitle = "1999-2023년",
+#'     caption = "KOSTAT; 경제활동인구조사(통계청)",
+#'     x = "",
+#'     y = "경제활동인구비율"
+#'   ) +
+#'   transition_states(
+#'     시점
+#'   ) 
+#' 
+#' animate(plot_ecoPeople, duration = 30)
+"economyPeople"
+
+
 #' 서울특별시 문화행사 정보
 #'
 #' 서울문화포털에서 제공하는 문화행사 정보입니다. 공연, 행사에 대한 장소, 날짜, 기관명, 이용대상, 이용요금, 출연자, 프로그램 등의 정보를 제공합니다.
