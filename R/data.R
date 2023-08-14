@@ -123,7 +123,8 @@ NULL
 #'     시점
 #'   ) 
 #' 
-#' animate(plot_ecoPeople, duration = 30)
+#' ani <- animate(plot_ecoPeople, duration = 30)
+#' ani
 "economyPeople"
 
 
