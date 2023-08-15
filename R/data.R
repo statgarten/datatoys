@@ -1,6 +1,46 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 공공데이터포털 독립운동정보 원문정보
+#' 
+#' 독립기념관 독립운동정보 원문자료의 자료번호, 자료내용 등의 정보입니다.
+#'
+#' @format A data frame with 3 variables.
+#' \describe{
+#'    \item{순번}{독립운동정보 원문자료 순번}
+#'    \item{자료번호}{독립운동정보 원문자료 자료번호}
+#'    \item{내용}{독립운동정보 원문자료 내용}
+#'  }
+#' @source \url{https://www.data.go.kr/data/15070349/fileData.do?recommendDataYn=Y#/tab-layer-recommend-data}
+#' @examples
+#' library(tidytext)
+#' library(ggwordcloud)
+#' library(stringr)
+#' library(ggthemes)
+#' imdependenceMov$내용 <- imdependenceMov$내용 %>% 
+#'   str_replace_all('[^가-힣]', ' ') %>% 
+#'   str_squish()
+#' 
+#' # mask_png <- png::readPNG("korean-flag-1424985_1280.png")
+#' 
+#' imdependenceMov %>% 
+#'   unnest_tokens(input = 내용, output = word, token = "words") %>% 
+#'   count(word, sort = TRUE) %>% 
+#'   filter(str_count(word) > 1) %>% 
+#'   head(100) %>% 
+#'   arrange(-n) %>% 
+#'   ggplot(aes(label = word, 
+#'              size = n, 
+#'              col = as.character(n))) +
+#'   geom_text_wordcloud(seed = 1234,
+#'                       max_steps = 1,
+#'                       grid_size = 1,
+#'                       eccentricity = .9,
+#'                       family = "NanumGothic") +
+#'   scale_size_area(max_size=12) +
+#'   theme_minimal()
+"imdependenceMov"
+
 #' 행정안전부 산후조리업 정보
 #'
 #'  출산 이후 임산부 및 신생아의 건강과 위생을 관리하기 위한 시설 정보, 주소, 번호, 경도, 위도, 임산부정원수, 영유아정원수 등을 제공
