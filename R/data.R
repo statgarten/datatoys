@@ -1,6 +1,104 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 행정안전부 가축분뇨수집운반업, 배출시설관리업 정보
+#' 
+#' 가축의 배설물을 수집하여 운반하는 업소정보와 가축분뇨배출시설 및 처리시설의 관리를 대행하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 10 variables.
+#' \describe{
+#'    \item{사업장명}{해당 가축분뇨 처리업 사업장명}
+#'    \item{전화번호}{해당 가축분뇨 처리업 전화번호}
+#'    \item{소재지우편번호}{해당 가축분뇨 처리업 소재지우편번호}
+#'    \item{소재지전체주소}{해당 가축분뇨 처리업 소재지전체주소}
+#'    \item{도로명전체주소}{해당 가축분뇨 처리업 도로명전체주소}
+#'    \item{도로명우편번호}{해당 가축분뇨 처리업 도로명우편번호}
+#'    \item{경도}{해당 가축분뇨 처리업 경도}
+#'    \item{위도}{해당 가축분뇨 처리업 위도}
+#'    \item{업종구분명}{해당 가축분뇨 처리업 업종구분명 : 지정외 폐기물 수집운반업, 분뇨 및 축산분뇨 처리업, 축산관련 서비스업, 축산분뇨 처리업 등}
+#'    \item{구분}{해당 가축분뇨 처리업 구분 : 가축분뇨 수집운반업, 가축분뇨배출시설관리업(사업장)}
+#'  }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' col_fac = colorFactor('Set1', aniPollution$구분)
+#' 
+#' library(leaflet)
+#' leaflet(aniPollution) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=127.9784, lat=36.866, zoom=7) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`),
+#'              color = ~col_fac(구분)) %>% 
+#'   addLegend(position = 'bottomright', 
+#'             title = '구분', 
+#'             pal = col_fac, values = ~구분, opacity = 0.5)
+"aniPollution"
+
+
+#' 행정안전부 직업소개소 정보
+#' 
+#' 유료/무료로 구인 또는 구직의 신청을 받아 구인자와 구직자 간에 고용계약이 성립되도록 알선하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 9 variables.
+#' \describe{
+#'    \item{사업장명}{해당 직업소개소 사업장명}
+#'    \item{전화번호}{해당 직업소개소 전화번호}
+#'    \item{소재지우편번호}{해당 직업소개소 소재지우편번호}
+#'    \item{소재지전체주소}{해당 직업소개소 소재지전체주소}
+#'    \item{도로명전체주소}{해당 직업소개소 도로명전체주소}
+#'    \item{도로명우편번호}{해당 직업소개소 도로명우편번호}
+#'    \item{경도}{해당 직업소개소 경도}
+#'    \item{위도}{해당 직업소개소 위도}
+#'    \item{유무료}{해당 직업소개소 유무료 여부 : 유료, 무료}
+#'  }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' free_color = colorFactor('Set1', jobMating$유무료)
+#' 
+#' library(leaflet)
+#' leaflet(jobMating) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=127.9784, lat=36.866, zoom=7) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`),
+#'              color = ~free_color(유무료)) %>% 
+#'   addLegend(position = 'bottomright', 
+#'             title = '유무료', 
+#'             pal = free_color, values = ~유무료, opacity = 0.5)
+"jobMating"
+
+#' 행정안전부 부화업 정보
+#' 
+#' 닭 또는 오리 등 부화대상 가축의 알을 인공부화시설로 부화시켜 판매하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 9 variables.
+#' \describe{
+#'    \item{사업장명}{해당 부화업 사업장명}
+#'    \item{전화번호}{해당 부화업 전화번호}
+#'    \item{소재지면적}{해당 부화업 소재지면적}
+#'    \item{소재지우편번호}{해당 부화업 소재지우편번호}
+#'    \item{소재지전체주소}{해당 부화업 소재지전체주소}
+#'    \item{도로명전체주소}{해당 부화업 도로명전체주소}
+#'    \item{도로명우편번호}{해당 부화업 도로명우편번호}
+#'    \item{경도}{해당 부화업 경도}
+#'    \item{위도}{해당 부화업 위도}
+#'  }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(hatching) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=127.9784, lat=35.866, zoom=7) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircleMarkers(lng=~`경도`, lat=  ~`위도`,
+#'                    label =~`사업장명`,
+#'                    popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`))
+"hatching"
+
 #' 공공데이터포털 독립운동정보 원문정보
 #' 
 #' 독립기념관 독립운동정보 원문자료의 자료번호, 자료내용 등의 정보입니다.
