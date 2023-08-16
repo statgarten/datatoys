@@ -1,7 +1,253 @@
 #' @importFrom tibble tibble
 NULL
 
-#' 행정안정부 동물병원 정보
+#' 공공데이터포털 독립운동정보 원문정보
+#' 
+#' 독립기념관 독립운동정보 원문자료의 자료번호, 자료내용 등의 정보입니다.
+#'
+#' @format A data frame with 3 variables.
+#' \describe{
+#'    \item{순번}{독립운동정보 원문자료 순번}
+#'    \item{자료번호}{독립운동정보 원문자료 자료번호}
+#'    \item{내용}{독립운동정보 원문자료 내용}
+#'  }
+#' @source \url{https://www.data.go.kr/data/15070349/fileData.do?recommendDataYn=Y#/tab-layer-recommend-data}
+#' @examples
+#' library(tidytext)
+#' library(ggwordcloud)
+#' library(stringr)
+#' library(ggthemes)
+#' imdependenceMov$내용 <- imdependenceMov$내용 %>% 
+#'   str_replace_all('[^가-힣]', ' ') %>% 
+#'   str_squish()
+#' 
+#' # mask_png <- png::readPNG("korean-flag-1424985_1280.png")
+#' 
+#' imdependenceMov %>% 
+#'   unnest_tokens(input = 내용, output = word, token = "words") %>% 
+#'   count(word, sort = TRUE) %>% 
+#'   filter(str_count(word) > 1) %>% 
+#'   head(100) %>% 
+#'   arrange(-n) %>% 
+#'   ggplot(aes(label = word, 
+#'              size = n, 
+#'              col = as.character(n))) +
+#'   geom_text_wordcloud(seed = 1234,
+#'                       max_steps = 1,
+#'                       grid_size = 1,
+#'                       eccentricity = .9,
+#'                       family = "NanumGothic") +
+#'   scale_size_area(max_size=12) +
+#'   theme_minimal()
+"imdependenceMov"
+
+#' 행정안전부 산후조리업 정보
+#'
+#'  출산 이후 임산부 및 신생아의 건강과 위생을 관리하기 위한 시설 정보, 주소, 번호, 경도, 위도, 임산부정원수, 영유아정원수 등을 제공
+#' 
+#' @format A data frame with 27 variables:
+#' \describe{
+#'   \item{사업장명}{해당 산후조리업 사업장명}
+#'   \item{전화번호}{해당 산후조리업 전화번호}
+#'   \item{소재지우편번호}{해당 산후조리업 소재지우편번호}
+#'   \item{소재지전체주소}{해당 산후조리업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 산후조리업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 산후조리업 도로명우편번호}
+#'   \item{경도}{해당 산후조리업 경도}
+#'   \item{위도}{해당 산후조리업 위도}
+#'   \item{임산부정원수}{해당 산후조리업 임산부정원수}
+#'   \item{영유아정원수}{해당 산후조리업 영유아정원수}
+#'   \item{임산부실면적}{해당 산후조리업 임산부실면적}
+#'   \item{영유아실면적}{해당 산후조리업 영유아실면적}
+#'   \item{모유수유실면적}{해당 산후조리업 모유수유실면적}
+#'   \item{급식시설면적}{해당 산후조리업 급식시설면적}
+#'   \item{세탁실면적}{해당 산후조리업 세탁실면적}
+#'   \item{목욕실면적}{해당 산후조리업 목욕실면적}
+#'   \item{조리원화장실면적}{해당 산후조리업 조리원화장실면적}
+#'   \item{사무실면적}{해당 산후조리업 사무실면적}
+#'   \item{간호사수}{해당 산후조리업 간호사수}
+#'   \item{간호조무사수}{해당 산후조리업 간호조무사수}
+#'   \item{영양사수}{해당 산후조리업 영양사수}
+#'   \item{취사부수}{해당 산후조리업 취사부수}
+#'   \item{미화원수}{해당 산후조리업 미화원수}
+#'   \item{기타인원수}{해당 산후조리업 기타인원수}
+#'   \item{건물층수}{해당 산후조리업 건물층수}
+#'   \item{지상층수}{해당 산후조리업 지상층수}
+#'   \item{지하층수}{해당 산후조리업 지하층수}
+#'}
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(postnatal) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=127.9784, lat=36.866, zoom=7) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`))
+"postnatal"
+
+#' 행정안전부 목욕장업 정보
+#'
+#'  대중목욕탕, 찜질방, 사우나 등 물로 목욕 할 수 있거나 맥반석ㆍ황토 등에게 발생되는 열기 또는 원적외선 등을 이용하여 땀을 낼 수 있는 시설 및 설비 등의 서비스를 제공하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 14 variables:
+#' \describe{
+#'   \item{사업장명}{해당 목욕장업 사업장명}
+#'   \item{전화번호}{해당 목욕장업 전화번호}
+#'   \item{소재지면적}{해당 목욕장업 소재지면적}
+#'   \item{소재지우편번호}{해당 목욕장업 소재지우편번호}
+#'   \item{소재지전체주소}{해당 목욕장업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 목욕장업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 목욕장업 도로명우편번호}
+#'   \item{업태구분명}{해당 목욕장업 업태구분명 : 찜질시설서비스영업, 공동탕업, 공동탕업+찜질시설서비스영, 목욕장업 기타, 한증막업}
+#'   \item{경도}{해당 목욕장업 경도}
+#'   \item{위도}{해당 목욕장업 위도}
+#'   \item{건물지상층수}{해당 목욕장업 건물지상층수}
+#'   \item{건물지하층수}{해당 목욕장업 건물지하층수}
+#'   \item{욕실수}{해당 목욕장업 욕실수}
+#'   \item{발한실여부}{해당 목욕장업 발한실여부 : Y, N}
+#'}
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' bath_color = colorFactor('Set1', bathHouse$업태구분명)
+#' 
+#' library(leaflet)
+#' leaflet(bathHouse) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=127.9784, lat=36.866, zoom=6) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`),
+#'              color = ~bath_color(업태구분명)) %>% 
+#'   addLegend(position = 'bottomright', 
+#'             title = '업태구분', 
+#'             pal = bath_color, values = ~업태구분명, opacity = 0.5)
+"bathHouse"
+
+#' 행정안전부 식용얼음판매업 정보
+#'
+#'  식용얼음을 전문적으로 판매하는 업소정보	, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 9 variables:
+#' \describe{
+#'   \item{사업장명}{해당 식용얼음판매업 사업장명}
+#'   \item{전화번호}{해당 식용얼음판매업 전화번호}
+#'   \item{소재지면적}{해당 식용얼음판매업 소재지면적}
+#'   \item{소재지우편번호}{해당 식용얼음판매업 소재지우편번호}
+#'   \item{소재지전체주소}{해당 식용얼음판매업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 식용얼음판매업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 식용얼음판매업 도로명우편번호}
+#'   \item{경도}{해당 식용얼음판매업 경도}
+#'   \item{위도}{해당 식용얼음판매업 위도}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(iceMarket) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=128.9784, lat=35.266, zoom=9) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`))
+"iceMarket"
+
+#' 행정안전부 노래연습장업 정보
+#'
+#'  반주에 맞추어 노래를 부를 수 있는 반주장치 등의 시설을 갖추어 제공하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 9 variables:
+#' \describe{
+#'   \item{사업장명}{해당 노래연습장 사업장명}
+#'   \item{전화번호}{해당 노래연습장 전화번호}
+#'   \item{소재지전체주소}{해당 노래연습장 소재지전체주소}
+#'   \item{도로명전체주소}{해당 노래연습장 도로명전체주소}
+#'   \item{도로명우편번호}{해당 노래연습장 도로명우편번호}
+#'   \item{경도}{해당 노래연습장 경도}
+#'   \item{위도}{해당 노래연습장 위도}
+#'   \item{총층수}{해당 노래연습장 총층수}
+#'   \item{노래방실수}{해당 노래연습장 노래방실수}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(singingRoom) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`, "<BR>","노래방실수 : ", 노래방실수))
+"singingRoom"
+
+#' 행정안전부 안경업 정보
+#'
+#'  눈을 보호하거나 시력의 교정을 요하는 대상에게 시력의 교정 및 안경을 판매 또는 수리하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
+#' 
+#' @format A data frame with 10 variables:
+#' \describe{
+#'   \item{사업장명}{해당 안경업 사업장명}
+#'   \item{영업상태명}{해당 안경업 영업상태명 : 취소/말소/만료/정지/중지, 영업/정상,폐업,휴업}
+#'   \item{폐업일자}{해당 안경업 폐업일자}
+#'   \item{전화번호}{해당 안경업 전화번호}
+#'   \item{소재지우편번호}{해당 안경업 소재지우편번호}
+#'   \item{소재지전체주소}{해당 안경업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 안경업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 안경업 도로명우편번호}
+#'   \item{경도}{해당 안경업 경도}
+#'   \item{위도}{해당 안경업 위도}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(optician) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`))
+"optician"
+
+
+#' 행정안전부 관광숙박업 정보
+#'
+#'  관광호텔과 같은 숙박시설 및 음식, 운동, 오락 등 적합한 시설 등을 함께 갖추어 제공하는 업소정보, 주소, 번호, 경도, 위도, 객실수 등을 제공
+#' 
+#' @format A data frame with 16 variables:
+#' \describe{
+#'   \item{사업장명}{해당 관광숙박업 사업장명}
+#'   \item{영업상태명}{해당 관광숙박업 영업상태명 : 취소/말소/만료/정지/중지, 영업/정상,폐업,휴업}
+#'   \item{폐업일자}{해당 관광숙박업 폐업일자}
+#'   \item{전화번호}{해당 관광숙박업 전화번호}
+#'   \item{소재지면적}{해당 관광숙박업 소재지면적}
+#'   \item{소재지우편번호}{해당 관광숙박업 소재지우편번호}
+#'   \item{소재지전체주소}{해당 관광숙박업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 관광숙박업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 관광숙박업 도로명우편번호}
+#'   \item{경도}{해당 관광숙박업 경도}
+#'   \item{위도}{해당 관광숙박업 위도}
+#'   \item{총층수}{해당 관광숙박업 총층수}
+#'   \item{지상층수}{해당 관광숙박업 지상층수}
+#'   \item{지하층수}{해당 관광숙박업 지하층수}
+#'   \item{객실수}{해당 관광숙박업 객실수}
+#'   \item{영문상호명}{해당 관광숙박업 영문상호명}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(accom) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=~`위도`,
+#'              label =~`사업장명`,
+#'              popup =~paste(`사업장명`,"<BR>", "주소 : ",`도로명전체주소`, sep="","<BR>","전화번호 : ",`전화번호`))
+"accom"
+
+#' 행정안전부 동물병원 정보
 #'
 #'  동물을 진료하거나 동물의 질병을 예방하는 기관정보을 제공, 주소, 경도, 위도, 직원수, 등을 제공
 #' 
@@ -123,7 +369,8 @@ NULL
 #'     시점
 #'   ) 
 #' 
-#' animate(plot_ecoPeople, duration = 30)
+#' ani <- animate(plot_ecoPeople, duration = 30)
+#' ani
 "economyPeople"
 
 
