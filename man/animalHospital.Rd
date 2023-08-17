@@ -3,7 +3,7 @@
 \docType{data}
 \name{animalHospital}
 \alias{animalHospital}
-\title{행정안정부 동물병원 정보}
+\title{행정안전부 동물병원 정보}
 \format{
 A data frame with 11 variables:
 \describe{
