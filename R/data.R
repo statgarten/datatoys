@@ -1,6 +1,25 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 서울특별시 동상 현황
+#'
+#' 서울시에서 관리하는 동상 정보입니다. 작품명, 설치연도, 작품설치장소, 작품관리기관, 작품주소, 상세주소, 작품상세 정보를 제공합니다.
+#' 
+#' @format A data frame with 7 variables:
+#' \describe{
+#'   \item{작품명}{해당 동상 작품명}
+#'   \item{설치연도}{해당 동상 설치연도}
+#'   \item{작품설치장소}{해당 동상 작품설치장소}
+#'   \item{작품관리기관}{해당 동상 작품관리기관}
+#'   \item{작품주소}{해당 동상 작품주소}
+#'   \item{상세주소}{해당 동상 상세주소}
+#'   \item{작품상세}{해당 동상 작품상세}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21242/S/1/datasetView.do}
+#' @examples
+#' DT::datatable(head(seoulStatue, 50))
+"seoulStatue"
+
 #' 제주데이터허브 무장애여행정보_제주올레길코스
 #' 
 #' 제주특별자치도에서 제공하는 무장애여행 관련 관광지별 위도, 경도, 장소명칭, 장소상세정보, 무장애관광정보입니다.
