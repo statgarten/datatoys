@@ -33,4 +33,5 @@ olle_14 <- olle_14 %>%
 
 olleWheelchair <- rbind(olle_1,olle_10,olle_14)
 
+usethis::use_data(olleWheelchair, overwrite = TRUE)
 

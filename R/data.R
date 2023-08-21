@@ -1,6 +1,32 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 서울특별시 안심이 CCTV 연계 현황
+#'
+#' 서울시 안심이 CCTV 연계 현황 관련으로 명칭, 주소, 위도/경도(좌표) 등으로 제공합니다. (개방표준 데이터), 안심이앱 : 기존 유사 안전서비스 스마트폰 앱 방식의 긴급호출방법 문제점을 개선한 자치구, 이동통신사와 연동이 가능한 개방형 공통 통합플랫폼 형태의 서울시 여성종합안심앱(안심이) 
+#' 
+#' @format A data frame with 5 variables:
+#' \describe{
+#'   \item{자치구}{해당 CCTV 설치 자치구}
+#'   \item{주소}{해당 CCTV 설치 주소}
+#'   \item{위도}{해당 CCTV 설치 위도}
+#'   \item{경도}{해당 CCTV 설치 경도}
+#'   \item{수량}{해당 CCTV 설치 수량}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-20923/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(seoulCCTV) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addMarkers(lng=~경도, lat=~위도,
+#'              label=~주소,
+#'              popup=~paste(주소,"<BR>", "수량 : ", 수량, sep=""),
+#'              clusterOptions = markerClusterOptions())
+"seoulCCTV"
+
+
 #' 서울특별시 동상 현황
 #'
 #' 서울시에서 관리하는 동상 정보입니다. 작품명, 설치연도, 작품설치장소, 작품관리기관, 작품주소, 상세주소, 작품상세 정보를 제공합니다.
