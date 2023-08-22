@@ -29,9 +29,3 @@ aniPollution$경도 <-  st_coordinates(sf_aniPollution_wgs84)[, 1]
 aniPollution$위도 <-  st_coordinates(sf_aniPollution_wgs84)[, 2]
 
 usethis::use_data(aniPollution, overwrite = TRUE)
-
-
-
-
-
-

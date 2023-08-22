@@ -1,6 +1,126 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 서울특별시 공영주차장 안내 정보
+#'
+#' 공영 노상, 노외 주차장 운영 정보를 안내하고 있으며, 주차장 여건에 따라 실제 정보와 다를 수 있습니다.
+#' 
+#' @format A data frame with 19 variables:
+#' \describe{
+#'   \item{주차장코드}{해당 주차장 주차장코드}
+#'   \item{주차장명}{해당 주차장 주차장명}
+#'   \item{주소}{해당 주차장 주소}
+#'   \item{주차장종류}{해당 주차장 주차장종류 : 노외주차장/ 노상주차장}
+#'   \item{운영구분}{해당 주차장 운영구분 : 시간제 주차장/시간제 + 거주자 주차장/버스전용 주차장/이륜차 전용 주차장/거주자 우선 주차장/시간제 + 버스전용 주차장}
+#'   \item{전화번호}{해당 주차장 전화번호}
+#'   \item{주차현황제공여부}{해당 주차장 주차현황제공여부}
+#'   \item{총 주차 가능 대수}{해당 주차장 총 주차 가능 대수}
+#'   \item{유무료구분}{해당 주차장 유무료구분 : 유료/무료}
+#'   \item{토요일 유무료 구분}{해당 주차장 토요일 유무료 구분}
+#'   \item{공휴일 유무료 구분}{해당 주차장 공휴일 유무료 구분}
+#'   \item{월 정기권 금액}{해당 주차장 월 정기권 금액}
+#'   \item{기본 주차 요금}{해당 주차장 기본 주차 요금}
+#'   \item{기본 주차 단위(분)}{해당 주차장 기본 주차 단위(분)}
+#'   \item{추가 주차 요금}{해당 주차장 추가 주차 요금}
+#'   \item{추가 주차 단위(분)}{해당 주차장 추가 주차 단위(분)}
+#'   \item{일 최대 요금}{해당 주차장 일 최대 요금}
+#'   \item{위도}{해당 주차장 위도}
+#'   \item{경도}{해당 주차장 경도}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-13122/S/1/datasetView.do}
+#' @examples
+#' col_fac = colorFactor('Set1', seoulCarpark$운영구분)
+#' 
+#' library(leaflet)
+#' leaflet(seoulCarpark) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`주차장명`,
+#'              popup =~paste(`주차장명`,"<BR>", "주소 : ",`주소`, sep="","<BR>","운영구분 : ",`운영구분`,"<BR>", "유무료구분 : #' ",`유무료구분`),
+#'              color = ~col_fac(운영구분)) %>% 
+#'   addLegend(position = 'bottomright', 
+#'             title = '구분', 
+#'             pal = col_fac, values = ~운영구분, opacity = 0.5)
+"seoulCarpark"
+
+#' 서울특별시 안심이 CCTV 연계 현황
+#'
+#' 서울시 안심이 CCTV 연계 현황 관련으로 명칭, 주소, 위도/경도(좌표) 등으로 제공합니다. (개방표준 데이터), 안심이앱 : 기존 유사 안전서비스 스마트폰 앱 방식의 긴급호출방법 문제점을 개선한 자치구, 이동통신사와 연동이 가능한 개방형 공통 통합플랫폼 형태의 서울시 여성종합안심앱(안심이) 
+#' 
+#' @format A data frame with 5 variables:
+#' \describe{
+#'   \item{자치구}{해당 CCTV 설치 자치구}
+#'   \item{주소}{해당 CCTV 설치 주소}
+#'   \item{위도}{해당 CCTV 설치 위도}
+#'   \item{경도}{해당 CCTV 설치 경도}
+#'   \item{수량}{해당 CCTV 설치 수량}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-20923/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(seoulCCTV) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addMarkers(lng=~경도, lat=~위도,
+#'              label=~주소,
+#'              popup=~paste(주소,"<BR>", "수량 : ", 수량, sep=""),
+#'              clusterOptions = markerClusterOptions())
+"seoulCCTV"
+
+
+#' 서울특별시 동상 현황
+#'
+#' 서울시에서 관리하는 동상 정보입니다. 작품명, 설치연도, 작품설치장소, 작품관리기관, 작품주소, 상세주소, 작품상세 정보를 제공합니다.
+#' 
+#' @format A data frame with 7 variables:
+#' \describe{
+#'   \item{작품명}{해당 동상 작품명}
+#'   \item{설치연도}{해당 동상 설치연도}
+#'   \item{작품설치장소}{해당 동상 작품설치장소}
+#'   \item{작품관리기관}{해당 동상 작품관리기관}
+#'   \item{작품주소}{해당 동상 작품주소}
+#'   \item{상세주소}{해당 동상 상세주소}
+#'   \item{작품상세}{해당 동상 작품상세}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-21242/S/1/datasetView.do}
+#' @examples
+#' DT::datatable(head(seoulStatue, 50))
+"seoulStatue"
+
+#' 제주데이터허브 무장애여행정보_제주올레길코스
+#' 
+#' 제주특별자치도에서 제공하는 무장애여행 관련 관광지별 위도, 경도, 장소명칭, 장소상세정보, 무장애관광정보입니다.
+#' 
+#' @format A data frame with 6 variables.
+#' \describe{
+#'    \item{구분}{해당 장소 구분}
+#'    \item{위도}{해당 장소 위도}
+#'    \item{경도}{해당 장소 경도}
+#'    \item{설명}{해당 장소 설명}
+#'    \item{상세정보}{해당 장소 상세정보}
+#'    \item{코스}{해당 장소 코스 : 1번 코스, 10번 코스, 14번 코스}
+#'  }
+#' @source \url{https://www.jejudatahub.net/data/view/data/691}
+#' @examples
+#' course_color = colorFactor('Set1', olleWheelchair$코스)
+#' 
+#' library(leaflet)
+#' leaflet(olleWheelchair) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.4784, lat=33.39282, zoom=10) %>%  
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~`경도`, lat=  ~`위도`,
+#'              label =~`구분`,
+#'              popup =~paste(`구분`,"<BR>", "설명 : ",`설명`, sep="","<BR>","접근성 : ",`상세정보`),
+#'              color = ~course_color(코스)) %>% 
+#'   addLegend(position = 'bottomright', 
+#'             title = '코스', 
+#'             pal = course_color, values = ~코스, opacity = 0.5)
+"olleWheelchair"
+
 #' 행정안전부 가축분뇨수집운반업, 배출시설관리업 정보
 #' 
 #' 가축의 배설물을 수집하여 운반하는 업소정보와 가축분뇨배출시설 및 처리시설의 관리를 대행하는 업소정보, 주소, 번호, 경도, 위도 등을 제공
