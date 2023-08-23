@@ -1,6 +1,36 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 행정안전부 인터넷컴퓨터게임시설제공업 정보
+#'
+#'  PC방과 같이 컴퓨터 등 게임물을 이용하는데 필요한 기자재를 갖추거나 그 밖의 정보제공물을 이용할 수 있도록 제공하는 업소정보
+#' 
+#' @format A data frame with 11 variables:
+#' \describe{
+#'   \item{사업장명}{해당 게임제공업 사업장명}
+#'   \item{전화번호}{해당 게임제공업 전화번호}
+#'   \item{소재지전체주소}{해당 게임제공업 소재지전체주소}
+#'   \item{도로명전체주소}{해당 게임제공업 도로명전체주소}
+#'   \item{도로명우편번호}{해당 게임제공업 도로명우편번호}
+#'   \item{경도}{해당 게임제공업 경도}
+#'   \item{위도}{해당 게임제공업 위도}
+#'   \item{총층수}{해당 게임제공업 총층수}
+#'   \item{시설면적}{해당 게임제공업 시설면적}
+#'   \item{지상층수}{해당 게임제공업 지상층수}
+#'   \item{지하층수}{해당 게임제공업 지하층수}
+#' }
+#' @source \url{https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001}
+#' @examples
+#' library(leaflet)
+#' leaflet(pcRoom) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=8) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addMarkers(lng=~`경도`, lat=~`위도`,
+#'              label =~`사업장명`,
+#'              clusterOptions = markerClusterOptions())
+"pcRoom"
+
 #' 서울특별시 공중화장실 위치정보
 #'
 #' 서울시 공중화장실 현황정보를 제공합니다. 좌표정보를 지도위에 표시하여 화장실 위치정보를 제공합니다. 
@@ -112,7 +142,7 @@ NULL
 #' DT::datatable(head(seoulStatue, 50))
 "seoulStatue"
 
-#' 제주데이터허브 무장애여행정보_제주올레길코스
+#' 제주데이터허브 무장애여행정보 제주올레길코스
 #' 
 #' 제주특별자치도에서 제공하는 무장애여행 관련 관광지별 위도, 경도, 장소명칭, 장소상세정보, 무장애관광정보입니다.
 #' 
