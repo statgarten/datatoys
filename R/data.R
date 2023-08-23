@@ -1,6 +1,28 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 서울특별시 공중화장실 위치정보
+#'
+#' 서울시 공중화장실 현황정보를 제공합니다. 좌표정보를 지도위에 표시하여 화장실 위치정보를 제공합니다. 
+#' 
+#' @format A data frame with 4 variables:
+#' \describe{
+#'   \item{주소(구)}{해당 화장실 주소(구)}
+#'   \item{주소(동)}{해당 화장실 주소(동)}
+#'   \item{위도}{해당 화장실 위도}
+#'   \item{경도}{해당 화장실 경도}
+#' }
+#' @source \url{https://data.seoul.go.kr/dataList/OA-1370/S/1/datasetView.do}
+#' @examples
+#' library(leaflet)
+#' leaflet(seoulRestroom) %>% 
+#'   addTiles() %>% 
+#'   setView(lng=126.9784, lat=37.566, zoom=11) %>% 
+#'   addProviderTiles('CartoDB.Positron') %>% 
+#'   addCircles(lng=~경도, lat=~위도,
+#'              label=~`주소(동)`)
+"seoulRestroom"
+
 #' 서울특별시 공영주차장 안내 정보
 #'
 #' 공영 노상, 노외 주차장 운영 정보를 안내하고 있으며, 주차장 여건에 따라 실제 정보와 다를 수 있습니다.
