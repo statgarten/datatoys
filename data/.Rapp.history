@@ -1,3 +1,4 @@
 load("/Users/youngjunna/Library/Mobile Documents/com~apple~CloudDocs/youngjunna/04 프로그래밍/datatoys/data/drunkdrive.rda")
 load("/Users/youngjunna/Library/Mobile Documents/com~apple~CloudDocs/Github/datatoys/data/busyMetro.rda")
-load("/Users/youngjunna/Library/Mobile Documents/com~apple~CloudDocs/Github/datatoys/data/busyMetro.rda")
+load("/Users/seungwoo/Desktop/Antller/datatoys/data/seoulCCTV.rda")
+load("/Users/seungwoo/Desktop/Antller/datatoys/data/seoulLibrary.rda")
