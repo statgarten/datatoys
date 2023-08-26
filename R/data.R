@@ -1,6 +1,38 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 통계청 내국인 출국 연령별
+#' 
+#' 한국관광공사에서 제공하는 관광수지 및 관광목적의 외래객입국과 내국인출국현황을 파악, 분석하여 관광정책수립의 기초자료로 활용
+#'
+#' @format A list with 3 data frame.
+#' \describe{
+#'    \item{연령}{해당 출국객 연령: 0-20세,21-30세,31-40세,41-50세,51-60세,61세 이상}
+#'    \item{시점}{해당 출국객 시점: 2014년 1월 ~ 2023년 6월}
+#'    \item{출국객 수}{해당 출국객 수}
+#'  }
+#' @source \url{https://kosis.kr/statHtml/statHtml.do?orgId=314&tblId=DT_TRD_AGE_ENT_AGG_MONTH&vw_cd=MT_ZTITLE&list_id=H2_19&scrId=&seqNo=&lang_mode=ko&obj_var_id=&itm_id=&conn_path=MT_ZTITLE&path=%252FstatisticsList%252FstatisticsListIndex.do}
+#' @examples
+#' 
+#' departure$시점 <- as.Date(paste0(departure$시점, ".1"),format="%Y.%m.%d")
+#' View(departure)
+#' main_departure <- departure %>% 
+#'   group_by(year(시점), 연령별) %>% 
+#'   summarize(총출국객 = sum(`출국객 수`)) %>% 
+#'   rename(
+#'     연도 = `year(시점)`
+#'   )
+#' 
+#' ggplot(main_departure, aes(x=연도, y=총출국객, color=연령별)) +
+#'   geom_point() +
+#'   geom_line() +
+#'   labs(title = "출국객 수", x="시점", y="") +
+#'   scale_y_continuous(labels = scales::comma) +  
+#'   theme_minimal(base_family = "NanumGothic")+
+#'   theme(plot.title = element_text(hjust = 0.5, size = 22, color = "royalblue4", face = "bold"))
+"departure"
+
+
 #' 통계청 외래객 입국-연령별/국적별
 #' 
 #' 한국관광공사에서 제공하는 관광수지 및 관광목적의 외래객입국과 내국인출국현황을 파악, 분석하여 관광정책수립의 기초자료로 활용
@@ -16,12 +48,12 @@ NULL
 #' @source \url{https://kosis.kr/statHtml/statHtml.do?orgId=314&tblId=DT_TRD_AGE_ENT_AGG_MONTH&vw_cd=MT_ZTITLE&list_id=H2_19&scrId=&seqNo=&lang_mode=ko&obj_var_id=&itm_id=&conn_path=MT_ZTITLE&path=%252FstatisticsList%252FstatisticsListIndex.do}
 #' @examples
 #' 
-#' entrance$시점 <- as.Date(paste0(entrance$시점, ".1"),format="%Y#' .%m.%d")
+#' entrance$시점 <- as.Date(paste0(entrance$시점, ".1"),format="%Y.%m.%d")
 #' 
 #' main_entrance <- entrance %>% 
 #'   group_by(시점, 국가) %>% 
 #'   summarize(총외래객 = sum(외래객)) %>% 
-#'   filter(국가 == "중국" | 국가 == "홍콩" | 국가 == "일본" | 국가 #' == "미국" | 국가 == "대만")
+#'   filter(국가 == "중국" | 국가 == "홍콩" | 국가 == "일본" | 국가 == "미국" | 국가 == "대만")
 #' 
 #' ggplot(main_entrance, aes(x=시점, y=총외래객, color=국가)) +
 #'   geom_point() +
@@ -29,7 +61,7 @@ NULL
 #'   labs(title = "주요 국가 별 외래객 수", x="시점", y="") +
 #'   scale_y_continuous(labels = scales::comma) +  
 #'   theme_minimal(base_family = "NanumGothic")+
-#'   theme(plot.title = element_text(hjust = 0.5, size = 22, color = #' "royalblue4", face = "bold"))
+#'   theme(plot.title = element_text(hjust = 0.5, size = 22, color = "royalblue4", face = "bold"))
 "entrance"
 
 #' 경찰청 전국치안센터주소현황
@@ -150,7 +182,7 @@ NULL
 #'   addProviderTiles('CartoDB.Positron') %>% 
 #'   addCircles(lng=~`경도`, lat=  ~`위도`,
 #'              label =~`주차장명`,
-#'              popup =~paste(`주차장명`,"<BR>", "주소 : ",`주소`, sep="","<BR>","운영구분 : ",`운영구분`,"<BR>", "유무료구분 : #' ",`유무료구분`),
+#'              popup =~paste(`주차장명`,"<BR>", "주소 : ",`주소`, sep="","<BR>","운영구분 : ",`운영구분`,"<BR>", "유무료구분 : ",`유무료구분`),
 #'              color = ~col_fac(운영구분)) %>% 
 #'   addLegend(position = 'bottomright', 
 #'             title = '구분', 
