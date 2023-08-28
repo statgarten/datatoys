@@ -10,3 +10,4 @@ policeBox <- df %>%
   )
 
 usethis::use_data(policeBox, overwrite = TRUE)
+
