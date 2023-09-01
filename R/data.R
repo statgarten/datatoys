@@ -14,7 +14,7 @@ NULL
 #'  }
 #' @source \url{https://data.seoul.go.kr/dataList/211/C/2/datasetView.do}
 #' @examples
-#' seoulDoctor <- seoulGraute %>% 
+#' seoulDoctor <- seoulGraduate %>% 
 #'   filter(구분_1 == "박사과정학생수" | 구분_2 == "박사과정")
 #' 
 #' ggplot(seoulDoctor, aes(x=시점, y=수, color=구분_1, group = 구분_1)) +
@@ -24,7 +24,7 @@ NULL
 #'   theme_minimal(base_family = "NanumGothic")+
 #'   labs(title="서울시 박사 통계", color = "") + 
 #'   theme(plot.title = element_text(hjust = 0.5, size = 22, color = "royalblue4", face = "bold"), legend.position = "top")
-"seoulGraute"
+"seoulGraduate"
 
 #' 통계청 내국인 출국 연령별
 #' 
