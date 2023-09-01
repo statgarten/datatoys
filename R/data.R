@@ -1,6 +1,31 @@
 #' @importFrom tibble tibble
 NULL
 
+#' 서울특별시 대학원 통계 
+#' 
+#' 서울열린데이터 광장에서 제공하는 대학원의 학생수(석사ㆍ박사과정), 교원수, 졸업/입학자 현황(석사ㆍ박사과정) 등, 출처 : 한국교육개발원 교육통계연구센터 
+#'
+#' @format A list with 4 data frame.
+#' \describe{
+#'    \item{구분_1}{대학원수(개), 학과수(개), 입학정원수, 석사과정학생수, 박사과정학생수, 졸업자현황}
+#'    \item{구분_2}{소계, 석사과정, 박사과정}
+#'    \item{시점}{조사 시점 : 1997 ~ 2022}
+#'    \item{수}{조사 시점의 수(대학원의 수, 학과 수, 입학 정원 수 등)}
+#'  }
+#' @source \url{https://data.seoul.go.kr/dataList/211/C/2/datasetView.do}
+#' @examples
+#' seoulDoctor <- seoulGraute %>% 
+#'   filter(구분_1 == "박사과정학생수" | 구분_2 == "박사과정")
+#' 
+#' ggplot(seoulDoctor, aes(x=시점, y=수, color=구분_1, group = 구분_1)) +
+#'   geom_point() +
+#'   geom_path() +
+#'   scale_y_continuous(labels = scales::comma) +  
+#'   theme_minimal(base_family = "NanumGothic")+
+#'   labs(title="서울시 박사 통계", color = "") + 
+#'   theme(plot.title = element_text(hjust = 0.5, size = 22, color = "royalblue4", face = "bold"), legend.position = "top")
+"seoulGraute"
+
 #' 통계청 내국인 출국 연령별
 #' 
 #' 한국관광공사에서 제공하는 관광수지 및 관광목적의 외래객입국과 내국인출국현황을 파악, 분석하여 관광정책수립의 기초자료로 활용
