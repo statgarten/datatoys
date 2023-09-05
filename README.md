@@ -37,8 +37,8 @@ load datatoys into a `pandas.DataFrame` format.
 
 ## A list of datasets
 
-A total 71 datasets are available (Last check point: 2023-08-17
-18:17:17).
+A total 81 datasets are available (Last check point: 2023-09-02
+11:28:58).
 
 | 번호 | 데이터셋              | 출처                   | 설명                                             |
 |-----:|:----------------------|:-----------------------|:-------------------------------------------------|
@@ -62,54 +62,64 @@ A total 71 datasets are available (Last check point: 2023-08-17
 |   18 | coolCenter            | 서울특별시             | 무더위쉼터 현황                                  |
 |   19 | crime                 | 경찰청                 | 범죄 발생 지역별 통계                            |
 |   20 | crimePlace            | 경찰청                 | 범죄 발생 장소별 통계                            |
-|   21 | drunkdrive            | 경찰청                 | 음주운전 적발 기록 현황                          |
-|   22 | earthShelter          | 서울특별시             | 지진실내구호소 현황                              |
-|   23 | economyPeople         | 통계청                 | 경제활동인구조사                                 |
-|   24 | election2020          | 중앙선거관리위원회     | 국회의원선거 개표결과 정보                       |
-|   25 | elevator              | 한국승강기안전공단     | 국내 승강기 보유 현황                            |
-|   26 | farmGIS               | 행전안전부             | 가축사육업 로컬데이터                            |
-|   27 | fire                  | 소방청                 | 화재통계                                         |
-|   28 | fireStation           | 소방청                 | 전국 소방서 정보                                 |
-|   29 | foodBank              | 한국사회복지협의회     | 2021 전국푸드뱅크 기부자 통계                    |
-|   30 | foodNutrients         | 식품의약품안전처       | 식품영양성분 데이터베이스                        |
-|   31 | gasStation            | 산업통상자원부         | 전국 주유소 등록현황                             |
-|   32 | globalBusiness        | 대한무역투자진흥공사   | 해외진출기업 정보                                |
-|   33 | gyeonggiER            | 경기도                 | 응급의료기관 및 응급의료지원센터 현황            |
-|   34 | hatching              | 행정안전부             | 부화업 정보                                      |
-|   35 | hospitalInfo          | 건강보험심사평가원     | 병의원 기본정보                                  |
-|   36 | housingPrice          | 국토교통부             | 2021 공동주택 공시가격 정보                      |
-|   37 | iceMarket             | 행정안전부             | 식용얼음판매업 정보                              |
-|   38 | imdependenceMov       | 공공데이터포털         | 독립운동정보 원문정보                            |
-|   39 | jobMating             | 행정안전부             | 직업소개소 정보                                  |
-|   40 | karaoke               | 행정안전부             | 단란주점 영업 정보                               |
-|   41 | Kcalendar             | 한국천문연구원         | 특일 정보                                        |
-|   42 | legalDong             | 국토교통부             | 법정동 정보                                      |
-|   43 | liquor                | 보건복지부             | 주류관련 통계                                    |
-|   44 | medicalCheckup        | 국민건강보험           | 일반건강검진결과                                 |
-|   45 | medicine              | 건강보험심사평가원     | 의약품 주성분 정보                               |
-|   46 | nationalPension       | 국민연금공단           | 국민연금사업장 정보                              |
-|   47 | necessariesPrice      | 한국소비자원           | 생필품가격 정보                                  |
-|   48 | odaIndex              | 한국국제협력단         | 협력국 개발지표 및 ODA 지원 실적                 |
-|   49 | odaKR                 | 한국국제협력단         | 소득수준별 ODA 실적통계                          |
-|   50 | odaNews               | 한국국제협력단         | 국가별 개발협력동향정보                          |
-|   51 | openData              | 공공데이터활용지원센터 | 공공데이터포털 목록개방현황                      |
-|   52 | optician              | 행정안전부             | 안경업 정보                                      |
-|   53 | petNames              | 마포구                 | 반려동물 이름 통계                               |
-|   54 | pharmacyInfo          | 건강보험심사평가원     | 약국 기본정보                                    |
-|   55 | pollution             | 국립환경과학원         | 축산오염원조사정보                               |
-|   56 | population            | 통계청                 | 인구총조사                                       |
-|   57 | postnatal             | 행정안전부             | 산후조리업 정보                                  |
-|   58 | postOffice            | 서울특별시             | 우체국 정보                                      |
-|   59 | pwd                   | 통계청                 | 장애인현황                                       |
-|   60 | restaurant            | 경기도                 | 맛집 정보                                        |
-|   61 | scholarship           | 한국장학재단           | 2020년도 장학금 수혜현황                         |
-|   62 | seoulCivic            | 서울특별시             | 2022년 서울 시민생활 데이터                      |
-|   63 | seoulCulture          | 서울특별시             | 문화공간정보                                     |
-|   64 | seoulER               | 서울특별시             | 응급실 위치 정보                                 |
-|   65 | seoulFestival         | 서울특별시             | 문화행사 정보                                    |
-|   66 | seoulLibrary          | 서울특별시             | 공공도서관 현황정보                              |
-|   67 | singingRoom           | 행정안전부             | 노래연습장업 정보                                |
-|   68 | socialCenter          | 서울특별시             | 사회복지시설 정보                                |
-|   69 | tuition               | 한국장학재단           | 장학금 정보                                      |
-|   70 | warmingCenter         | 서울특별시             | 한파쉼터현황                                     |
-|   71 | weather2020           | 농림축산식품부         | 농업 종관기상 데이터                             |
+|   21 | departure             | 통계청                 | 내국인 출국 연령별                               |
+|   22 | drunkdrive            | 경찰청                 | 음주운전 적발 기록 현황                          |
+|   23 | earthShelter          | 서울특별시             | 지진실내구호소 현황                              |
+|   24 | economyPeople         | 통계청                 | 경제활동인구조사                                 |
+|   25 | election2020          | 중앙선거관리위원회     | 국회의원선거 개표결과 정보                       |
+|   26 | elevator              | 한국승강기안전공단     | 국내 승강기 보유 현황                            |
+|   27 | entrance              | 통계청                 | 외래객 입국-연령별/국적별                        |
+|   28 | farmGIS               | 행전안전부             | 가축사육업 로컬데이터                            |
+|   29 | fire                  | 소방청                 | 화재통계                                         |
+|   30 | fireStation           | 소방청                 | 전국 소방서 정보                                 |
+|   31 | foodBank              | 한국사회복지협의회     | 2021 전국푸드뱅크 기부자 통계                    |
+|   32 | foodNutrients         | 식품의약품안전처       | 식품영양성분 데이터베이스                        |
+|   33 | gasStation            | 산업통상자원부         | 전국 주유소 등록현황                             |
+|   34 | globalBusiness        | 대한무역투자진흥공사   | 해외진출기업 정보                                |
+|   35 | gyeonggiER            | 경기도                 | 응급의료기관 및 응급의료지원센터 현황            |
+|   36 | hatching              | 행정안전부             | 부화업 정보                                      |
+|   37 | hospitalInfo          | 건강보험심사평가원     | 병의원 기본정보                                  |
+|   38 | housingPrice          | 국토교통부             | 2021 공동주택 공시가격 정보                      |
+|   39 | iceMarket             | 행정안전부             | 식용얼음판매업 정보                              |
+|   40 | imdependenceMov       | 공공데이터포털         | 독립운동정보 원문정보                            |
+|   41 | jobMating             | 행정안전부             | 직업소개소 정보                                  |
+|   42 | karaoke               | 행정안전부             | 단란주점 영업 정보                               |
+|   43 | Kcalendar             | 한국천문연구원         | 특일 정보                                        |
+|   44 | legalDong             | 국토교통부             | 법정동 정보                                      |
+|   45 | liquor                | 보건복지부             | 주류관련 통계                                    |
+|   46 | medicalCheckup        | 국민건강보험           | 일반건강검진결과                                 |
+|   47 | medicine              | 건강보험심사평가원     | 의약품 주성분 정보                               |
+|   48 | nationalPension       | 국민연금공단           | 국민연금사업장 정보                              |
+|   49 | necessariesPrice      | 한국소비자원           | 생필품가격 정보                                  |
+|   50 | odaIndex              | 한국국제협력단         | 협력국 개발지표 및 ODA 지원 실적                 |
+|   51 | odaKR                 | 한국국제협력단         | 소득수준별 ODA 실적통계                          |
+|   52 | odaNews               | 한국국제협력단         | 국가별 개발협력동향정보                          |
+|   53 | olleWheelchair        | 제주데이터허브         | 무장애여행정보 제주올레길코스                    |
+|   54 | openData              | 공공데이터활용지원센터 | 공공데이터포털 목록개방현황                      |
+|   55 | optician              | 행정안전부             | 안경업 정보                                      |
+|   56 | pcRoom                | 행정안전부             | 인터넷컴퓨터게임시설제공업 정보                  |
+|   57 | petNames              | 마포구                 | 반려동물 이름 통계                               |
+|   58 | pharmacyInfo          | 건강보험심사평가원     | 약국 기본정보                                    |
+|   59 | policeBox             | 경찰청                 | 전국치안센터주소현황                             |
+|   60 | pollution             | 국립환경과학원         | 축산오염원조사정보                               |
+|   61 | population            | 통계청                 | 인구총조사                                       |
+|   62 | postnatal             | 행정안전부             | 산후조리업 정보                                  |
+|   63 | postOffice            | 서울특별시             | 우체국 정보                                      |
+|   64 | pwd                   | 통계청                 | 장애인현황                                       |
+|   65 | restaurant            | 경기도                 | 맛집 정보                                        |
+|   66 | scholarship           | 한국장학재단           | 2020년도 장학금 수혜현황                         |
+|   67 | seoulCarpark          | 서울특별시             | 공영주차장 안내 정보                             |
+|   68 | seoulCCTV             | 서울특별시             | 안심이 CCTV 연계 현황                            |
+|   69 | seoulCivic            | 서울특별시             | 2022년 서울 시민생활 데이터                      |
+|   70 | seoulCulture          | 서울특별시             | 문화공간정보                                     |
+|   71 | seoulER               | 서울특별시             | 응급실 위치 정보                                 |
+|   72 | seoulFestival         | 서울특별시             | 문화행사 정보                                    |
+|   73 | seoulGraute           | 서울특별시             | 대학원 통계                                      |
+|   74 | seoulLibrary          | 서울특별시             | 공공도서관 현황정보                              |
+|   75 | seoulRestroom         | 서울특별시             | 공중화장실 위치정보                              |
+|   76 | seoulStatue           | 서울특별시             | 동상 현황                                        |
+|   77 | singingRoom           | 행정안전부             | 노래연습장업 정보                                |
+|   78 | socialCenter          | 서울특별시             | 사회복지시설 정보                                |
+|   79 | tuition               | 한국장학재단           | 장학금 정보                                      |
+|   80 | warmingCenter         | 서울특별시             | 한파쉼터현황                                     |
+|   81 | weather2020           | 농림축산식품부         | 농업 종관기상 데이터                             |
