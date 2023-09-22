@@ -9,7 +9,7 @@ glimpse(pollution)
 
 
 pollution <- pollution %>%
-  tibble() 
+  tibble()
 
 table(pollution$축종)
 

@@ -11,4 +11,3 @@ Kcalendar <- Kcalendar %>%
   )
 
 usethis::use_data(Kcalendar, overwrite = TRUE)
-

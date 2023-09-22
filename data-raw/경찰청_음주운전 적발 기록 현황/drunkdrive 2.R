@@ -6,7 +6,7 @@ readr::guess_encoding(file)
 
 data.table::fread(file)
 
-df <- tibble::tibble(read.csv(file, fileEncoding = "UTF-16", sep = "\t")) %>% 
+df <- tibble::tibble(read.csv(file, fileEncoding = "UTF-16", sep = "\t")) %>%
   mutate(
     성별 = factor(성별),
     나이불명 = ifelse(나이 == "불명", "나이불명", "정상"),
@@ -32,9 +32,9 @@ usethis::use_data(drunkdrive, overwrite = TRUE)
 drunkdrive %>%
   mutate(
     적발요일 = lubridate::wday(측정일시, label = TRUE)
-  ) %>% 
-  group_by(적발요일) %>% 
-  summarise(n = n()) %>% 
+  ) %>%
+  group_by(적발요일) %>%
+  summarise(n = n()) %>%
   ggplot(aes(적발요일, n)) +
   geom_col() +
   ggthemes::theme_fivethirtyeight(base_family = "NanumGothic")

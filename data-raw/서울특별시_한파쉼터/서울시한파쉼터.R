@@ -1,10 +1,10 @@
 library(tidyverse)
 setwd("../서울특별시_한파쉼터/")
 
-df <- read.csv('./서울시 한파쉼터.csv', fileEncoding = 'utf-8', header = T)
+df <- read.csv("./서울시 한파쉼터.csv", fileEncoding = "utf-8", header = T)
 
-warmingCenter <- df %>% 
-  select(c(-1:-8,-17:-25)) %>% 
+warmingCenter <- df %>%
+  select(c(-1:-8, -17:-25)) %>%
   rename(
     `난방기보유대수(열풍기)` = `난방기보유.열풍기.`,
     `난방기보유대수(히터)` = `난방기보유.히터.`,

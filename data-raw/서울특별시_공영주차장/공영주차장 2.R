@@ -1,9 +1,9 @@
 library(tidyverse)
 library(lubridate)
-df <- read.csv('서울시 공영주차장 안내 정보.csv', fileEncoding = 'utf-8', header = T)
+df <- read.csv("서울시 공영주차장 안내 정보.csv", fileEncoding = "utf-8", header = T)
 
-seoulCarpark <- df %>% 
-  select(c(-4,-6,-9,-12,-14,-16:-22,-23,-25,-28,-33:-36)) %>% 
+seoulCarpark <- df %>%
+  select(c(-4, -6, -9, -12, -14, -16:-22, -23, -25, -28, -33:-36)) %>%
   rename(
     주차장종류 = 주차장.종류명,
     운영구분 = 운영구분명,
@@ -19,6 +19,7 @@ seoulCarpark <- df %>%
     `추가 주차 요금` = `추가.단위.요금`,
     `추가 주차 단위(분)` = `추가.단위.시간.분.단위.`,
     `일 최대 요금` = `일.최대.요금`
-  ) %>% select(-야간무료개방여부)
+  ) %>%
+  select(-야간무료개방여부)
 
 usethis::use_data(seoulCarpark, overwrite = TRUE)

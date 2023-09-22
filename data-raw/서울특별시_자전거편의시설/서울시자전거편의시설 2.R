@@ -1,10 +1,10 @@
 library(tidyverse)
 setwd("../서울특별시_자전거편의시설/")
 
-df <- read.csv('./서울시 자전거 편의시설.csv',fileEncoding = 'utf-8', header = T)
+df <- read.csv("./서울시 자전거 편의시설.csv", fileEncoding = "utf-8", header = T)
 
-bike <- df %>% 
-  select(c(-1,-4,-5,-8,-9,-10,-12,-14,-15:-47)) %>% 
+bike <- df %>%
+  select(c(-1, -4, -5, -8, -9, -10, -12, -14, -15:-47)) %>%
   rename(
     `편의시설명` = `시설ID`,
     `편의시설분류` = `컨텐츠.명`,

@@ -54,8 +54,8 @@ data(package = "datatoys")$results %>%
   rename("데이터셋" = "Item") %>%
   tidyr::separate(Title, c("출처", "설명"), sep = " ", extra = "merge") %>%
   arrange(데이터셋) %>%
-  mutate(번호 = row_number()) %>% 
-  select(번호, everything()) %>% 
+  mutate(번호 = row_number()) %>%
+  select(번호, everything()) %>%
   knitr::kable()
 ```
 

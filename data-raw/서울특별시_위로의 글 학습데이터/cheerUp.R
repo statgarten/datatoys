@@ -8,11 +8,11 @@ cheerUp <- df %>% select(1:3)
 library(tidytext)
 library(ggwordcloud)
 
-cheerUp %>% 
-  unnest_tokens(input = 위로글내용, output = word, token = "words") %>% 
-  count(word, sort = TRUE) %>% 
-  filter(nchar(word) > 1) %>% 
-  head(100) %>% 
+cheerUp %>%
+  unnest_tokens(input = 위로글내용, output = word, token = "words") %>%
+  count(word, sort = TRUE) %>%
+  filter(nchar(word) > 1) %>%
+  head(100) %>%
   ggplot(aes(label = word, size = n)) +
   geom_text_wordcloud(seed = 811, family = "NanumGothic")
 

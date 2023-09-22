@@ -8,5 +8,7 @@ df <- readxl::read_excel("세출_지출 세부사업 예산편성현황(총액)_
 
 str(df)
 
-budget2023 <- df %>% select(-1) %>% janitor::clean_names(ascii = FALSE)
+budget2023 <- df %>%
+  select(-1) %>%
+  janitor::clean_names(ascii = FALSE)
 usethis::use_data(budget2023, overwrite = TRUE)

@@ -3,7 +3,7 @@ library(lubridate)
 
 guess_encoding("scholarship.csv")
 
-scholarship <- read.csv("scholarship.csv", fileEncoding = "euc-kr") %>% tibble() 
+scholarship <- read.csv("scholarship.csv", fileEncoding = "euc-kr") %>% tibble()
 
 scholarship
 

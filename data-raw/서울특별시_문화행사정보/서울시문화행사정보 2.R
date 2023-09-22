@@ -1,10 +1,10 @@
 library(tidyverse)
 getwd()
 
-df <- read.csv('./서울시 문화행사 정보.csv', fileEncoding = 'utf-8', header = T)
+df <- read.csv("./서울시 문화행사 정보.csv", fileEncoding = "utf-8", header = T)
 
-seoulFestival <- df %>% 
-  select(c(-1,-11,-15:-18,-22)) %>% 
+seoulFestival <- df %>%
+  select(c(-1, -11, -15:-18, -22)) %>%
   rename(
     `공연(행사)명` = `공연.행사명`,
     `일시` = `날짜.시간`,

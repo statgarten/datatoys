@@ -11,6 +11,6 @@ glimpse(crime)
 
 
 crime <- crime %>%
-  tibble() 
+  tibble()
 
 usethis::use_data(crime, overwrite = TRUE)

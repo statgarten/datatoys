@@ -14,7 +14,7 @@ df1 <- tibble::tibble(read.csv("fireStation-안전센터.csv", fileEncoding = "e
 dplyr::glimpse(df)
 
 df %>% mutate(분류 = "소방서")
-df1 %>% mutate(분류 = "안전센터") #나중에 추가
+df1 %>% mutate(분류 = "안전센터") # 나중에 추가
 
 
 fireStation <- df

@@ -8,4 +8,3 @@ economyPeople <- readxl::read_excel("연령별_경제
 dplyr::glimpse(economyPeople)
 
 usethis::use_data(economyPeople, overwrite = TRUE)
-

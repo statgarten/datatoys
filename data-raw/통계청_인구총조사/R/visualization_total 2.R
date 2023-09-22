@@ -6,10 +6,12 @@ population <- datatoys::population
 population <- subset(population, 행정구역별 != "황해도" & 행정구역별 != "평안북도" & 행정구역별 != "평안남도" & 행정구역별 != "함경북도" & 행정구역별 != "함경남도" & 행정구역별 != "함경북도")
 population <- population %>%
   mutate(
-    행정구역별 = recode(행정구역별, "서울특별시" = "서울", "부산광역시" = "부산", "충청북도" = "충북", "충청남도" = "충남", 
-                   "전라북도" = "전북", "전라남도" = "전남", "경상북도" = "경북", "경상남도" = "경남", "대구광역시" = "대구", 
-                   "광주광역시" = "광주", "대전광역시" = "대전", "울산광역시" = "울산", "인천광역시" = "인천", "경기도" = "경기", 
-                   "강원도" = "강원", "제주도" = "제주", "세종특별자치시" = "세종", "제주특별자치도" = "제주")
+    행정구역별 = recode(행정구역별,
+      "서울특별시" = "서울", "부산광역시" = "부산", "충청북도" = "충북", "충청남도" = "충남",
+      "전라북도" = "전북", "전라남도" = "전남", "경상북도" = "경북", "경상남도" = "경남", "대구광역시" = "대구",
+      "광주광역시" = "광주", "대전광역시" = "대전", "울산광역시" = "울산", "인천광역시" = "인천", "경기도" = "경기",
+      "강원도" = "강원", "제주도" = "제주", "세종특별자치시" = "세종", "제주특별자치도" = "제주"
+    )
   ) %>%
   group_by(행정구역별, 연도) %>%
   summarise(
@@ -45,11 +47,14 @@ area_palette <- c(
 )
 
 total_population <- ggplot(population, aes(rank, group = 행정구역별)) +
-  geom_tile(aes(
-    y = 인구수_10000 / 2,
-    height = 인구수_10000,
-    width = 0.9, fill = 행정구역별), 
-    alpha = 0.8) +
+  geom_tile(
+    aes(
+      y = 인구수_10000 / 2,
+      height = 인구수_10000,
+      width = 0.9, fill = 행정구역별
+    ),
+    alpha = 0.8
+  ) +
   geom_text(aes(y = 0, label = paste(행정구역별, " ")), vjust = 0.2, hjust = 1, size = 5, family = "AppleSDGothicNeo-SemiBold") +
   geom_text(aes(y = 인구수_10000, label = 인구수_char, hjust = 0)) +
   theme_minimal(base_family = "AppleSDGothicNeo-SemiBold") +
@@ -67,8 +72,8 @@ total_population <- ggplot(population, aes(rank, group = 행정구역별)) +
     plot.background = element_blank()
   ) +
   transition_states(연도,
-                    transition_length = 40,
-                    state_length = 10
+    transition_length = 40,
+    state_length = 10
   ) +
   scale_y_continuous(breaks = seq(0, 1500, 250), labels = scales::comma) +
   scale_x_reverse() +
