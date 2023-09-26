@@ -29,6 +29,8 @@ Let's play with data! We prepared toy data for data newbies. This package contai
 ```
 # Install development version from GitHub
 # install.packages("remotes")
+# Due to the large size of the file, you may get a download error. If so, set the options below.
+# options(timeout = 9999999)
 remotes::install_github("statgarten/datatoys")
 ```
 

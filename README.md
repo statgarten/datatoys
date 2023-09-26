@@ -24,6 +24,8 @@ adventure!**
 
     # Install development version from GitHub
     # install.packages("remotes")
+    # Due to the large size of the file, you may get a download error. If so, set the options below.
+    # options(timeout = 9999999)
     remotes::install_github("statgarten/datatoys")
 
 ## For python users
@@ -37,8 +39,8 @@ load datatoys into a `pandas.DataFrame` format.
 
 ## A list of datasets
 
-A total 81 datasets are available (Last check point: 2023-09-02
-11:28:58).
+A total 81 datasets are available (Last check point: 2023-09-26
+17:22:33).
 
 | 번호 | 데이터셋              | 출처                   | 설명                                             |
 |-----:|:----------------------|:-----------------------|:-------------------------------------------------|
