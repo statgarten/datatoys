@@ -39,8 +39,10 @@ load datatoys into a `pandas.DataFrame` format.
 
 ## A list of datasets
 
-A total 81 datasets are available (Last check point: 2023-09-26
-17:22:33).
+A total 82 datasets are available (Last check point: 2023-10-23
+17:20:59).
+
+    #> Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [74].
 
 | 번호 | 데이터셋              | 출처                   | 설명                                             |
 |-----:|:----------------------|:-----------------------|:-------------------------------------------------|
@@ -116,12 +118,13 @@ A total 81 datasets are available (Last check point: 2023-09-26
 |   70 | seoulCulture          | 서울특별시             | 문화공간정보                                     |
 |   71 | seoulER               | 서울특별시             | 응급실 위치 정보                                 |
 |   72 | seoulFestival         | 서울특별시             | 문화행사 정보                                    |
-|   73 | seoulGraute           | 서울특별시             | 대학원 통계                                      |
-|   74 | seoulLibrary          | 서울특별시             | 공공도서관 현황정보                              |
-|   75 | seoulRestroom         | 서울특별시             | 공중화장실 위치정보                              |
-|   76 | seoulStatue           | 서울특별시             | 동상 현황                                        |
-|   77 | singingRoom           | 행정안전부             | 노래연습장업 정보                                |
-|   78 | socialCenter          | 서울특별시             | 사회복지시설 정보                                |
-|   79 | tuition               | 한국장학재단           | 장학금 정보                                      |
-|   80 | warmingCenter         | 서울특별시             | 한파쉼터현황                                     |
-|   81 | weather2020           | 농림축산식품부         | 농업 종관기상 데이터                             |
+|   73 | seoulGraduate         | 서울특별시             | 대학원 통계                                      |
+|   74 | seoulGraute           |                        | NA                                               |
+|   75 | seoulLibrary          | 서울특별시             | 공공도서관 현황정보                              |
+|   76 | seoulRestroom         | 서울특별시             | 공중화장실 위치정보                              |
+|   77 | seoulStatue           | 서울특별시             | 동상 현황                                        |
+|   78 | singingRoom           | 행정안전부             | 노래연습장업 정보                                |
+|   79 | socialCenter          | 서울특별시             | 사회복지시설 정보                                |
+|   80 | tuition               | 한국장학재단           | 장학금 정보                                      |
+|   81 | warmingCenter         | 서울특별시             | 한파쉼터현황                                     |
+|   82 | weather2020           | 농림축산식품부         | 농업 종관기상 데이터                             |
