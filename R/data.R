@@ -5,7 +5,7 @@ NULL
 #' 
 #' 서울열린데이터 광장에서 제공하는 대학원의 학생수(석사ㆍ박사과정), 교원수, 졸업/입학자 현황(석사ㆍ박사과정) 등, 출처 : 한국교육개발원 교육통계연구센터 
 #'
-#' @format A list with 4 data frame.
+#' @format A data frame with 4 variables.
 #' \describe{
 #'    \item{구분_1}{대학원수(개), 학과수(개), 입학정원수, 석사과정학생수, 박사과정학생수, 졸업자현황}
 #'    \item{구분_2}{소계, 석사과정, 박사과정}
@@ -30,7 +30,7 @@ NULL
 #' 
 #' 한국관광공사에서 제공하는 관광수지 및 관광목적의 외래객입국과 내국인출국현황을 파악, 분석하여 관광정책수립의 기초자료로 활용
 #'
-#' @format A list with 3 data frame.
+#' @format A data frame with 3 variables.
 #' \describe{
 #'    \item{연령}{해당 출국객 연령: 0-20세,21-30세,31-40세,41-50세,51-60세,61세 이상}
 #'    \item{시점}{해당 출국객 시점: 2014년 1월 ~ 2023년 6월}
@@ -62,7 +62,7 @@ NULL
 #' 
 #' 한국관광공사에서 제공하는 관광수지 및 관광목적의 외래객입국과 내국인출국현황을 파악, 분석하여 관광정책수립의 기초자료로 활용
 #'
-#' @format A list with 5 data frame.
+#' @format A data frame with 5 variabels.
 #' \describe{
 #'    \item{연령}{해당 외래객 연령: 0-20세,21-30세,31-40세,41-50세,51-60세,61세 이상}
 #'    \item{시점}{해당 외래객 시점: 2017년 7월 ~ 2023년 6월}
@@ -93,7 +93,7 @@ NULL
 #' 
 #' 경찰청에서 제공하는 전국 치안센터 주소 이용허락범위 제한 없음.
 #'
-#' @format A list with 6 data frame.
+#' @format A data frame with 6 variables.
 #' \describe{
 #'    \item{시도청}{해당 치안센터 시도청 : 서울청,부산청,대구청,인천청,광주청,대전청,울산청,세종청,경기남부청,경기북부청,강원청,충북청,충남청,전북청,전남청,경북청,경남청,제주청}
 #'    \item{지역명}{해당 치안센터 지역명}
@@ -1291,24 +1291,19 @@ NULL
 #' @source \url{https://www.data.go.kr/data/3045217/fileData.do}
 #' @examples
 #' DT::datatable(head(pollution, 50))
-#' library(highcharter)
+#' library(ggplot)
 #' library(dplyr)
 #' library(datatoys)
 #' 
-#' pollution |> 
-#'   group_by(축종) |> 
+#' pollution  %>%  
+#'   group_by(축종) %>% 
 #'   summarise(
 #'     총분뇨발생량 = sum(가축분뇨발생량.m3.일.)
-#'   ) |> 
-#'   ungroup() |> 
-#'   arrange(desc(총분뇨발생량)) |> 
-#'   hchart(type = "column", hcaes(축종, 총분뇨발생량), name = "총발생량") |> 
-#'   hc_title(
-#'     text = "축종별 가축분뇨 총 발생량",
-#'     margin = 20,
-#'     align = "left"
-#'   ) |> 
-#'   hc_add_theme(hc_theme_538())
+#'   ) %>% 
+#'   ungroup() %>% 
+#'   arrange(desc(총분뇨발생량)) %>% 
+#'   ggplot(aes(축종, 총분뇨발생량)) +
+#'   geom_col()
 
 
 "pollution"
@@ -2139,7 +2134,7 @@ NULL
 #' 
 #' 국토교통부에서 제공하는 전세계 공항의 영문 공항명, 한글 공항명, IATA 코드, ICAO 코드, 국가명, 지역명에 대한 정보.
 #'
-#' @format A list with 8 data frame.
+#' @format A dataframe with 8 data frame.
 #' \describe{
 #'    \item{영문공항명}{해당 공항 영문공항명}
 #'    \item{한글공항명}{해당 공항 한글공항명}
@@ -2168,7 +2163,7 @@ NULL
 #' *출처: World Bank Open data, Human Development Data Center, Fragile States Index, Transparency International, 
 #' UN Department of Economic and Social Affairs Public Institutions, OECD Statistics, KOICA ODA 정보센터
 #'
-#' @format A list with 80 data frame.
+#' @format A dataframe with 80 variables.
 #' \describe{
 #'    \item{WB_국가명}{WB 국가명
 #' WB: World Bank 세계은행}
@@ -2274,7 +2269,7 @@ NULL
 #' 
 #' 행정안전부에서 제공하는 단란주점 영업 정보. 주로 주류와 함께 음식류를 조리 및 판매하는 곳으로 손님이 노래를 부르는 행위가 허용되는 업소정보 데이터로 인허가일자, 영업상태, 사업장명, 소재지주소 등의 정보등을 제공. * 좌표계 : 중부원점TM(EPSG:2097).
 #'
-#' @format A list with 48 data frame.
+#' @format A data frame with 48 variables.
 #' \describe{
 #'    \item{번호}{해당 단란주점 번호}
 #'    \item{개방서비스명}{해당 단란주점 서비스명
@@ -2345,7 +2340,7 @@ NULL
 #' 
 #' 소방청에서 제공하는 장소별 원인별 화재통계.
 #'
-#' @format A list with 18 data frame.
+#' @format A data frame with 18 variables.
 #' \describe{
 #'    \item{연번}{해당 화재 연번}
 #'    \item{사망}{해당 화재 사망}
@@ -2393,7 +2388,7 @@ NULL
 #' 본 저작물은 '식품의약품안전처'에서 '2020년'작성하여 공공누리 제1유형으로 개방한 '식품영양성분 데이터베이스를'을 이용하였으며, 
 #' 해당 저작물은 '식품의약품안전처 식품영양성분 데이터베이스(https://www.foodsafetykorea.go.kr/fcdb/index.do)'에서 무료로 다운받으실 수 있습니다.
 #'
-#' @format A list with 146 data frame.
+#' @format A data frame with 146 varialbles.
 #' \describe{
 #'    \item{no}{순번}
 #'    \item{sample_id}{sample_id}
@@ -2565,7 +2560,7 @@ NULL
 #' 공공기관이 등록하여 공공데이터포털에서 개방중인 목록 정보(목록명, 목록타입(파일, API), 표준데이터 여부, 국가중점여부, 등록기관, 
 #' 기관 분류, 분류체계, 등록일, 마지막 수정일) 를 제공. 이용허락범위 제한 없음.
 #'
-#' @format A list with 13 data frame.
+#' @format A data frame with 13 varirables.
 #' \describe{
 #'    \item{목록키}{해당 공공데이터 목록키}
 #'    \item{목록유형}{해당 공공데이터 목록유형
@@ -2597,7 +2592,7 @@ NULL
 #' 
 #' 한국승강기안전공단에서 제공하는 국내 승강기 보유 현황. 이용허락범위 제한 없음.
 #'
-#' @format A list with 8 data frame.
+#' @format A data frame with 8 variables.
 #' \describe{
 #'    \item{지역}{해당 승강기 보유 건물의 지역}
 #'    \item{건물명}{해당 승강기 보유 건물명}
@@ -2622,7 +2617,7 @@ NULL
 #' 
 #' 경찰청에서 제공하는 범죄유형별(강력범죄, 폭력범죄, 지능범죄 등)로 범죄장소(아파트, 단독주택, 고속도로, 노상 ,백화점, 슈퍼마켓 등)별 통계. 이용허락범위 제한 없음.
 #'
-#' @format A list with 4 data frame.
+#' @format A data frame with 4 variables.
 #' \describe{
 #'    \item{범죄대분류}{해당 범죄의 대분류
 #'    강력범죄, 절도범죄, 폭력범죄, 지능범죄, 풍속범죄, 특별경제범죄, 마약범죄, 보건범죄, 환경범죄, 교통범죄, 노동범죄, 안보범죄, 선거범죄, 병역범죄, 기타범죄}
@@ -2960,7 +2955,7 @@ NULL
 #'    \item{정부안금액_천원}{각 중앙관서의 장이 제출한 예산 요구서에 대한 검토 및 조정 작업(예산안 편성)을 거쳐 예산안 시안이 마련되면 기획재정부는 대통령 중간보고, 당정협의, 예산자문회의 등을 거쳐 정부의 최종 예산안을 마련}
 #'    \item{국회확정금액_천원}{국회에서 확정된 최종 금액}
 #'  }
-#' @source \url{https://www.data.go.kr/data/15071311/fileData.do}
+#' @source \url{https://www.openfiscaldata.go.kr/}
 #' @examples
 #' DT::datatable(head(budget2023))
 

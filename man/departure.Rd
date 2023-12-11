@@ -5,7 +5,7 @@
 \alias{departure}
 \title{통계청 내국인 출국 연령별}
 \format{
-A list with 3 data frame.
+A data frame with 3 variables.
 \describe{
    \item{연령}{해당 출국객 연령: 0-20세,21-30세,31-40세,41-50세,51-60세,61세 이상}
    \item{시점}{해당 출국객 시점: 2014년 1월 ~ 2023년 6월}

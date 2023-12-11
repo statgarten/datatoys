@@ -5,7 +5,7 @@
 \alias{openData}
 \title{공공데이터활용지원센터 공공데이터포털 목록개방현황}
 \format{
-A list with 13 data frame.
+A data frame with 13 varirables.
 \describe{
    \item{목록키}{해당 공공데이터 목록키}
    \item{목록유형}{해당 공공데이터 목록유형

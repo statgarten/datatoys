@@ -5,7 +5,7 @@
 \alias{airport}
 \title{국토교통부 전세계 공항정보}
 \format{
-A list with 8 data frame.
+A dataframe with 8 data frame.
 \describe{
    \item{영문공항명}{해당 공항 영문공항명}
    \item{한글공항명}{해당 공항 한글공항명}

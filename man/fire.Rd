@@ -5,7 +5,7 @@
 \alias{fire}
 \title{소방청 화재통계}
 \format{
-A list with 18 data frame.
+A data frame with 18 variables.
 \describe{
    \item{연번}{해당 화재 연번}
    \item{사망}{해당 화재 사망}

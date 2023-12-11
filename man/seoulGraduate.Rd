@@ -5,7 +5,7 @@
 \alias{seoulGraduate}
 \title{서울특별시 대학원 통계}
 \format{
-A list with 4 data frame.
+A data frame with 4 variables.
 \describe{
    \item{구분_1}{대학원수(개), 학과수(개), 입학정원수, 석사과정학생수, 박사과정학생수, 졸업자현황}
    \item{구분_2}{소계, 석사과정, 박사과정}

@@ -5,7 +5,7 @@
 \alias{policeBox}
 \title{경찰청 전국치안센터주소현황}
 \format{
-A list with 6 data frame.
+A data frame with 6 variables.
 \describe{
    \item{시도청}{해당 치안센터 시도청 : 서울청,부산청,대구청,인천청,광주청,대전청,울산청,세종청,경기남부청,경기북부청,강원청,충북청,충남청,전북청,전남청,경북청,경남청,제주청}
    \item{지역명}{해당 치안센터 지역명}

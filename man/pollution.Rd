@@ -50,23 +50,18 @@ pollution
 }
 \examples{
 DT::datatable(head(pollution, 50))
-library(highcharter)
+library(ggplot)
 library(dplyr)
 library(datatoys)
 
-pollution |> 
-  group_by(축종) |> 
+pollution  \%>\%  
+  group_by(축종) \%>\% 
   summarise(
     총분뇨발생량 = sum(가축분뇨발생량.m3.일.)
-  ) |> 
-  ungroup() |> 
-  arrange(desc(총분뇨발생량)) |> 
-  hchart(type = "column", hcaes(축종, 총분뇨발생량), name = "총발생량") |> 
-  hc_title(
-    text = "축종별 가축분뇨 총 발생량",
-    margin = 20,
-    align = "left"
-  ) |> 
-  hc_add_theme(hc_theme_538())
+  ) \%>\% 
+  ungroup() \%>\% 
+  arrange(desc(총분뇨발생량)) \%>\% 
+  ggplot(aes(축종, 총분뇨발생량)) +
+  geom_col()
 }
 \keyword{datasets}

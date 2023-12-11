@@ -1,7 +1,7 @@
 Package: datatoys
 Type: Package
 Title: A Collection of Datasets from data.go.kr
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
               person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"),
                       comment = c(ORCID = "0000-0002-4643-0191")),

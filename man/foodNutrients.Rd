@@ -5,7 +5,7 @@
 \alias{foodNutrients}
 \title{식품의약품안전처 식품영양성분 데이터베이스}
 \format{
-A list with 146 data frame.
+A data frame with 146 varialbles.
 \describe{
    \item{no}{순번}
    \item{sample_id}{sample_id}

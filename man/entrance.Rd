@@ -5,7 +5,7 @@
 \alias{entrance}
 \title{통계청 외래객 입국-연령별/국적별}
 \format{
-A list with 5 data frame.
+A data frame with 5 variabels.
 \describe{
    \item{연령}{해당 외래객 연령: 0-20세,21-30세,31-40세,41-50세,51-60세,61세 이상}
    \item{시점}{해당 외래객 시점: 2017년 7월 ~ 2023년 6월}

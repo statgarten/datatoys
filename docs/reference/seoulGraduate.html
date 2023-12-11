@@ -16,7 +16,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">datatoys</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="네비게이션바 열기">
@@ -59,7 +59,7 @@
 
     <div class="section level2">
     <h2 id="-">양식<a class="anchor" aria-label="anchor" href="#-"></a></h2>
-    <p>A list with 4 data frame.</p><dl><dt>구분_1</dt>
+    <p>A data frame with 4 variables.</p><dl><dt>구분_1</dt>
 <dd><p>대학원수(개), 학과수(개), 입학정원수, 석사과정학생수, 박사과정학생수, 졸업자현황</p></dd>
 
    <dt>구분_2</dt>
@@ -80,16 +80,16 @@
 
     <div class="section level2">
     <h2 id="ref-examples">예시 코드<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">seoulDoctor</span> <span class="op">&lt;-</span> <span class="va">seoulGraduate</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span> </span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">seoulDoctor</span> <span class="op">&lt;-</span> <span class="va">seoulGraduate</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
 <span class="r-in">  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">구분_1</span> <span class="op">==</span> <span class="st">"박사과정학생수"</span> <span class="op">|</span> <span class="va">구분_2</span> <span class="op">==</span> <span class="st">"박사과정"</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">seoulDoctor</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">시점</span>, y<span class="op">=</span><span class="va">수</span>, color<span class="op">=</span><span class="va">구분_1</span>, group <span class="op">=</span> <span class="va">구분_1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_path</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/comma.html" class="external-link">comma</a></span><span class="op">)</span> <span class="op">+</span>  </span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"NanumGothic"</span><span class="op">)</span><span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"서울시 박사 통계"</span>, color <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span> </span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0.5</span>, size <span class="op">=</span> <span class="fl">22</span>, color <span class="op">=</span> <span class="st">"royalblue4"</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>, legend.position <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">ggplot</span><span class="op">(</span><span class="va">seoulDoctor</span>, <span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">시점</span>, y<span class="op">=</span><span class="va">수</span>, color<span class="op">=</span><span class="va">구분_1</span>, group <span class="op">=</span> <span class="va">구분_1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span class="r-in">  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span class="r-in">  <span class="fu">geom_path</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span class="r-in">  <span class="fu">scale_y_continuous</span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/comma.html" class="external-link">comma</a></span><span class="op">)</span> <span class="op">+</span>  </span>
+<span class="r-in">  <span class="fu">theme_minimal</span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"NanumGothic"</span><span class="op">)</span><span class="op">+</span></span>
+<span class="r-in">  <span class="fu">labs</span><span class="op">(</span>title<span class="op">=</span><span class="st">"서울시 박사 통계"</span>, color <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span> </span>
+<span class="r-in">  <span class="fu">theme</span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0.5</span>, size <span class="op">=</span> <span class="fl">22</span>, color <span class="op">=</span> <span class="st">"royalblue4"</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>, legend.position <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="seoulGraduate-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

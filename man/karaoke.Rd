@@ -5,7 +5,7 @@
 \alias{karaoke}
 \title{행정안전부 단란주점 영업 정보}
 \format{
-A list with 48 data frame.
+A data frame with 48 variables.
 \describe{
    \item{번호}{해당 단란주점 번호}
    \item{개방서비스명}{해당 단란주점 서비스명

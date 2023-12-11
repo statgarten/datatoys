@@ -5,7 +5,7 @@
 \alias{odaIndex}
 \title{한국국제협력단 협력국 개발지표 및 ODA 지원 실적}
 \format{
-A list with 80 data frame.
+A dataframe with 80 variables.
 \describe{
    \item{WB_국가명}{WB 국가명
 WB: World Bank 세계은행}

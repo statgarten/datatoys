@@ -5,7 +5,7 @@
 \alias{crimePlace}
 \title{경찰청 범죄 발생 장소별 통계}
 \format{
-A list with 4 data frame.
+A data frame with 4 variables.
 \describe{
    \item{범죄대분류}{해당 범죄의 대분류
    강력범죄, 절도범죄, 폭력범죄, 지능범죄, 풍속범죄, 특별경제범죄, 마약범죄, 보건범죄, 환경범죄, 교통범죄, 노동범죄, 안보범죄, 선거범죄, 병역범죄, 기타범죄}

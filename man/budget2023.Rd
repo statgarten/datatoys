@@ -23,7 +23,7 @@ A data frame with 13 variables.
  }
 }
 \source{
-\url{https://www.data.go.kr/data/15071311/fileData.do}
+\url{https://www.openfiscaldata.go.kr/}
 }
 \usage{
 budget2023

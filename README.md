@@ -39,8 +39,8 @@ load datatoys into a `pandas.DataFrame` format.
 
 ## A list of datasets
 
-A total 82 datasets are available (Last check point: 2023-10-23
-17:20:59).
+A total 82 datasets are available (Last check point: 2023-12-11
+11:10:28).
 
     #> Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [74].
 

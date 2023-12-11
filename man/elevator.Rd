@@ -5,7 +5,7 @@
 \alias{elevator}
 \title{한국승강기안전공단 국내 승강기 보유 현황}
 \format{
-A list with 8 data frame.
+A data frame with 8 variables.
 \describe{
    \item{지역}{해당 승강기 보유 건물의 지역}
    \item{건물명}{해당 승강기 보유 건물명}
